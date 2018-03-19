@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="spring-boot-security-oauth2-minimal" external.linked.project.path="$USER_HOME$/gitClone/spring-boot-security-oauth2-minimal" external.root.project.path="$USER_HOME$/gitClone/spring-boot-security-oauth2-minimal" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$USER_HOME$/gitClone/spring-boot-security-oauth2-minimal">
+      <excludeFolder url="file://$USER_HOME$/gitClone/spring-boot-security-oauth2-minimal/.gradle" />
+      <excludeFolder url="file://$USER_HOME$/gitClone/spring-boot-security-oauth2-minimal/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

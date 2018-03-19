@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: service-oauth
+
+  jpa:
+    open-in-view: true
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+
+server:
+  port: 9030
+
+
+logging.level.org.springframework.security: DEBUG
+
+logging.leve.org.springframework: DEBUG
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3

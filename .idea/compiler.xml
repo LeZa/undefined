@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/operators/HelloDate.java" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway (1) (com.kakawait)" />
+        <module name="dubbo-spring-boot-actuator" />
+        <module name="dubbo-spring-boot-autoconfigure" />
+        <module name="dubbo-spring-boot-oauth" />
+        <module name="dubbo-spring-boot-sample-api" />
+        <module name="dubbo-spring-boot-sample-consumer" />
+        <module name="dubbo-spring-boot-sample-provider" />
+        <module name="dubbo-spring-boot-starter" />
+        <module name="dummy-service" />
+        <module name="netty.io" />
+        <module name="oath2-client-demo" />
+        <module name="service-registry" />
+        <module name="uaa-service" />
+        <module name="user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account" target="1.8" />
+      <module name="account (2)" target="1.8" />
+      <module name="api" target="1.5" />
+      <module name="api-gateway" target="1.8" />
+      <module name="api-gateway (1) (com.kakawait)" target="1.8" />
+      <module name="api_main" target="1.8" />
+      <module name="api_test" target="1.8" />
+      <module name="auth" target="1.8" />
+      <module name="auth (2)" target="1.8" />
+      <module name="auth-server" target="1.8" />
+      <module name="client" target="1.8" />
+      <module name="client_main" target="1.8" />
+      <module name="client_test" target="1.8" />
+      <module name="custom-error" target="1.5" />
+      <module name="demo" target="1.8" />
+      <module name="discovery" target="1.8" />
+      <module name="discovery (2)" target="1.8" />
+      <module name="discovery-service" target="1.8" />
+      <module name="dubbo-spring-boot-actuator" target="1.7" />
+      <module name="dubbo-spring-boot-autoconfigure" target="1.7" />
+      <module name="dubbo-spring-boot-oauth" target="1.8" />
+      <module name="dubbo-spring-boot-parent" target="1.7" />
+      <module name="dubbo-spring-boot-project" target="1.5" />
+      <module name="dubbo-spring-boot-sample-api" target="1.7" />
+      <module name="dubbo-spring-boot-sample-consumer" target="1.8" />
+      <module name="dubbo-spring-boot-sample-provider" target="1.7" />
+      <module name="dubbo-spring-boot-samples" target="1.7" />
+      <module name="dubbo-spring-boot-starter" target="1.7" />
+      <module name="dummy-service" target="1.8" />
+      <module name="eee_main" target="1.8" />
+      <module name="eee_test" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="gateway (2)" target="1.8" />
+      <module name="netty.io" target="1.6" />
+      <module name="oath2-client-demo" target="1.8" />
+      <module name="oauth-client" target="1.8" />
+      <module name="oltu-client" target="1.8" />
+      <module name="oltu-oauth" target="1.8" />
+      <module name="order-service" target="1.8" />
+      <module name="sample-spring-oauth2-microservices" target="1.8" />
+      <module name="sample-spring-oauth2-microservices (2)" target="1.8" />
+      <module name="service-api_main" target="1.8" />
+      <module name="service-api_test" target="1.8" />
+      <module name="service-client" target="1.8" />
+      <module name="service-clientribbon" target="1.8" />
+      <module name="service-netty" target="1.6" />
+      <module name="service-oauth" target="1.8" />
+      <module name="service-registry" target="1.8" />
+      <module name="service-ribbon" target="1.8" />
+      <module name="service-server" target="1.8" />
+      <module name="service-zuul" target="1.8" />
+      <module name="social-auth-server" target="1.5" />
+      <module name="social-click" target="1.5" />
+      <module name="social-github" target="1.5" />
+      <module name="social-logout" target="1.5" />
+      <module name="social-manual" target="1.5" />
+      <module name="social-simple" target="1.5" />
+      <module name="spring-boot-oauth2" target="1.8" />
+      <module name="spring-security-5-oauth-resource" target="1.8" />
+      <module name="spring-security-oauth" target="1.6" />
+      <module name="spring-security-oauth-resource" target="1.8" />
+      <module name="spring-security-oauth-server" target="1.8" />
+      <module name="spring-security-oauth-ui-implicit" target="1.8" />
+      <module name="spring-security-oauth-ui-password" target="1.8" />
+      <module name="tut-spring-boot-oauth" target="1.5" />
+      <module name="uaa-behind-zuul" target="1.8" />
+      <module name="uaa-service" target="1.8" />
+      <module name="user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

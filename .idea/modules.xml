@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-actuator/dubbo-spring-boot-actuator.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-actuator/dubbo-spring-boot-actuator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-autoconfigure/dubbo-spring-boot-autoconfigure.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-autoconfigure/dubbo-spring-boot-autoconfigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-oauth/dubbo-spring-boot-oauth.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-oauth/dubbo-spring-boot-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-parent/dubbo-spring-boot-parent.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-parent/dubbo-spring-boot-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-project.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-api/dubbo-spring-boot-sample-api.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-api/dubbo-spring-boot-sample-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-consumer/dubbo-spring-boot-sample-consumer.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-consumer/dubbo-spring-boot-sample-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-provider/dubbo-spring-boot-sample-provider.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-provider/dubbo-spring-boot-sample-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-samples.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-starter/dubbo-spring-boot-starter.iml" filepath="$PROJECT_DIR$/dubbo-spring-boot-project-master/dubbo-spring-boot-starter/dubbo-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-netty/netty.io.iml" filepath="$PROJECT_DIR$/service-netty/netty.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_main.iml" group="service-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_test.iml" group="service-api" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,32 @@
+延迟加载队列(DelayQueue)
+
+1:继承AbstractQueue,实现BlockingQueue
+
+2:使用了ReentrantLock锁
+    2.1:ReentrantLock锁
+        一个可重入的互斥锁 Lock，它具有与使用 synchronized 方法和语句所访问的隐式监视器锁相同的一些基本行为和语义，但功能更强大。
+    2.2:transient关键字
+        变量修饰符，如果用transient声明一个实例变量，当对象存储时，它的值不需要维持。换句话来说就是，用transient关键字标记的成员变量不参与序列化过程。
+
+3:使用了PriorityQueue队列
+    3.1:PriorityQueue
+        一个基于优先级堆的无界优先级队列
+
+4:使用了Condition对象
+    4.1:Codition对象
+        Condition 将 Object 监视器方法（wait、notify 和 notifyAll）分解成截然不同的对象，以便通过将这些对象与任意 Lock 实现组合使用，
+        为每个对象提供多个等待 set（wait-set）。
+        其中，Lock 替代了 synchronized 方法和语句的使用，Condition 替代了 Object 监视器方法的使用。
+
+5:put方法
+    5.1 put方法调用offer方法,offer方法首先获取锁,然后调用Priority的offer方法.Priority的offer方法实际是对object数组的处理
+    5.2 put方法最终释放锁(unlock)
+
+
+6:take方法
+    6.1获取当前lock.lockInterruptibly();
+
+
+
+
+

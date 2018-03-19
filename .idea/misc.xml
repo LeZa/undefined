@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/dubbo-spring-boot-project-master/pom.xml" />
+        <option value="$PROJECT_DIR$/service-netty/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-actuator/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-autoconfigure/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-parent/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-oauth/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-api/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-consumer/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-provider/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/pom.xml" />
+        <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/click/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/custom-error/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/github/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/logout/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/manual/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/pom.xml" />
+        <option value="$PROJECT_DIR$/tut-spring-boot-oauth2-master/simple/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>
