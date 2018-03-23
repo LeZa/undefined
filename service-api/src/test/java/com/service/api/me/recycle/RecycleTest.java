@@ -23,7 +23,7 @@ import java.util.Map;
 public class RecycleTest {
 
     private final static String oauthAddress="http://oauth:oauth@localhost:9070/oauth/token"; //oauth
-    private final static String ipAddress="http://192.168.89.80:9060";
+    private final static String ipAddress="http://192.168.89.223:9060";
 
     /**
      * 获取token
@@ -179,7 +179,7 @@ public class RecycleTest {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         final HttpPost httpPost = new HttpPost(ipAddress+"/appointment/monthVal");
         final StringBody mobile = new StringBody("13366100567", ContentType.TEXT_PLAIN);
-        final StringBody wechatOfficialAccountsId = new StringBody("23254", ContentType.TEXT_PLAIN);
+        final StringBody wechatOfficialAccountsId = new StringBody("1234567890", ContentType.TEXT_PLAIN);
         final StringBody access_token = new StringBody(token, ContentType.TEXT_PLAIN);
         final HttpEntity httpEntity = MultipartEntityBuilder.create()
                 .addPart("mobile", mobile)
@@ -196,22 +196,17 @@ public class RecycleTest {
      */
     @Test
     public void homeRecy() throws Exception{
-        Map<String,Object> loginMap = login();
-        System.out.println(loginMap.get("userToken"));
-        String token = String.valueOf(loginMap.get("userToken"));
         CloseableHttpClient httpclient = HttpClients.createDefault();
         final HttpPost httpPost = new HttpPost(ipAddress+"/appointment/homeRecy");
-        final StringBody mobile = new StringBody("18330795174", ContentType.TEXT_PLAIN);
-        final StringBody wechatOfficialAccountsId = new StringBody("23255", ContentType.TEXT_PLAIN);
-        final StringBody currentPage = new StringBody("2", ContentType.TEXT_PLAIN);
-        final StringBody pageSize = new StringBody("5", ContentType.TEXT_PLAIN);
-        final StringBody access_token = new StringBody(token, ContentType.TEXT_PLAIN);
+        final StringBody mobile = new StringBody("18810844169", ContentType.TEXT_PLAIN);
+        final StringBody wechatOfficialAccountsId = new StringBody("1234567890", ContentType.TEXT_PLAIN);
+        final StringBody currentPage = new StringBody("6", ContentType.TEXT_PLAIN);
+        final StringBody pageSize = new StringBody("150", ContentType.TEXT_PLAIN);
         final HttpEntity httpEntity = MultipartEntityBuilder.create()
                 .addPart("mobile", mobile)
                 .addPart("wechatOfficialAccountsId", wechatOfficialAccountsId)
                 .addPart("currentPage", currentPage)
                 .addPart("pageSize", pageSize)
-                .addPart("access_token",access_token)
                 .build();
         httpPost.setEntity( httpEntity );
         charOutStream(  new Gson().toJson( getPOSTResponseJsonObejct(httpclient,httpPost) ));
@@ -224,22 +219,18 @@ public class RecycleTest {
      */
     @Test
     public void machineRecy() throws Exception{
-        Map<String,Object> loginMap = login();
-        System.out.println(loginMap.get("userToken"));
-        String token = String.valueOf(loginMap.get("userToken"));
+
         CloseableHttpClient httpclient = HttpClients.createDefault();
         final HttpPost httpPost = new HttpPost(ipAddress+"/appointment/machineRecy");
         final StringBody mobile = new StringBody("15855271830", ContentType.TEXT_PLAIN);
-        final StringBody wechatOfficialAccountsId = new StringBody("23255", ContentType.TEXT_PLAIN);
+        final StringBody wechatOfficialAccountsId = new StringBody("1234567890", ContentType.TEXT_PLAIN);
         final StringBody currentPage = new StringBody("1", ContentType.TEXT_PLAIN);
         final StringBody pageSize = new StringBody("5", ContentType.TEXT_PLAIN);
-        final StringBody access_token = new StringBody(token, ContentType.TEXT_PLAIN);
         final HttpEntity httpEntity = MultipartEntityBuilder.create()
                 .addPart("mobile", mobile)
                 .addPart("wechatOfficialAccountsId", wechatOfficialAccountsId)
                 .addPart("currentPage", currentPage)
                 .addPart("pageSize", pageSize)
-                .addPart("access_token",access_token)
                 .build();
         httpPost.setEntity( httpEntity );
         charOutStream(  new Gson().toJson( getPOSTResponseJsonObejct(httpclient,httpPost) ));
@@ -317,6 +308,25 @@ public class RecycleTest {
         charOutStream( new  Gson().toJson( getPOSTResponseJsonObejct(httpclient,httpPost)));
     }
 
+    /**
+     * @Description  上门回收列表
+     * @throws Exception
+     */
+    @Test
+    public void homeRecyPhp() throws  Exception{
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        final HttpPost httpPost = new HttpPost(ipAddress+"/appointment/homeRecyPhp");
+        final StringBody wechatOfficialAccountsId = new StringBody("1234567890", ContentType.TEXT_PLAIN);
+        final StringBody currentPage = new StringBody("2", ContentType.TEXT_PLAIN);
+        final StringBody pageSize = new StringBody("5",ContentType.TEXT_PLAIN);
+        final HttpEntity httpEntity = MultipartEntityBuilder.create()
+                .addPart("wechatOfficialAccountsId", wechatOfficialAccountsId)
+                .addPart("currentPage", currentPage)
+                .addPart("pageSize", pageSize)
+                .build();
+        httpPost.setEntity( httpEntity );
+         charOutStream( new Gson().toJson(getPOSTResponseJsonObejct(httpclient,httpPost)));
+    }
 
     public static void charOutStream(String str) throws Exception{
         File file = new File("/home/cent/test.txt");

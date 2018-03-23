@@ -10,13 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway (1) (com.kakawait)" />
-        <module name="dubbo-spring-boot-actuator" />
-        <module name="dubbo-spring-boot-autoconfigure" />
-        <module name="dubbo-spring-boot-oauth" />
-        <module name="dubbo-spring-boot-sample-api" />
-        <module name="dubbo-spring-boot-sample-consumer" />
-        <module name="dubbo-spring-boot-sample-provider" />
-        <module name="dubbo-spring-boot-starter" />
+        <module name="cube" />
         <module name="dummy-service" />
         <module name="netty.io" />
         <module name="oath2-client-demo" />
@@ -39,21 +33,23 @@
       <module name="client" target="1.8" />
       <module name="client_main" target="1.8" />
       <module name="client_test" target="1.8" />
+      <module name="cloudy" target="1.5" />
+      <module name="cube" target="1.5" />
       <module name="custom-error" target="1.5" />
       <module name="demo" target="1.8" />
       <module name="discovery" target="1.8" />
       <module name="discovery (2)" target="1.8" />
       <module name="discovery-service" target="1.8" />
-      <module name="dubbo-spring-boot-actuator" target="1.7" />
-      <module name="dubbo-spring-boot-autoconfigure" target="1.7" />
+      <module name="dubbo-spring-boot-actuator" target="1.8" />
+      <module name="dubbo-spring-boot-autoconfigure" target="1.8" />
       <module name="dubbo-spring-boot-oauth" target="1.8" />
-      <module name="dubbo-spring-boot-parent" target="1.7" />
+      <module name="dubbo-spring-boot-parent" target="1.8" />
       <module name="dubbo-spring-boot-project" target="1.5" />
-      <module name="dubbo-spring-boot-sample-api" target="1.7" />
+      <module name="dubbo-spring-boot-sample-api" target="1.8" />
       <module name="dubbo-spring-boot-sample-consumer" target="1.8" />
-      <module name="dubbo-spring-boot-sample-provider" target="1.7" />
-      <module name="dubbo-spring-boot-samples" target="1.7" />
-      <module name="dubbo-spring-boot-starter" target="1.7" />
+      <module name="dubbo-spring-boot-sample-provider" target="1.8" />
+      <module name="dubbo-spring-boot-samples" target="1.8" />
+      <module name="dubbo-spring-boot-starter" target="1.8" />
       <module name="dummy-service" target="1.8" />
       <module name="eee_main" target="1.8" />
       <module name="eee_test" target="1.8" />

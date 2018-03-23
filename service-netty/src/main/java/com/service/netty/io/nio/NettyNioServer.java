@@ -34,7 +34,7 @@ public class NettyNioServer {
 
                                         @Override
                                         public void channelRead( ChannelHandlerContext context,Object object){
-                                            context.channel()
+                                            context.channel();
                                         }
 
                                         @Override
@@ -53,10 +53,13 @@ public class NettyNioServer {
         }
     }
 
+    public static void sendMsg(Channel channel, ByteBuf buf) {
+    }
+
 
     class FrontendHandler extends SimpleChannelInboundHandler<Object>{
 
-        private Session session;
+//        private Session session;
 
         @Override
         protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o) throws Exception {
