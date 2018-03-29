@@ -1183,7 +1183,7 @@
       <workItem from="1522207450402" duration="3549000" />
       <workItem from="1522214237043" duration="14612000" />
       <workItem from="1522229954468" duration="2619000" />
-      <workItem from="1522285123900" duration="1420000" />
+      <workItem from="1522285123900" duration="1506000" />
     </task>
     <servers />
   </component>
@@ -1220,7 +1220,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="739452000" />
+    <option name="totallyTimeSpent" value="739538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1233,7 +1233,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1924" height="1059" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3862375" sideWeight="0.50317967" order="13" side_tool="true" content_ui="tabs" />
@@ -1256,7 +1255,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3969957" sideWeight="0.28957835" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23603794" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23603794" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43647864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4935484" sideWeight="0.5089852" order="6" side_tool="true" content_ui="tabs" />
