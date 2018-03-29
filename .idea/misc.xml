@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/dubbo-spring-boot-project-master/pom.xml" />
         <option value="$PROJECT_DIR$/service-netty/pom.xml" />
         <option value="$PROJECT_DIR$/cube/pom.xml" />
+        <option value="$PROJECT_DIR$/service-battery/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

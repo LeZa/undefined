@@ -6,7 +6,6 @@ import io.netty.channel.socket.DatagramPacket;
 import io.netty.handler.codec.MessageToMessageEncoder;
 import io.netty.util.CharsetUtil;
 
-
 import java.net.InetSocketAddress;
 import java.util.List;
 

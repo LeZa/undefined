@@ -4,6 +4,8 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
+import io.netty.channel.epoll.EpollDatagramChannel;
+import io.netty.channel.epoll.EpollEventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 
@@ -20,10 +22,15 @@ public class LogEventBroadcaster {
     private final File file;
 
     public LogEventBroadcaster(InetSocketAddress inetSocketAddress,File file ){
-         eventLoopGroup = new NioEventLoopGroup();
+        /**
+         * @Description  Nio和Epoll
+         */
+//         eventLoopGroup = new NioEventLoopGroup();
+        eventLoopGroup =  new EpollEventLoopGroup();
          bootstrap = new Bootstrap();
          bootstrap.group(eventLoopGroup)
-                  .channel(NioDatagramChannel.class)
+//                  .channel(NioDatagramChannel.class)
+                  .channel(EpollDatagramChannel.class)
                   .option(ChannelOption.SO_BROADCAST,true)
                   .handler( new LogEventEncoder( inetSocketAddress  ));
          this.file = file;
@@ -65,7 +72,7 @@ public class LogEventBroadcaster {
 
     public static void main( String sck[] ) throws Exception{
         LogEventBroadcaster logEventBroadcaster = new LogEventBroadcaster(
-                            new InetSocketAddress("255.255.255.255",9156),
+                            new InetSocketAddress("192.168.88.50",9213),
                                     new File("/home/cent/log.log"));
         try{
            logEventBroadcaster.run();
