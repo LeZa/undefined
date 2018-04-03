@@ -32,11 +32,9 @@ public class ByteBufUtils {
     /**
      * 按ByteBuf转换为传输帧,需要自己release 参数中的content
      */
-    public static ByteBuf toFrameBuf(short event,ByteBuf content){
+    public static ByteBuf toFrameBuf(ByteBuf content){
         Integer length = content.readableBytes();
-        ByteBuf frame = Unpooled.buffer(4 + length);
-        frame.writeShort(event);
-        frame.writeShort(length.shortValue());
+        ByteBuf frame = Unpooled.buffer(0 + length);
         frame.writeBytes(content);
         return frame;
     }

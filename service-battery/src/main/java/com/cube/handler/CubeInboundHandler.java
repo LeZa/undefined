@@ -1,16 +1,19 @@
 package com.cube.handler;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.Attribute;
+import io.netty.util.CharsetUtil;
 import io.netty.util.ReferenceCountUtil;
+
+import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
 import com.cube.core.common.SysConst;
 import com.cube.core.conn.Connection;
 import com.cube.core.conn.ConnectionManager;
@@ -22,7 +25,6 @@ import com.cube.utils.CommUtils;
 
 @Sharable
 public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
-	private static final Logger LOG = Logger.getLogger(CubeInboundHandler.class);
 
     /**
      * @description DelayClose
@@ -50,23 +52,21 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
                 ctx.pipeline().close();
             }
         }
-
     }
 
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-        Connection conn = ConnectionManager.getInstance().getNewConnection(ctx);
-        Attribute<Connection> connAttr = ctx.channel().attr(SysConst.CONN_KEY);
-        connAttr.set(conn);
-        String key = "HeartBeat";
+        Connection connection = ConnectionManager.getInstance().getNewConnection(ctx);
+        Attribute<Connection> attribute = ctx.channel().attr(SysConst.CONN_KEY);
+        attribute.set(connection);
+        String key = "HeartBeat...";
         Attribute<String> secAttr = ctx.channel().attr(SysConst.SECURE_KEY);
         secAttr.set(key);
         ByteBuf buf = ByteBufUtils.str2Buf(key);
-        ByteBuf frame = ByteBufUtils.toFrameBuf(EventEnum.ONE.getVal(), buf);
+        ByteBuf frame = ByteBufUtils.toFrameBuf(buf);
         ReferenceCountUtil.release(buf);
         ctx.channel().writeAndFlush(frame);
-        LOG.info((new StringBuilder()).append("channelRegistered==conn.listAllConn=:").append(ConnectionManager.getInstance().listAllConn().size()).toString());
     }
 
 
@@ -94,16 +94,18 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         try {
-
-             CubeMsg aa=new CubeMsg();
-             aa.setType(EventEnum.ONE);
-             aa.setData("esc".getBytes());//SN
-             aa.setCtx(ctx);
-             aa.setDataString("123");
-             CubeBootstrap.processRunnable.pushUpMsg(aa);
+            ByteBuf msgByteBuf = (ByteBuf)msg;
+            System.out.println(Calendar.getInstance().getTimeInMillis()+"..."+ msgByteBuf.toString(CharsetUtil.UTF_8));
+            String msgStr = msgByteBuf.toString( CharsetUtil.UTF_8);
+            String[] msrArr = msgStr.split(",");
+            CubeMsg cubeMsg=new CubeMsg();
+            cubeMsg.setType(EventEnum.SAVE_BATTERY_INFO);
+            cubeMsg.setData( msrArr[1].getBytes() );//SN
+            cubeMsg.setCtx(ctx);
+            cubeMsg.setDataString(msgStr);
+            CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
         } catch (Exception ex) {
         	ctx.pipeline().close();
-			
         } finally {
             ReferenceCountUtil.release(msg);
         }
@@ -123,12 +125,12 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
             }
         }
     }
-    
+
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.pipeline().close();
     }
-  
+
 
 }

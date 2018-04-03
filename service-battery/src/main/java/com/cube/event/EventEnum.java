@@ -2,18 +2,13 @@ package com.cube.event;
 
 public enum EventEnum {
 
-    /**
-     * 手表-->TCP server
-     */
-     ONE((short) 1),
-    /**
-     * app发消息-->TCP server-->手表
-     */
-     TWO((short) 2),
-     /**
-      * 超长指令app->tcp 服务-->手表
-      */
-     THREE((short) 3);
+     OPEN_BATTERY( (short) 4),
+
+     CLOSE_BATTERY( (short) 5),
+
+     HTTP_BATTERY_INFO( (short) 6),
+
+     SAVE_BATTERY_INFO( (short) 7);
 
     private short v;
 
@@ -21,7 +16,8 @@ public enum EventEnum {
         this.v = v;
     }
 
-    public short getVal() {
+    public short
+    getVal() {
         return v;
     }
 

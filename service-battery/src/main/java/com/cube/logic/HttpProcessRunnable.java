@@ -51,7 +51,7 @@ public class HttpProcessRunnable implements Runnable {
                 res.headers().set(CONTENT_TYPE, "text/html;charset=UTF-8");
                 ctx.channel().writeAndFlush(res).addListener(ChannelFutureListener.CLOSE);
             } else {
-                process.execute(ctx, req);
+                process.execute(ctx, req,new HashMap<String,Object>());
             }
         } catch (Exception e) {
             LOG.error("执行http业务error", e);

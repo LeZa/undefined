@@ -8,9 +8,14 @@ import static io.netty.handler.codec.http.HttpResponseStatus.NOT_FOUND;
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
+import com.cube.conf.CommonUtil;
+import com.cube.conf.ResponseEntity;
 import com.cube.core.CubeRun;
 import com.cube.logic.HttpProcess;
+import com.cube.logic.http.BatteryExecAction;
+import com.cube.logic.http.CloseExecAction;
 import com.cube.logic.http.OpenExecAction;
+import com.google.gson.Gson;
 import org.apache.log4j.Logger;
 
 import io.netty.buffer.ByteBuf;
@@ -29,12 +34,13 @@ import com.cube.logic.HttpProcessRunnable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
-	private static final Logger LOG = Logger.getLogger(HttpServerInboundHandler.class);
     public static final String NEWLINE = "\r\n";
-
 
     @Autowired
     private OpenExecAction openExecAction;
@@ -47,20 +53,51 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
             sendHttpResponse(ctx, req, new DefaultFullHttpResponse(HTTP_1_1, BAD_REQUEST));
             return;
         }
-        
+
+        /**
+         * @Description  Check  http method.
+         */
+        String methodName = req.getMethod().name().toUpperCase();
+        Gson gson =  new Gson();
+        ByteBuf responseStr = null;
+        if( !methodName.equals("POST") ){
+            responseStr = getContent(gson.toJson(ResponseEntity.failRtn("请求格式有误")));
+        }
+        /**
+         * @Description  Check param=
+         */
+        int len = req.content().readableBytes();
+        Map<String ,Object> paramMap =  new HashMap<String,Object>();
+        if( len > 0 ){
+            byte[] content = new byte[len];
+            req.content().readBytes(content);
+            String contentStr = new String( content,"UTF-8");
+            paramMap = CommonUtil.url2Map(contentStr);
+            if( paramMap.containsKey("SN")
+                    && paramMap.containsKey("CODE")){}else{
+                responseStr = getContent(gson.toJson(ResponseEntity.failRtn("请求参数有误/缺少参数")));
+            }
+        }else{
+            ByteBuf content = getContent(gson.toJson(ResponseEntity.failRtn("请求参数有误/缺少参数")));
+        }
+
+        if( responseStr != null ){
+            FullHttpResponse res = new DefaultFullHttpResponse(HTTP_1_1, OK,responseStr );
+            res.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
+            setContentLength(res, responseStr.readableBytes());
+            sendHttpResponse(ctx, req, res);
+            return;
+        }
+
         QueryStringDecoder queryStringDecoder = new QueryStringDecoder(req.getUri());
-        LOG.info("getUri=:"+req.getUri());
         String path = queryStringDecoder.path();
-        
 
         // Send the demo page and favicon.ico
         if ("/".equals(path)) {
-            ByteBuf content = getContent("返回build by purely");
+            ByteBuf content = getContent(gson.toJson(ResponseEntity.failRtn("请添加请求路径")));
             FullHttpResponse res = new DefaultFullHttpResponse(HTTP_1_1, OK, content);
-
             res.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
             setContentLength(res, content.readableBytes());
-
             sendHttpResponse(ctx, req, res);
             return;
         }
@@ -72,17 +109,17 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
 
         AnnotationConfigApplicationContext
                         applicationContext = CubeRun.getApplicationContext();
+        HttpProcess  httpProcess = null;
 //        dispatcher(ctx, req);
         if( "/open".equals(path) ){
-            HttpProcess openExecAction = (OpenExecAction) applicationContext.getBean("openExecAction");
-            openExecAction.execute(ctx,req);
+            httpProcess = (OpenExecAction) applicationContext.getBean("openExecAction");
         }else if("/close".equals(path)){
-            HttpProcess openExecAction = (OpenExecAction) applicationContext.getBean("closeExecAction");
-            openExecAction.execute(ctx,req);
+            httpProcess = (CloseExecAction) applicationContext.getBean("closeExecAction");
         }else if("/battery".equals(path)){
-            HttpProcess openExecAction = (OpenExecAction) applicationContext.getBean("batteryExecAction");
-            openExecAction.execute(ctx,req);
+            httpProcess = (BatteryExecAction) applicationContext.getBean("batteryExecAction");
         }
+
+        httpProcess.execute(ctx,req,paramMap);
 
         // 处理业务
     }
@@ -97,7 +134,6 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
     @Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
 			throws Exception {
-		LOG.error("http server handler exception:", cause);
 	}
 
 	public static void sendHttpResponse(ChannelHandlerContext ctx, FullHttpRequest req, FullHttpResponse res) {
@@ -111,7 +147,6 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
 
         // Send the response and close the connection if necessary.
         if(ctx.channel().isWritable()){
-        	 LOG.info("remoteAddress============;"+ctx.channel().remoteAddress());
             ChannelFuture f = ctx.channel().writeAndFlush(res);
             if (!isKeepAlive(req) || res.getStatus().code() != 200) {
                 f.addListener(ChannelFutureListener.CLOSE);
@@ -126,7 +161,8 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
     }
 
     private static ByteBuf getContent(String cnt) {
-        return Unpooled.copiedBuffer("<html><head><title>Web Test</title></head>" + NEWLINE + "<body>" + NEWLINE
-                + cnt + NEWLINE + "</body>" + NEWLINE + "</html>" + NEWLINE, CharsetUtil.UTF_8);
+      /*  return Unpooled.copiedBuffer("<html><head><title>Web Test</title></head>" + NEWLINE + "<body>" + NEWLINE
+                + cnt + NEWLINE + "</body>" + NEWLINE + "</html>" + NEWLINE, CharsetUtil.UTF_8);*/
+      return Unpooled.copiedBuffer(cnt.getBytes());
     }
 }

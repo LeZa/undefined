@@ -1,5 +1,6 @@
 package com.cube.handler;
 
+import com.cube.utils.newStringUtils.*;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -14,21 +15,19 @@ import io.netty.util.CharsetUtil;
 
 import org.springframework.stereotype.Component;
 
-import com.cube.utils.newStringUtils.LengthFieldBasedFrameDecoder;
-
-import com.cube.utils.newStringUtils.StringDecoder;
-import com.cube.utils.newStringUtils.StringEncoder;
-
 @Component("CubeChannelInit")
 public class CubeChannelInit extends ChannelInitializer<SocketChannel> {
 
+    /**
+     * MAX_FRAME_LENGTH:消息体的最大长度
+     */
     private static final int MAX_FRAME_LENGTH = Integer.MAX_VALUE;
 
     private static final int LENGTH_FIELD_LENGTH = 4;
 
-    private static final int LENGTH_FIELD_OFFSET = 15;
+    private static final int LENGTH_FIELD_OFFSET = 1;
 
-    private static final int LENGTH_ADJUSTMENT = 2;
+    private static final int LENGTH_ADJUSTMENT = 1;
 
     private static final int INITIAL_BYTES_TO_STRIP = 0;
 
@@ -44,13 +43,15 @@ public class CubeChannelInit extends ChannelInitializer<SocketChannel> {
          * LENGTH_FIELD_OFFSET:偏移多少位之后才是我们的消息体
          * LENGTH_FIELD_LENGTH:Message类中的length的长度
          **/
-        pipeline.addLast("frameDecoder",
+/*        pipeline.addLast("frameDecoder",
                 new LengthFieldBasedFrameDecoder(
-                             MAX_FRAME_LENGTH, LENGTH_FIELD_OFFSET, LENGTH_FIELD_LENGTH, LENGTH_ADJUSTMENT, INITIAL_BYTES_TO_STRIP));
-        pipeline.addLast("frameEncoder",
-                new LengthFieldPrepender(LENGTH_FIELD_LENGTH));
-        pipeline.addLast("decoder", new StringDecoder(CharsetUtil.UTF_8));
-		pipeline.addLast("encoder", new StringEncoder(CharsetUtil.UTF_8));
+                             MAX_FRAME_LENGTH, LENGTH_FIELD_OFFSET, LENGTH_FIELD_LENGTH,
+                                LENGTH_ADJUSTMENT, INITIAL_BYTES_TO_STRIP));*/
+        pipeline.addLast("frameDecoder", new MsgDecoder());
+/*        pipeline.addLast("frameEncoder",
+                new MsgEncoder());*/
+/*        pipeline.addLast("decoder", new StringDecoder(CharsetUtil.UTF_8));
+		pipeline.addLast("encoder", new StringEncoder(CharsetUtil.UTF_8));*/
         pipeline.addLast("cubehandler", new CubeInboundHandler());
     }
 

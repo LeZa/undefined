@@ -84,7 +84,7 @@ public class CubeInboundHandlerLong extends ChannelInboundHandlerAdapter {
         secAttr.set(key);
         // 生成待发送的key
         ByteBuf buf = ByteBufUtils.str2Buf(key);
-        ByteBuf frame = ByteBufUtils.toFrameBuf(EventEnum.ONE.getVal(), buf);
+        ByteBuf frame = ByteBufUtils.toFrameBuf( buf);
         ReferenceCountUtil.release(buf);
         // 需要在当前线程马上发送
         ctx.channel().writeAndFlush(frame);
@@ -134,13 +134,12 @@ public class CubeInboundHandlerLong extends ChannelInboundHandlerAdapter {
 	 									   .append("*");
 	 						KeyName=tempKye.toString();
 	 						
-	 						CubeMsg aa=new CubeMsg();
-	 						 aa.setType(EventEnum.THREE);
-	 			        	 aa.setData(((String)KeyName).getBytes());//把主键放进去
-	 			             aa.setCtx(ctx);
-	 			             aa.setDataString(info);
-	 			             LOG.info((new StringBuilder()).append("app发送指令给手表=:").append(info).toString());
-	 			             CubeBootstrap.processRunnable.pushUpMsg(aa);
+                            CubeMsg cubeMsg=new CubeMsg();
+                            cubeMsg.setType(EventEnum.SAVE_BATTERY_INFO);
+                            cubeMsg.setData(((String)KeyName).getBytes());//把主键放进去
+                            cubeMsg.setCtx(ctx);
+                            cubeMsg.setDataString(info);
+                            CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
  						
  			 
  				}else{

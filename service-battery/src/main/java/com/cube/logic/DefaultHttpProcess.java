@@ -2,6 +2,9 @@ package com.cube.logic;
 
 import static io.netty.handler.codec.http.HttpHeaders.setContentLength;
 import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
+
+import com.cube.conf.ResponseEntity;
+import com.google.gson.Gson;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
@@ -33,7 +36,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
 
 	private static final Logger LOG = Logger.getLogger(ProcessRunnable.class);
 
-    public void execute(ChannelHandlerContext ctx, FullHttpRequest req) {
+    public void execute(ChannelHandlerContext ctx, FullHttpRequest req,Map<String,Object> paramMap)  {
         FullHttpResponse resp = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK);
         Map<String, List<String>> params = null;
         HttpPostRequestDecoder decoder = null;
@@ -47,7 +50,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
                 throw new Exception("HTTP method 不支持:" + req.getMethod().name());
             }
             // 执行业务逻辑
-            doExcute(ctx, req, resp, params, decoder);
+            doExcute(ctx, req, resp, paramMap, decoder);
             sendResp(ctx, resp);
         } catch (RespException e) {
             LOG.info("RespException 返回");
@@ -66,7 +69,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
     }
 
     protected abstract void doExcute(ChannelHandlerContext ctx, FullHttpRequest req, FullHttpResponse resp,
-            Map<String, List<String>> params, HttpPostRequestDecoder decoder) throws Exception;
+            Map<String, Object> params, HttpPostRequestDecoder decoder) throws Exception;
 
     public String parseData(InterfaceHttpData data) throws IOException {
         if (data == null) {
@@ -145,14 +148,15 @@ public abstract class DefaultHttpProcess implements HttpProcess {
     }
 
     protected void sendTimeout(FullHttpResponse resp) {
-    	//超时
-        resp.content().writeBytes(("503,处理超时").getBytes());
+        Gson gson =  new Gson();
+        resp.content().writeBytes(gson.toJson(ResponseEntity.failRtn("请求处理超时")).getBytes());
         resp.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
     }
 
     protected void sendUnableConn(FullHttpResponse resp) {
     	//无有效连接
-        resp.content().writeBytes(("502,未连接手表").getBytes());
+        Gson gson = new Gson();
+        resp.content().writeBytes( gson.toJson( ResponseEntity.failRtn("设备未连接")).getBytes() );
         resp.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
     }
 

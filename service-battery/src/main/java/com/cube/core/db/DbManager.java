@@ -2,19 +2,15 @@ package com.cube.core.db;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-
-
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * jdbc管理类
  * @description DbManager
  * @author niulu
  * @version 0.1
- * @date 2014年8月31日
  */
 @Component
 public class DbManager {
@@ -27,9 +23,6 @@ public class DbManager {
     }
     
 
-    /**
-     * 获取连接
-     */
     public Connection getConnection() throws SQLException {
         return dataSource.getConnection();
     }

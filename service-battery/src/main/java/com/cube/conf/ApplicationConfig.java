@@ -9,7 +9,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @PropertySource("classpath:/application.properties")
-@Import(value = {NettyConfig.class, CtxConfig.class})
+@Import(value = {BeanConfig.class})
 @ComponentScan(basePackages = {"com.cube"})
 public class ApplicationConfig {
 
@@ -17,7 +17,5 @@ public class ApplicationConfig {
     public PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
-
-
 
 }

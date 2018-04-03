@@ -3,6 +3,7 @@ package com.cube.event;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.log4j.Logger;
 
 import com.cube.core.conn.Connection;
@@ -22,6 +23,8 @@ public class CubeMsg implements Serializable {
     private EventEnum type;
     private ChannelHandlerContext ctx;
     private byte[] data;
+
+
     private String dataString;
     private Object dataObject;
     
@@ -85,4 +88,32 @@ public class CubeMsg implements Serializable {
 		this.dataObject = dataObject;
 	}
 
+
+	static class Device{
+
+        private String deviceProvide;
+
+        private String deviceCode;
+
+        @Override
+        public boolean equals( Object obj ){
+            if( obj == this ){
+                return true;
+            }
+            if( !(obj instanceof  Device )){
+                return  false;
+            }
+            Device device = (Device)obj;
+            return device.deviceCode == deviceCode
+                    && device.deviceProvide == deviceProvide;
+        }
+
+        @Override
+        public int hashCode(){
+            return new HashCodeBuilder( 17,37)
+                        .append(deviceCode)
+                        .append(deviceCode)
+                        .toHashCode();
+        }
+    }
 }

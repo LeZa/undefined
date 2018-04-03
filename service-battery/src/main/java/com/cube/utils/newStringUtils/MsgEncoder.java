@@ -26,5 +26,5 @@ public class MsgEncoder extends MessageToByteEncoder<Object>{
 		buf.writeShort(jsonBytes.length + 2);
 		buf.writeBytes(jsonBytes);
 	}
-	
+
 }

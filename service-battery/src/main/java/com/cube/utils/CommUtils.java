@@ -8,12 +8,10 @@ import io.netty.util.Attribute;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
- 
 
 import com.cube.core.common.SysConst;
 import com.cube.core.conn.Connection;
 import com.cube.exception.IllegalDataException;
-import com.cube.handler.CubeInboundHandler;
 
 public class CommUtils {
 

@@ -4,26 +4,19 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.apache.log4j.Logger;
- 
 
-import com.cube.core.CubeRun;
 import com.cube.event.CubeMsg;
 import com.cube.event.EventEnum;
 import com.cube.event.ReplyEvent;
 
-/**
- * 工作对象
- * @description Worker
- * @author niulu
- * @version 0.1
- * @date 2014年8月6日
- */
+
 public class ProcessRunnable implements Runnable {
 	private static final Logger LOG = Logger.getLogger(ProcessRunnable.class);
 
     private ConcurrentHashMap<String, ReplyEvent> replyMap = new ConcurrentHashMap<String, ReplyEvent>();
-    // 任务队列
+
     private ConcurrentLinkedQueue<CubeMsg> workqueue = new ConcurrentLinkedQueue<CubeMsg>();
+
     private volatile boolean isRunning = false;
 
     public void putReply(ReplyEvent reply) {
@@ -43,7 +36,7 @@ public class ProcessRunnable implements Runnable {
     }
 
     /**
-     * 向事件队列中添加事件
+     * Add queue  event.
      */
     public boolean pushUpMsg(CubeMsg msg) {
         if (isRunning) {
@@ -64,7 +57,6 @@ public class ProcessRunnable implements Runnable {
     }
  
     public void run() {
-        LOG.info("ProcessRunnable worker starting...");
         isRunning = true;
         while (true) {
             try {
@@ -77,21 +69,9 @@ public class ProcessRunnable implements Runnable {
                     }
                 }
 
-                // 具体工作
-                EventEnum event =msg.getType();
-                if (event == null) {
-                    LOG.info("event is null......continue");
-                    continue;
-                }
-
+                EventEnum event = msg.getType();
                 Process process = ProcessManager.getInstance().getProcess(event);
-                if (process == null) {
-                    LOG.info("event is:{} without process"+event.getVal());
-                    continue;
-                }
-                //LOG.info(process.toString()+"{}=======process the msg:{}"+ event.getVal());
                 process.excute(msg);
-
             } catch (Exception e) {
                 LOG.error("ProcessRunnable Worker exception", e);
             }

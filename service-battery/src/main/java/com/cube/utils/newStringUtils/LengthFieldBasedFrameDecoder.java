@@ -15,6 +15,7 @@
  */
  package com.cube.utils.newStringUtils;
 
+import com.cube.handler.CubeInboundHandler;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -22,8 +23,11 @@ import io.netty.handler.codec.CorruptedFrameException;
 import io.netty.handler.codec.DecoderException;
 import io.netty.handler.codec.TooLongFrameException;
 import io.netty.handler.codec.serialization.ObjectDecoder;
+import io.netty.util.CharsetUtil;
+import org.apache.log4j.Logger;
 
 import java.nio.ByteOrder;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -183,9 +187,11 @@ import java.util.List;
  * | 0xCA | 0x0010 | 0xFE | "HELLO, WORLD" |      | 0xFE | "HELLO, WORLD" |
  * +------+--------+------+----------------+      +------+----------------+
  * </pre>
- * @see LengthFieldPrepender
  */
 public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
+
+
+    private static final Logger LOG = Logger.getLogger(CubeInboundHandler.class);
 
     private final ByteOrder byteOrder;
     private final int maxFrameLength;
@@ -359,6 +365,7 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
      *                          be created.
      */
     protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
+       System.out.println( Calendar.getInstance().getTimeInMillis()+"...LengthFieldBasedFrameDecoder..............."+ in.toString(CharsetUtil.UTF_8));
         if (discardingTooLongFrame) {
             long bytesToDiscard = this.bytesToDiscard;
             int localBytesToDiscard = (int) Math.min(bytesToDiscard, in.readableBytes());
@@ -375,7 +382,6 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
 
         int actualLengthFieldOffset = in.readerIndex() + lengthFieldOffset;
         long frameLength = getUnadjustedFrameLength(in, actualLengthFieldOffset, lengthFieldLength, byteOrder);
-
         if (frameLength < 0) {
             in.skipBytes(lengthFieldEndOffset);
             throw new CorruptedFrameException(
@@ -383,6 +389,8 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
         }
 
         frameLength += lengthAdjustment + lengthFieldEndOffset;
+
+        int frameLengthInt = (int) frameLength;
 
         if (frameLength < lengthFieldEndOffset) {
             in.skipBytes(lengthFieldEndOffset);
@@ -394,27 +402,18 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
         if (frameLength > maxFrameLength) {
             long discard = frameLength - in.readableBytes();
             tooLongFrameLength = frameLength;
-
             if (discard < 0) {
-                // buffer contains more bytes then the frameLength so we can discard all now
                 in.skipBytes((int) frameLength);
             } else {
-                // Enter the discard mode and discard everything received so far.
                 discardingTooLongFrame = true;
                 bytesToDiscard = discard;
                 in.skipBytes(in.readableBytes());
             }
             failIfNecessary(true);
             return null;
-        }
-
-        // never overflows because it's less than maxFrameLength
-        int frameLengthInt = (int) frameLength;
-        if (in.readableBytes() < frameLengthInt) {
+        }else if (in.readableBytes() < frameLengthInt) {
             return null;
-        }
-
-        if (initialBytesToStrip > frameLengthInt) {
+        }else if (initialBytesToStrip > frameLengthInt) {
             in.skipBytes(frameLengthInt);
             throw new CorruptedFrameException(
                     "Adjusted frame length (" + frameLength + ") is less " +
@@ -452,13 +451,7 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
             frameLength = buf.getUnsignedMedium(offset);
             break;
         case 4:
-//            frameLength = buf.getUnsignedInt(offset);
-//            break;
-        	   //字符串长度占用的字节数
-        	   String s="";
-        	   for(int i=0;i<2;i++)
-        	   s+=(char)buf.getByte(offset+i);
-               frameLength = Integer.parseInt(s,16);
+            frameLength = 94;
             break;
         case 8:
             frameLength = buf.getLong(offset);
@@ -502,7 +495,7 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
      */
     protected ByteBuf extractFrame(ChannelHandlerContext ctx, ByteBuf buffer, int index, int length) {
         ByteBuf frame = ctx.alloc().buffer(length);
-        frame.writeBytes(buffer, index, length);
+        frame.writeBytes(buffer, (index+1), length);
         return frame;
     }
 

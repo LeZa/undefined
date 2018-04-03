@@ -1,11 +1,5 @@
 package com.cube.core;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -15,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.Lifecycle;
 import org.springframework.stereotype.Component;
 
-import com.cube.logic.HttpProcess;
-import com.cube.logic.HttpProcessRunnable;
 import com.cube.server.CubeBootstrap;
 import com.cube.server.CubeBootstrapLong;
 import com.cube.server.HttpBootstrap;
@@ -42,10 +34,7 @@ public class Service implements Lifecycle {
 	
 	@Autowired
 	private WebSocketBootstrap webSocketBootstrap;
-	
-	
-//	@Autowired
-//	private DbManager dbManager;
+
 
 	public void start() {
 		LOG.info("Service serverRun start");
@@ -83,62 +72,10 @@ public class Service implements Lifecycle {
 				e.printStackTrace();
 			}
 		}
-		
-		 
-		// 初始化路由
-		LOG.info("初始化路由httpBootstrap");
-		initRoute();
+
 		threadPool.submit(httpBootstrap);
-		
 	}
 
-	
-	
-	// 初始化路由
-	private void initRoute() {
-		try {
-			String pkg = "com.cube.logic.http";
-			InputStream in = this.getClass().getResourceAsStream("/route");
-			InputStreamReader inReader = new InputStreamReader(in);
-			BufferedReader br = new BufferedReader(inReader);
-			String line = null;
-			String[] args = null;
-			while ((line = br.readLine()) != null) {
-				args = line.split("\\s{1,}");
-				if (args.length != 2) {
-					continue;
-				}
-
-				Class<?> clazz = this.getClass().forName(pkg + "." + args[1]);
-				Class<?>[] ifaces = clazz.getInterfaces();
-				if (!isInterface(clazz, HttpProcess.class)) {
-					LOG.info("{} is not the HttpProcess"+clazz.getCanonicalName());
-					continue;
-				}
-
-				HttpProcess process = (HttpProcess) clazz.newInstance();
-				HttpProcessRunnable.ROUTE.put(args[0], process);
-				if (args[0].endsWith("/") == false) {
-					//LOG.info("args[0]=:"+ args[0] + "/");
-					HttpProcessRunnable.ROUTE.put(args[0] + "/", process);
-				} else {
-					//LOG.info("args[0222]=:"+ args[0].substring(0, args[0].length() - 2));
-					HttpProcessRunnable.ROUTE.put(args[0].substring(0, args[0].length() - 2), process);
-				}
-			}
-		} catch (FileNotFoundException e) {
-			LOG.error("初始化路由文件没找到", e);
-		} catch (IOException e) {
-			LOG.error("初始化路由出错", e);
-		} catch (ClassNotFoundException e) {
-			LOG.error("初始化路由出错", e);
-		} catch (InstantiationException e) {
-			LOG.error("初始化路由出错", e);
-		} catch (IllegalAccessException e) {
-			LOG.error("初始化路由出错", e);
-		}
-
-	}
 
 	public void stop() {
 		LOG.info("Service serverRun stop");
