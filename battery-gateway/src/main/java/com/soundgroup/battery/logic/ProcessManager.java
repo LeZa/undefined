@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.PostConstruct;
 
-import com.cube.logic.proc.*;
 import com.soundgroup.battery.logic.proc.BatteryInfoProcess;
 import com.soundgroup.battery.logic.proc.CloseBatteryProcess;
 import com.soundgroup.battery.logic.proc.OpenBatteryProcess;

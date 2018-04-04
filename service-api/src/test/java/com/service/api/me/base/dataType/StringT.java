@@ -13,8 +13,7 @@ public class StringT {
         System.out.println("SN..."+getLenArr[1]+getLenArr[2]+getLenArr[3]+getLenArr[4]+getLenArr[5]);//SN
         System.out.println("A..."+getLenArr[12]+getLenArr[13]+getLenArr[14]+getLenArr[15]);
         System.out.println( "battery..."+getLenArr[16]);//0-10
-        System.out.println( "N..."+getLenArr[17]+getLenArr[18]+getLenArr[19]+getLenArr[20]+getLenArr[21]);
-
+        System.out.println( "N..."+getLenArr[17]+getLenArr[18]+getLenArr[19]+getLenArr[20]);
 
         int xe = 24;
         System.out.println(    String.format("%x",xe));

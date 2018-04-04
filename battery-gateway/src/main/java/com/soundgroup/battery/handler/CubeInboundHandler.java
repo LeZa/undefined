@@ -1,5 +1,8 @@
 package com.soundgroup.battery.handler;
 
+import com.soundgroup.battery.event.CubeMsg;
+import com.soundgroup.battery.event.EventEnum;
+import com.soundgroup.battery.server.CubeBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
@@ -92,14 +95,15 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
         try {
             ByteBuf msgByteBuf = (ByteBuf)msg;
             System.out.println(Calendar.getInstance().getTimeInMillis()+"..."+ msgByteBuf.toString(CharsetUtil.UTF_8));
-//            String msgStr = msgByteBuf.toString( CharsetUtil.UTF_8);
-//            String[] msrArr = msgStr.split(",");
-//            CubeMsg cubeMsg=new CubeMsg();
-//            cubeMsg.setType(EventEnum.SAVE_BATTERY_INFO);
-//            cubeMsg.setData( msrArr[1].getBytes() );//SN
-//            cubeMsg.setCtx(ctx);
-//            cubeMsg.setDataString(msgStr);
-//            CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
+            String msgStr = msgByteBuf.toString( CharsetUtil.UTF_8);
+            String[] msrArr = msgStr.split(",");
+            String sn = msrArr[1]+msrArr[2]+msrArr[3]+msrArr[4]+msrArr[5];//SN
+            CubeMsg cubeMsg=new CubeMsg();
+            cubeMsg.setType(EventEnum.SAVE_BATTERY_INFO);
+            cubeMsg.setData( sn.getBytes() );//SN
+            cubeMsg.setCtx(ctx);
+            cubeMsg.setDataString(msgStr);
+            CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
         } catch (Exception ex) {
         	ctx.pipeline().close();
         } finally {

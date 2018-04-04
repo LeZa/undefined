@@ -12,13 +12,12 @@ import org.springframework.context.annotation.Scope;
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
 
-
 @Configuration
 public class BeanConfig {
 
 
-    @Bean(name = {"dataSource"})
-    public DataSource dataSource() throws PropertyVetoException {
+    @Bean(name = {"comboPooledDataSource"})
+    public ComboPooledDataSource dataSource() throws PropertyVetoException {
         ComboPooledDataSource cpds = new ComboPooledDataSource();
         cpds.setDriverClass( "com.mysql.jdbc.Driver" );
     	cpds.setJdbcUrl("jdbc:mysql://192.168.109.26:3306/sharing_battery?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull" );
@@ -27,7 +26,6 @@ public class BeanConfig {
     	cpds.setMinPoolSize(5);
     	cpds.setAcquireIncrement(5);
     	cpds.setMaxPoolSize(20);
-
         return cpds;
     }
 

@@ -1,6 +1,5 @@
 package com.soundgroup.battery.handler;
 
-import com.cube.utils.newStringUtils.*;
 import com.soundgroup.battery.utils.newStringUtils.MsgDecoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

@@ -1,6 +1,5 @@
 package com.soundgroup.battery.event;
 
-
 import java.io.Serializable;
 
 import org.apache.commons.lang.builder.HashCodeBuilder;

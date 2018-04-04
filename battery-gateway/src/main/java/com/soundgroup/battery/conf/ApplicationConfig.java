@@ -10,7 +10,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @Configuration
 @PropertySource("classpath:/application.properties")
 @Import(value = {BeanConfig.class})
-@ComponentScan(basePackages = {"com.cube"})
+@ComponentScan(basePackages = {"com.soundgroup.battery"})
 public class ApplicationConfig {
 
     @Bean
