@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway (1) (com.kakawait)" />
+        <module name="battery-gateway" />
         <module name="cube" />
         <module name="dummy-service" />
         <module name="netty.io" />
@@ -21,6 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="battery-gateway" target="1.5" />
       <module name="netty.io" target="1.8" />
       <module name="service-api_main" target="1.8" />
       <module name="service-api_test" target="1.8" />
