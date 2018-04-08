@@ -4,6 +4,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,14 +16,25 @@ import java.beans.PropertyVetoException;
 @Configuration
 public class BeanConfig {
 
+    @Value("${jdbc.url}")
+    private String jdbcUrl;
+
+    @Value("${jdbc.driverclass}")
+    private String jdbcDriverClass;
+
+    @Value("${jdbc.username}")
+    private String jdbcUser;
+
+    @Value("${jdbc.password}")
+    private String jdbcPassword;
 
     @Bean(name = {"comboPooledDataSource"})
     public ComboPooledDataSource dataSource() throws PropertyVetoException {
         ComboPooledDataSource cpds = new ComboPooledDataSource();
-        cpds.setDriverClass( "com.mysql.jdbc.Driver" );
-    	cpds.setJdbcUrl("jdbc:mysql://192.168.109.26:3306/sharing_battery?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull" );
-    	cpds.setUser("battery");
-    	cpds.setPassword("@sd#battery");
+        cpds.setDriverClass( jdbcDriverClass );
+    	cpds.setJdbcUrl(jdbcUrl);
+    	cpds.setUser(jdbcUser);
+    	cpds.setPassword(jdbcPassword);
     	cpds.setMinPoolSize(5);
     	cpds.setAcquireIncrement(5);
     	cpds.setMaxPoolSize(20);

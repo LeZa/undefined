@@ -31,24 +31,24 @@ import java.sql.SQLException;
  * @Description Receive  battery info
  * @date 20180329
  */
-
 public class ReceiveBatteryProcess
         implements Process {
 
     public void excute(CubeMsg msg) {
+        java.sql.Connection connection = null;
+        PreparedStatement preparedStatement = null;
         try {
             String mac = new String(msg.getData());
             Connection conn = null;
             conn = CommUtils.getConn(msg.getCtx());
             conn.setMac(mac);
             ConnectionManager.getInstance().addToConns(conn.getMac(), conn);
-
             AnnotationConfigApplicationContext
                     applicationContext = CubeRun.getApplicationContext();
-            ComboPooledDataSource comboPooledDataSource = (ComboPooledDataSource) applicationContext.getBean("comboPooledDataSource");
-            java.sql.Connection connection = comboPooledDataSource.getConnection();
+            ComboPooledDataSource  comboPooledDataSource  = (ComboPooledDataSource) applicationContext.getBean("comboPooledDataSource");
+            connection = comboPooledDataSource.getConnection();
             String sql = "select count(1) from Battery ery where ery.battery_number=?";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement  = connection.prepareStatement(sql);
             preparedStatement.setString(1, new String(msg.getData()));
 
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -84,7 +84,6 @@ public class ReceiveBatteryProcess
                     preparedStatement.execute();
                 }
             }
-
           /*  String backString = Utils.wristwatchToPlatform(msg.getDataString()).get("responseMessage")
                     + "";
             if (null != backString && !"".equals(backString)) {
@@ -106,6 +105,21 @@ public class ReceiveBatteryProcess
             }*/
         } catch (Exception exp) {
            exp.printStackTrace();
+        }finally {
+            if( preparedStatement != null ){
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if( connection != null ){
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
