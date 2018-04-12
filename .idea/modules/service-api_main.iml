@@ -21,6 +21,8 @@
     <orderEntry type="library" name="Gradle: cglib:cglib:3.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="library" name="Gradle: com.github.junrar:junrar:0.7" level="project" />
+    <orderEntry type="library" name="Gradle: org.rocksdb:rocksdbjni:5.11.3" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.0.21.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-vfs2:2.0" level="project" />

@@ -1,6 +1,7 @@
 package com.soundgroup.battery.conf;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.soundgroup.battery.core.common.RocksDBHolder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -39,6 +40,16 @@ public class BeanConfig {
     	cpds.setAcquireIncrement(5);
     	cpds.setMaxPoolSize(20);
         return cpds;
+    }
+
+    private String shardId = "1";
+
+
+    @Bean(name = {"rocksDBHolder"})
+    public RocksDBHolder initStorage() throws Exception {
+        RocksDBHolder rocksDBHolder = new RocksDBHolder(shardId);
+        rocksDBHolder.init();
+       return rocksDBHolder;
     }
 
 

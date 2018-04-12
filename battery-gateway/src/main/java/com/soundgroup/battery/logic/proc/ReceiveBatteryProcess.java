@@ -15,6 +15,7 @@ import com.soundgroup.battery.utils.HexByteToolUtil;
 import com.soundgroup.battery.utils.newStringUtils.Utils;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import org.rocksdb.RocksDB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
@@ -34,11 +35,14 @@ import java.sql.SQLException;
 public class ReceiveBatteryProcess
         implements Process {
 
+
     public void excute(CubeMsg msg) {
         java.sql.Connection connection = null;
         PreparedStatement preparedStatement = null;
+
         try {
             String mac = new String(msg.getData());
+            String msgString = msg.getDataString();
             Connection conn = null;
             conn = CommUtils.getConn(msg.getCtx());
             conn.setMac(mac);
@@ -54,7 +58,6 @@ public class ReceiveBatteryProcess
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 int len = resultSet.getInt(1);
-                String msgString = msg.getDataString();
                 String[] msgArr = msgString.split(",");
                 String sn = new String(msg.getData());
                 if (len > 0) {

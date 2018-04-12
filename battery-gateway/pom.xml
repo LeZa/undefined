@@ -94,5 +94,11 @@
             <version>2.1.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.rocksdb</groupId>
+            <artifactId>rocksdbjni</artifactId>
+            <version>5.11.3</version>
+        </dependency>
+
     </dependencies>
 </project>

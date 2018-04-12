@@ -54,5 +54,16 @@ dependencies {
     compile group: 'com.github.junrar', name: 'junrar', version: '0.7'
 
 
+    // https://mvnrepository.com/artifact/org.rocksdb/rocksdbjni
+    compile group: 'org.rocksdb', name: 'rocksdbjni', version: '5.11.3'
+
+
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
+
+
+    // https://mvnrepository.com/artifact/io.netty/netty-all
+    compile group: 'io.netty', name: 'netty-all', version: '4.0.21.Final'
+
 
 }

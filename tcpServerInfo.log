@@ -1,19 +1,279 @@
-2018-04-08 11:18:27 030-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
-2018-04-08 11:18:27 065-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
-2018-04-08 11:18:27 066-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
-2018-04-08 11:18:27 069-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
-2018-04-08 11:18:27 086-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
-2018-04-08 11:18:27 070-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
-2018-04-08 11:18:27 160-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
-2018-04-08 11:18:27 161-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
-2018-04-08 11:18:27 177-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
-2018-04-08 11:18:27 177-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
-2018-04-08 11:18:27 326-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
-2018-04-08 11:18:27 327-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
-2018-04-08 11:18:27 341-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
-2018-04-08 11:18:27 341-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
-2018-04-08 11:18:27 344-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
-2018-04-08 11:18:27 345-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
-2018-04-08 11:18:28 094-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
-2018-04-08 11:18:28 107-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
-2018-04-08 11:18:28 107-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 09:43:03 661-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 09:43:04 682-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 09:43:04 683-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 09:43:04 685-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 09:43:04 685-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 09:43:04 690-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 09:43:04 711-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 09:43:04 713-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 09:43:04 713-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 09:43:04 714-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 09:43:04 787-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 09:43:04 788-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 09:43:04 788-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 09:43:04 789-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 09:43:04 790-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 09:43:04 791-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 09:43:05 691-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 09:43:05 693-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 09:43:05 694-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 09:43:28 879-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 09:43:28 879-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 09:43:28 881-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:115)]---> {} not exists, make it failed/data/wal_rocksdb
+2018-04-12 09:43:28 890-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:139)]---> dataDir make it OK
+2018-04-12 09:43:28 891-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 09:43:28 896-[nioEventLoopGroup-3-1]-[ERROR]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:151)]---> exception : While mkdir if missing: /data/wal_rocksdb: No such file or directory
+org.rocksdb.RocksDBException: While mkdir if missing: /data/wal_rocksdb: No such file or directory
+	at org.rocksdb.RocksDB.open(Native Method)
+	at org.rocksdb.RocksDB.open(RocksDB.java:231)
+	at com.soundgroup.battery.core.common.RocksDBHolder.openRocksDB(RocksDBHolder.java:148)
+	at com.soundgroup.battery.core.common.RocksDBHolder.init(RocksDBHolder.java:173)
+	at com.soundgroup.battery.handler.CubeChannelInit.initStorage(CubeChannelInit.java:41)
+	at com.soundgroup.battery.handler.CubeChannelInit.initChannel(CubeChannelInit.java:47)
+	at com.soundgroup.battery.handler.CubeChannelInit.initChannel(CubeChannelInit.java:16)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRegistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:732)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:443)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:375)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:419)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:370)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-12 09:44:30 806-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 09:44:32 036-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 09:44:32 037-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 09:44:32 039-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 09:44:32 043-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 09:44:32 055-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 09:44:32 074-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 09:44:32 074-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 09:44:32 076-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 09:44:32 076-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 09:44:32 143-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 09:44:32 144-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 09:44:32 148-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 09:44:32 148-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 09:44:32 150-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 09:44:32 151-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 09:44:33 056-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 09:44:33 059-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 09:44:33 060-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 09:45:13 142-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 09:45:13 143-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 09:45:13 145-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 09:45:13 154-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:139)]---> dataDir make it OK
+2018-04-12 09:45:13 154-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 09:45:13 180-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 09:45:13 181-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 09:55:07 010-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 09:55:07 973-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 09:55:07 973-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 09:55:07 976-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 09:55:07 976-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 09:55:07 976-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 09:55:08 004-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 09:55:08 005-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 09:55:08 008-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 09:55:08 009-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 09:55:08 068-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 09:55:08 069-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 09:55:08 073-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 09:55:08 076-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 09:55:08 081-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 09:55:08 081-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 09:55:08 977-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 09:55:08 980-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 09:55:08 980-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 09:55:24 835-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 09:55:24 836-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 09:55:24 838-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 09:55:24 844-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 09:55:24 844-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 09:55:24 864-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 09:55:24 865-[nioEventLoopGroup-3-1]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:00:22 597-[nioEventLoopGroup-3-2]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:00:22 598-[nioEventLoopGroup-3-2]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:00:22 598-[nioEventLoopGroup-3-2]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:00:22 599-[nioEventLoopGroup-3-2]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:00:22 599-[nioEventLoopGroup-3-2]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:00:22 606-[nioEventLoopGroup-3-2]-[ERROR]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:151)]---> exception : While lock file: data/rocksdb//LOCK: No locks available
+org.rocksdb.RocksDBException: While lock file: data/rocksdb//LOCK: No locks available
+	at org.rocksdb.RocksDB.open(Native Method)
+	at org.rocksdb.RocksDB.open(RocksDB.java:231)
+	at com.soundgroup.battery.core.common.RocksDBHolder.openRocksDB(RocksDBHolder.java:148)
+	at com.soundgroup.battery.core.common.RocksDBHolder.init(RocksDBHolder.java:173)
+	at com.soundgroup.battery.handler.CubeChannelInit.initStorage(CubeChannelInit.java:41)
+	at com.soundgroup.battery.handler.CubeChannelInit.initChannel(CubeChannelInit.java:47)
+	at com.soundgroup.battery.handler.CubeChannelInit.initChannel(CubeChannelInit.java:16)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRegistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:732)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:443)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:375)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:419)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:370)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:748)
+2018-04-12 10:03:41 516-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 10:03:42 342-[main]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:03:42 342-[main]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:03:42 344-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:03:42 349-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:03:42 350-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:03:42 372-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 10:03:42 373-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:03:42 383-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 10:03:42 383-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 10:03:42 385-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 10:03:42 385-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 10:03:42 385-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 10:03:42 407-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 10:03:42 408-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 10:03:42 408-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 10:03:42 410-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 10:03:42 461-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 10:03:42 461-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 10:03:42 462-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 10:03:42 462-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 10:03:42 463-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 10:03:42 464-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 10:03:43 386-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 10:03:43 388-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 10:03:43 389-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 10:09:29 954-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 10:09:31 111-[main]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:09:31 112-[main]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:09:31 114-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:09:31 123-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:09:31 123-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:09:31 146-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 10:09:31 146-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:09:31 158-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 10:09:31 158-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 10:09:31 161-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 10:09:31 161-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 10:09:31 161-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 10:09:31 191-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 10:09:31 191-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 10:09:31 191-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 10:09:31 199-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 10:09:31 249-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 10:09:31 250-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 10:09:31 249-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 10:09:31 251-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 10:09:31 252-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 10:09:31 253-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 10:09:32 161-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 10:09:32 164-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 10:09:32 164-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 10:14:16 717-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 10:14:17 703-[main]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:14:17 704-[main]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:14:17 706-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:14:17 712-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:14:17 712-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:14:17 747-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 10:14:17 748-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:14:17 760-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 10:14:17 760-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 10:14:17 763-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 10:14:17 764-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 10:14:17 763-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 10:14:17 789-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 10:14:17 789-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 10:14:17 790-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 10:14:17 790-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 10:14:17 841-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 10:14:17 841-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 10:14:17 842-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 10:14:17 842-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 10:14:17 842-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 10:14:17 844-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 10:14:18 763-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 10:14:18 766-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 10:14:18 767-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 10:32:19 169-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 10:32:20 088-[main]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:32:20 088-[main]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:32:20 090-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:32:20 096-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:32:20 097-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:32:20 130-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 10:32:20 130-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:32:20 141-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 10:32:20 142-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 10:32:20 145-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 10:32:20 145-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 10:32:20 147-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 10:32:20 179-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 10:32:20 179-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 10:32:20 179-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 10:32:20 182-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 10:32:20 262-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 10:32:20 262-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 10:32:20 264-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 10:32:20 264-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 10:32:20 268-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 10:32:20 268-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 10:32:21 146-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 10:32:21 148-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 10:32:21 149-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 10:34:38 503-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 10:34:39 486-[main]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:34:39 487-[main]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:34:39 489-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:34:39 495-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:34:39 495-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:34:39 520-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 10:34:39 521-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:34:39 530-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 10:34:39 530-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 10:34:39 532-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 10:34:39 532-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 10:34:39 532-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 10:34:39 566-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 10:34:39 567-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 10:34:39 568-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 10:34:39 568-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 10:34:39 635-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 10:34:39 635-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 10:34:39 636-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 10:34:39 636-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 10:34:39 637-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 10:34:39 636-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 10:34:40 533-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 10:34:40 535-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 10:34:40 536-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................
+2018-04-12 10:42:52 563-[main]-[INFO ]-[CubeRun.init(ProcessManager.java:40)]-init the INSTANCE OF ProcessManager
+2018-04-12 10:42:53 511-[main]-[INFO ]-[RocksDBHolder.setBlockCacheSize(RocksDBHolder.java:80)]---> blockCacheSize = {} GB5
+2018-04-12 10:42:53 512-[main]-[INFO ]-[RocksDBHolder.setBlockCacheCompressedSize(RocksDBHolder.java:93)]---> blockCacheCompressedSize = {} GB2
+2018-04-12 10:42:53 513-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:110)]---> {} existsdata/wal_rocksdb
+2018-04-12 10:42:53 520-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:136)]---> data path is OK : {}data/rocksdb/
+2018-04-12 10:42:53 520-[main]-[INFO ]-[RocksDBHolder.initConfig(RocksDBHolder.java:142)]---> Init config OK
+2018-04-12 10:42:53 555-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:149)]---> RocksDB data path : {}data/rocksdb/
+2018-04-12 10:42:53 555-[main]-[INFO ]-[RocksDBHolder.openRocksDB(RocksDBHolder.java:154)]---> Open RocksDB OK
+2018-04-12 10:42:53 568-[main]-[INFO ]-[Service.isRunning(Service.java:89)]-Service serverRun isRunning
+2018-04-12 10:42:53 569-[main]-[INFO ]-[Service.start(Service.java:39)]-Service serverRun start
+2018-04-12 10:42:53 571-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:42)]-设置HttpBootstrap
+2018-04-12 10:42:53 571-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:55)]-设置serverbootstrap
+2018-04-12 10:42:53 571-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:57)]-设置serverbootstrap
+2018-04-12 10:42:53 603-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:78)]-处理器设置为daemon
+2018-04-12 10:42:53 603-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:75)]-处理器设置为daemon
+2018-04-12 10:42:53 611-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:78)]-启动处理器进程
+2018-04-12 10:42:53 604-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:81)]-启动处理器进程
+2018-04-12 10:42:53 683-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:85)]-listen port=:9152
+2018-04-12 10:42:53 684-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:88)]-listen port=:9151
+2018-04-12 10:42:53 684-[pool-1-thread-1]-[INFO ]-[CubeBootstrap.run(CubeBootstrap.java:91)]-等待TCP结束...............................
+2018-04-12 10:42:53 684-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:63)]-listen port=:9153
+2018-04-12 10:42:53 684-[pool-1-thread-2]-[INFO ]-[CubeBootstrapLong.run(CubeBootstrapLong.java:88)]-等待TCP结束..........................
+2018-04-12 10:42:53 685-[pool-1-thread-3]-[INFO ]-[WebSocketBootstrap.run(WebSocketBootstrap.java:64)]-等待HTTP服务结束...
+2018-04-12 10:42:54 571-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:43)]-设置HttpBootstrap
+2018-04-12 10:42:54 575-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:64)]-listen port=:9154
+2018-04-12 10:42:54 575-[pool-1-thread-4]-[INFO ]-[HttpBootstrap.run(HttpBootstrap.java:65)]-等待HTTP服务结束...........................

@@ -26,7 +26,6 @@
       <module name="netty.io" target="1.8" />
       <module name="service-api_main" target="1.8" />
       <module name="service-api_test" target="1.8" />
-      <module name="service-battery" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,5 +1,7 @@
 package com.soundgroup.battery.handler;
 
+import com.soundgroup.battery.core.CubeRun;
+import com.soundgroup.battery.core.common.RocksDBHolder;
 import com.soundgroup.battery.event.CubeMsg;
 import com.soundgroup.battery.event.EventEnum;
 import com.soundgroup.battery.server.CubeBootstrap;
@@ -21,14 +23,27 @@ import com.soundgroup.battery.core.conn.Connection;
 import com.soundgroup.battery.core.conn.ConnectionManager;
 import com.soundgroup.battery.utils.ByteBufUtils;
 import com.soundgroup.battery.utils.CommUtils;
+import org.rocksdb.RocksDB;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @Sharable
 public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
 
+
+
+    private RocksDBHolder rocksDBHolder;
+
+    public CubeInboundHandler(){
+        AnnotationConfigApplicationContext
+                applicationContext = CubeRun.getApplicationContext();
+        rocksDBHolder = (RocksDBHolder) applicationContext.getBean("rocksDBHolder");
+    }
+
     /**
      * @description DelayClose
      * @author niulu
-     * @version 0.1
+     * @version 0.122
      */
     class DelayClose implements Runnable {
 
@@ -103,6 +118,18 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
             cubeMsg.setData( sn.getBytes() );//SN
             cubeMsg.setCtx(ctx);
             cubeMsg.setDataString(msgStr);
+            String replaceMsg = msgStr.replaceAll(",","");
+            replaceMsg = replaceMsg+"%"+Calendar.getInstance().getTimeInMillis();
+            if( rocksDBHolder.getResource().get(sn.getBytes()) != null){
+                byte[] exists  = rocksDBHolder.getResource().get(sn.getBytes());
+                byte[] newVal = replaceMsg.getBytes();
+                String existsStr =  new String( exists );
+                String newStr =  new String( newVal );
+                String putStr = existsStr + ","+ newStr;
+                rocksDBHolder.getResource().put(sn.getBytes(),putStr.getBytes());
+            }else{
+                rocksDBHolder.getResource().put(sn.getBytes(),replaceMsg.getBytes());
+            }
             CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
         } catch (Exception ex) {
         	ctx.pipeline().close();
