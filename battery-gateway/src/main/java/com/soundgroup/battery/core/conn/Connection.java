@@ -28,6 +28,11 @@ public class Connection {
      */
     private ConcurrentHashMap<String, Object> attr = new ConcurrentHashMap<String, Object>();
 
+    public Connection(long id, ChannelHandlerContext ctx) {
+        this.id = id;
+        this.ctx = ctx;
+    }
+
     public Object getAttr(String key) {
         return attr.get(key);
     }
@@ -38,11 +43,6 @@ public class Connection {
 
     public Object removeAttr(String key) {
         return attr.remove(key);
-    }
-
-    public Connection(long id, ChannelHandlerContext ctx) {
-        this.id = id;
-        this.ctx = ctx;
     }
 
     public long getId() {

@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.PostConstruct;
 
-import com.soundgroup.battery.logic.proc.BatteryInfoProcess;
 import com.soundgroup.battery.logic.proc.CloseBatteryProcess;
 import com.soundgroup.battery.logic.proc.OpenBatteryProcess;
 import com.soundgroup.battery.logic.proc.ReceiveBatteryProcess;
@@ -15,8 +14,6 @@ import com.soundgroup.battery.event.EventEnum;
 
 /**
  * @ClassName: ProcessManager
- * @author A18ccms a18ccms_gmail_com 
- * @date Jul 9, 2015 12:44:57 PM
  */
 @Component
 public class ProcessManager {
@@ -34,7 +31,6 @@ public class ProcessManager {
         return processMap.get(eventEnum);
     }
 
-
     @PostConstruct
     private void init() {
         LOG.info("init the INSTANCE OF ProcessManager");
@@ -49,11 +45,6 @@ public class ProcessManager {
          * close battery process
          */
         INSTANCE.processMap.put(EventEnum.CLOSE_BATTERY,new CloseBatteryProcess());
-
-        /**
-         * http get battery info process
-         */
-        INSTANCE.processMap.put(EventEnum.HTTP_BATTERY_INFO,new BatteryInfoProcess());
 
         /**
          * save battery info process

@@ -30,7 +30,7 @@ public class BatteryEntity {
     /**
      * 纬度值
      */
-    private String nNum;
+    private String pointX;
 
     /**
      * 纬度标志位
@@ -40,7 +40,7 @@ public class BatteryEntity {
     /**
      * 经度值
      */
-    private String eNum;
+    private String pointY;
 
     /**
      * 经度标志位
@@ -93,6 +93,13 @@ public class BatteryEntity {
     private String elecPower;
 
 
+
+    /**
+     *battery
+     */
+    private String power;
+
+
     public String getDeviceProvider() {
         return deviceProvider;
     }
@@ -133,13 +140,6 @@ public class BatteryEntity {
         this.avSign = avSign;
     }
 
-    public String getnNum() {
-        return nNum;
-    }
-
-    public void setnNum(String nNum) {
-        this.nNum = nNum;
-    }
 
     public String getnSign() {
         return nSign;
@@ -149,12 +149,20 @@ public class BatteryEntity {
         this.nSign = nSign;
     }
 
-    public String geteNum() {
-        return eNum;
+    public String getPointX() {
+        return pointX;
     }
 
-    public void seteNum(String eNum) {
-        this.eNum = eNum;
+    public void setPointX(String pointX) {
+        this.pointX = pointX;
+    }
+
+    public String getPointY() {
+        return pointY;
+    }
+
+    public void setPointY(String pointY) {
+        this.pointY = pointY;
     }
 
     public String geteSign() {
@@ -236,4 +244,13 @@ public class BatteryEntity {
     public void setElecPower(String elecPower) {
         this.elecPower = elecPower;
     }
+
+    public String getPower() {
+        return power;
+    }
+
+    public void setPower(String power) {
+        this.power = power;
+    }
+
 }

@@ -86,33 +86,5 @@ public class CubeMsg implements Serializable {
 	public void setDataObject(Object dataObject) {
 		this.dataObject = dataObject;
 	}
-
-
-	static class Device{
-
-        private String deviceProvide;
-
-        private String deviceCode;
-
-        @Override
-        public boolean equals( Object obj ){
-            if( obj == this ){
-                return true;
-            }
-            if( !(obj instanceof  Device )){
-                return  false;
-            }
-            Device device = (Device)obj;
-            return device.deviceCode == deviceCode
-                    && device.deviceProvide == deviceProvide;
-        }
-
-        @Override
-        public int hashCode(){
-            return new HashCodeBuilder( 17,37)
-                        .append(deviceCode)
-                        .append(deviceCode)
-                        .toHashCode();
-        }
-    }
+	
 }

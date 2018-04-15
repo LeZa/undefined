@@ -26,16 +26,12 @@ public class CubeRun {
             return;
         }
 
-        /**
-         * @Description Start spring annotation
-         */
-        context   = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         context.start();
         synchronized (forWait) {
         	forWait.wait();
 		}
         context.close();
-
     }
 
     public static  AnnotationConfigApplicationContext getApplicationContext(){

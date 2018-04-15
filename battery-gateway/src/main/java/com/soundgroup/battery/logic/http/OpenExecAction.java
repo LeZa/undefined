@@ -25,7 +25,7 @@ import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
  * @author sushile
  * @date 20180328
  */
-@Component("openExecAction")
+@Component
 public class OpenExecAction
             extends DefaultHttpProcess{
 

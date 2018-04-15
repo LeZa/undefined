@@ -12,8 +12,9 @@ import com.soundgroup.battery.utils.HexByteToolUtil;
 import com.google.gson.Gson;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import io.netty.util.concurrent.Future;
+import io.netty.util.concurrent.GenericFutureListener;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -33,16 +34,10 @@ public class OpenBatteryProcess
                 sb.append("*HQ,");
                 sb.append( new String(msg.getData()) );
                 sb.append(",S20,095540,1,0#");
-                System.out.println(Calendar.getInstance().getTimeInMillis()+"...openMsg..sb..." + sb.toString() );
                 ByteBuf buff=(ByteBuf) Unpooled.wrappedBuffer(
                         HexByteToolUtil.hexStringToBytes(HexByteToolUtil.encode( sb.toString() )));
                 String sn = new String( msg.getData() );
-                conn.getCtx().writeAndFlush(buff);
-                ReplyEvent replyEvent = CubeBootstrap.processRunnable.getReply(sn);
-                Gson gson = new Gson();
-                String msgStr = new  String( msg.getData());
-                replyEvent.setObj(gson.toJson(ResponseEntity.sussRtn("open device success "+msgStr
-                        ,new ArrayList())));
+                conn.getCtx().writeAndFlush(buff).addListener( new OpenBatteryProcess.OpenDeviceFutureListener(sn));
                 doing="ok";
                 msg.getCtx().pipeline().writeAndFlush(doing);
             } else {
@@ -54,6 +49,34 @@ public class OpenBatteryProcess
             msg.getCtx().pipeline().close();
         }
 
-
     }
+
+
+    /**
+     * @Description openDeviceListener;
+     * @author sushile
+     */
+    static class OpenDeviceFutureListener implements  GenericFutureListener{
+
+        private String sn = null;
+
+        public OpenDeviceFutureListener( String sn ){
+            this.sn = sn;
+        }
+
+        public void operationComplete(Future future) throws Exception {
+            Gson gson = new Gson();
+            if( future.isSuccess() ){
+                ReplyEvent replyEvent = CubeBootstrap.processRunnable.getReply(sn);
+                replyEvent.setObj(gson.toJson(ResponseEntity.sussRtn("open device success"
+                        ,new String())));
+            }
+            if( future.isCancelled() ){
+                ReplyEvent replyEvent = CubeBootstrap.processRunnable.getReply(sn);
+                replyEvent.setObj(gson.toJson(ResponseEntity.sussRtn("open device fail"
+                        ,new String())));
+            }
+            }
+        }
+
 }

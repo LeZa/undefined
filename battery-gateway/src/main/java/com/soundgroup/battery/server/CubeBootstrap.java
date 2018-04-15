@@ -22,7 +22,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-// @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class CubeBootstrap implements Runnable {
 
     private static final Logger LOG = Logger.getLogger(CubeBootstrap.class);
@@ -35,27 +34,21 @@ public class CubeBootstrap implements Runnable {
 
     @Autowired
     private ServerBootstrap serverBootstrap;
+
     @Resource(name = "CubeChannelInit")
     private ChannelInitializer<SocketChannel> cubeChannelInit;
     
     @Resource(name = "boss")
     private EventLoopGroup boss;
+
     @Resource(name = "cubeTcpWorker")
     private EventLoopGroup worker;
 
-    /**
-     * 本地tcp服务端口
-     */
     @Value("${service.port}")
     private String servicePort;
-
-//    @Autowired
-//    private DbManager dbManager;
     
     public void run() {
 
-        LOG.info("设置serverbootstrap");
-        // 设置工作线程池
         serverBootstrap.group(boss, worker);
         serverBootstrap.channel(NioServerSocketChannel.class);
         serverBootstrap.handler(new LoggingHandler(LogLevel.INFO));
@@ -75,10 +68,8 @@ public class CubeBootstrap implements Runnable {
 
             // 启动工作线程
             Thread processThread = new Thread(processRunnable);
-            LOG.info("处理器设置为daemon");
             //setDaemon方法把java的线程设置为守护线程，此方法的调用必须在线程启动之前执行。只有在当前jvm中所有的线程都为守护线程时，jvm才会退出。
             processThread.setDaemon(true);
-            LOG.info("启动处理器进程");
             processThread.start();
 
             ChannelFuture bindf = serverBootstrap.bind(Integer.valueOf(servicePort));
@@ -102,10 +93,4 @@ public class CubeBootstrap implements Runnable {
         return run;
     }
 
-    /*
-     * Runtime.getRuntime().addShutdownHook(new Thread("System Shutdown Hooker")
-     * {
-     * @Override public void run() { LOG.info("系统关闭中...");
-     * boss.shutdownGracefully(); worker.shutdownGracefully(); } });
-     */
 }

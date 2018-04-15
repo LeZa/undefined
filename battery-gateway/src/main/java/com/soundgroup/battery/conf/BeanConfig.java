@@ -2,6 +2,7 @@ package com.soundgroup.battery.conf;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.soundgroup.battery.core.common.RocksDBHolder;
+import com.soundgroup.battery.logic.http.OpenExecAction;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -51,7 +52,6 @@ public class BeanConfig {
         rocksDBHolder.init();
        return rocksDBHolder;
     }
-
 
     @Bean(name = {"serverBootstrap"})
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

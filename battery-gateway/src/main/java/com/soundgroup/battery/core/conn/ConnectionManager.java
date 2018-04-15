@@ -8,13 +8,15 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * 链接管理类，spring中单例
- * @author fck
- */
 public class ConnectionManager {
 
-    private static final ConnectionManager INSTANCE = new ConnectionManager();
+    private static final ConnectionManager
+                        INSTANCE = new ConnectionManager();
+
+    private AtomicLong atomicLong = new AtomicLong();
+
+    private ConcurrentHashMap<String, Connection>
+            conns = new ConcurrentHashMap<String, Connection>();
 
     public static ConnectionManager getInstance() {
         return INSTANCE;
@@ -23,12 +25,9 @@ public class ConnectionManager {
     private ConnectionManager() {
     }
 
-    private AtomicLong atomicLong = new AtomicLong();
-
-    private ConcurrentHashMap<String, Connection> conns = new ConcurrentHashMap<String, Connection>();
-
     public Connection getNewConnection(ChannelHandlerContext ctx) {
-        Connection conn = new Connection(atomicLong.incrementAndGet(), ctx);
+        Connection conn
+                        = new Connection(atomicLong.incrementAndGet(), ctx);
         return conn;
     }
 
@@ -47,28 +46,19 @@ public class ConnectionManager {
         }
         return connLst;
     }
-    /**
-     * 添加连接
-     * @param key 设备号
-     * @param conn 连接对象
-     * @return
-     */
+
     public Connection addToConns(String key, Connection conn) {
         Connection oldConn = conns.put(key, conn);
         if (oldConn == null) {
-            // 新的key
             return null;
         }
         ChannelHandlerContext ctx = oldConn.getCtx();
         if (ctx == null) {
-            // oldConn无效
             return oldConn;
         }
         if (oldConn.equals(conn)) {
-            // 同key同value
             return null;
         }
-        // 被替换的conn必须关闭
         ctx.pipeline().close();
         return oldConn;
     }

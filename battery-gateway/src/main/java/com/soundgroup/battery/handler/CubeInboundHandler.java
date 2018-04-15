@@ -5,6 +5,7 @@ import com.soundgroup.battery.core.common.RocksDBHolder;
 import com.soundgroup.battery.event.CubeMsg;
 import com.soundgroup.battery.event.EventEnum;
 import com.soundgroup.battery.server.CubeBootstrap;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
@@ -15,22 +16,22 @@ import io.netty.util.Attribute;
 import io.netty.util.CharsetUtil;
 import io.netty.util.ReferenceCountUtil;
 
+import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 import org.apache.commons.lang.StringUtils;
+
 import com.soundgroup.battery.core.common.SysConst;
 import com.soundgroup.battery.core.conn.Connection;
 import com.soundgroup.battery.core.conn.ConnectionManager;
 import com.soundgroup.battery.utils.ByteBufUtils;
 import com.soundgroup.battery.utils.CommUtils;
-import org.rocksdb.RocksDB;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @Sharable
 public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
-
-
 
     private RocksDBHolder rocksDBHolder;
 
@@ -105,9 +106,16 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
     }
 
 
+    /**
+     * Storage rules.
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         try {
+            String currentDay =  new SimpleDateFormat("yyyyMMdd").format( new java.util.Date());
             ByteBuf msgByteBuf = (ByteBuf)msg;
             System.out.println(Calendar.getInstance().getTimeInMillis()+"..."+ msgByteBuf.toString(CharsetUtil.UTF_8));
             String msgStr = msgByteBuf.toString( CharsetUtil.UTF_8);
@@ -118,18 +126,23 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
             cubeMsg.setData( sn.getBytes() );//SN
             cubeMsg.setCtx(ctx);
             cubeMsg.setDataString(msgStr);
-            String replaceMsg = msgStr.replaceAll(",","");
-            replaceMsg = replaceMsg+"%"+Calendar.getInstance().getTimeInMillis();
-            if( rocksDBHolder.getResource().get(sn.getBytes()) != null){
-                byte[] exists  = rocksDBHolder.getResource().get(sn.getBytes());
-                byte[] newVal = replaceMsg.getBytes();
+            /** DaySN  storage start **/
+            String heartMsg = msgStr.replaceAll(",","");
+            String daySN =  sn+currentDay;
+            if( rocksDBHolder.getResource().get(daySN.getBytes()) != null){
+                byte[] exists  = rocksDBHolder.getResource().get(daySN.getBytes());
+                byte[] newVal = heartMsg.getBytes();
                 String existsStr =  new String( exists );
                 String newStr =  new String( newVal );
                 String putStr = existsStr + ","+ newStr;
-                rocksDBHolder.getResource().put(sn.getBytes(),putStr.getBytes());
+                rocksDBHolder.getResource().put(daySN.getBytes(),putStr.getBytes());
             }else{
-                rocksDBHolder.getResource().put(sn.getBytes(),replaceMsg.getBytes());
+                rocksDBHolder.getResource().put(daySN.getBytes(),heartMsg.getBytes());
             }
+            /** DaySN  storage end **/
+            long curTimeinMillis = Calendar.getInstance().getTimeInMillis();
+            String newMsgStr = heartMsg = msgStr+","+String.valueOf( curTimeinMillis/1000 );
+            rocksDBHolder.getResource().put(sn.getBytes(),newMsgStr.getBytes());
             CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
         } catch (Exception ex) {
         	ctx.pipeline().close();
@@ -158,6 +171,5 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.pipeline().close();
     }
-
 
 }

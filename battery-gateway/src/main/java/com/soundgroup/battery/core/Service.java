@@ -5,9 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import com.soundgroup.battery.server.CubeBootstrap;
-import com.soundgroup.battery.server.CubeBootstrapLong;
 import com.soundgroup.battery.server.HttpBootstrap;
-import com.soundgroup.battery.server.WebSocketBootstrap;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.Lifecycle;
@@ -25,22 +23,22 @@ public class Service implements Lifecycle {
 	@Autowired
 	private CubeBootstrap cubeBoostrap;
 
-	@Autowired
-	private CubeBootstrapLong cubeBootstrapLong;
+/*	@Autowired
+	private CubeBootstrapLong cubeBootstrapLong;*/
 	
 	@Autowired
 	private HttpBootstrap httpBootstrap;
 	
-	@Autowired
-	private WebSocketBootstrap webSocketBootstrap;
+/*	@Autowired
+	private WebSocketBootstrap webSocketBootstrap;*/
 
-
+	/**From spring Lifecycle**/
 	public void start() {
 		LOG.info("Service serverRun start");
 		started = true;
 		future = threadPool.submit(cubeBoostrap);
-		future = threadPool.submit(cubeBootstrapLong);
-		future = threadPool.submit(webSocketBootstrap);
+	/*	future = threadPool.submit(cubeBootstrapLong);
+		future = threadPool.submit(webSocketBootstrap);*/
 
 		int sleepCount = 5;
 		while (!cubeBoostrap.isRun()) {
@@ -56,7 +54,7 @@ public class Service implements Lifecycle {
 				e.printStackTrace();
 			}
 		}
-		//tcp 超长指令发送给手表
+/*		//tcp 超长指令发送给手表
 		int sleepCount2 = 5;
 		while (!cubeBootstrapLong.isRun()) {
 			if (sleepCount2 < 0) {
@@ -70,12 +68,11 @@ public class Service implements Lifecycle {
 				LOG.info("InterruptedException:", e);
 				e.printStackTrace();
 			}
-		}
-
+		}*/
 		threadPool.submit(httpBootstrap);
 	}
 
-
+	/**From spring Lifecycle**/
 	public void stop() {
 		LOG.info("Service serverRun stop");
 		started = false;
@@ -85,6 +82,7 @@ public class Service implements Lifecycle {
 		}
 	}
 
+	/**From spring Lifecycle**/
 	public boolean isRunning() {
 		LOG.info("Service serverRun isRunning");
 		return started;
@@ -107,7 +105,6 @@ public class Service implements Lifecycle {
 		}
 		clazz = clazz.getSuperclass();
 		return isInterface(clazz, infClazz);
-
 	}
 
 }

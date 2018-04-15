@@ -3,19 +3,17 @@ package com.soundgroup.battery.logic;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import org.apache.log4j.Logger;
-
 import com.soundgroup.battery.event.CubeMsg;
 import com.soundgroup.battery.event.EventEnum;
 import com.soundgroup.battery.event.ReplyEvent;
 
-
 public class ProcessRunnable implements Runnable {
-	private static final Logger LOG = Logger.getLogger(ProcessRunnable.class);
 
-    private ConcurrentHashMap<String, ReplyEvent> replyMap = new ConcurrentHashMap<String, ReplyEvent>();
+    private ConcurrentHashMap<String, ReplyEvent>
+                replyMap = new ConcurrentHashMap<String, ReplyEvent>();
 
-    private ConcurrentLinkedQueue<CubeMsg> workqueue = new ConcurrentLinkedQueue<CubeMsg>();
+    private ConcurrentLinkedQueue<CubeMsg>
+                workqueue = new ConcurrentLinkedQueue<CubeMsg>();
 
     private volatile boolean isRunning = false;
 
@@ -73,7 +71,7 @@ public class ProcessRunnable implements Runnable {
                 Process process = ProcessManager.getInstance().getProcess(event);
                 process.excute(msg);
             } catch (Exception e) {
-                LOG.error("ProcessRunnable Worker exception", e);
+                e.printStackTrace();
             }
 
         }

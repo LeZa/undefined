@@ -1,30 +1,10 @@
 package com.soundgroup.battery.logic.proc;
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.soundgroup.battery.core.CubeRun;
 import com.soundgroup.battery.core.conn.Connection;
 import com.soundgroup.battery.core.conn.ConnectionManager;
-import com.soundgroup.battery.core.db.DbManager;
 import com.soundgroup.battery.event.CubeMsg;
-import com.soundgroup.battery.event.ReplyEvent;
-import com.soundgroup.battery.exception.IllegalDataException;
 import com.soundgroup.battery.logic.Process;
-import com.soundgroup.battery.server.CubeBootstrap;
 import com.soundgroup.battery.utils.CommUtils;
-import com.soundgroup.battery.utils.HexByteToolUtil;
-import com.soundgroup.battery.utils.newStringUtils.Utils;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
-import org.rocksdb.RocksDB;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-import javax.sql.DataSource;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 
 /**
@@ -35,19 +15,18 @@ import java.sql.SQLException;
 public class ReceiveBatteryProcess
         implements Process {
 
-
     public void excute(CubeMsg msg) {
-        java.sql.Connection connection = null;
-        PreparedStatement preparedStatement = null;
+  /*      java.sql.Connection connection = null;
+        PreparedStatement preparedStatement = null;*/
 
         try {
             String mac = new String(msg.getData());
-            String msgString = msg.getDataString();
+            /*String msgString = msg.getDataString();*/
             Connection conn = null;
             conn = CommUtils.getConn(msg.getCtx());
             conn.setMac(mac);
             ConnectionManager.getInstance().addToConns(conn.getMac(), conn);
-            AnnotationConfigApplicationContext
+         /*   AnnotationConfigApplicationContext
                     applicationContext = CubeRun.getApplicationContext();
             ComboPooledDataSource  comboPooledDataSource  = (ComboPooledDataSource) applicationContext.getBean("comboPooledDataSource");
             connection = comboPooledDataSource.getConnection();
@@ -86,7 +65,7 @@ public class ReceiveBatteryProcess
                     preparedStatement.setDouble(4, Double.parseDouble(battery));
                     preparedStatement.execute();
                 }
-            }
+            }*/
           /*  String backString = Utils.wristwatchToPlatform(msg.getDataString()).get("responseMessage")
                     + "";
             if (null != backString && !"".equals(backString)) {
@@ -108,7 +87,8 @@ public class ReceiveBatteryProcess
             }*/
         } catch (Exception exp) {
            exp.printStackTrace();
-        }finally {
+        }
+      /*  finally {
             if( preparedStatement != null ){
                 try {
                     preparedStatement.close();
@@ -123,7 +103,7 @@ public class ReceiveBatteryProcess
                     e.printStackTrace();
                 }
             }
-        }
+        }*/
     }
 
 }
