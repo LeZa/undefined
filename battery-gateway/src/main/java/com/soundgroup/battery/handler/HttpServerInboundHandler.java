@@ -14,6 +14,7 @@ import com.soundgroup.battery.core.CubeRun;
 import com.soundgroup.battery.logic.HttpProcess;
 import com.soundgroup.battery.logic.http.BatteryExecAction;
 import com.soundgroup.battery.logic.http.CloseExecAction;
+import com.soundgroup.battery.logic.http.DayBatteryExecAction;
 import com.soundgroup.battery.logic.http.OpenExecAction;
 import com.google.gson.Gson;
 import com.soundgroup.battery.logic.HttpProcessRunnable;
@@ -109,26 +110,24 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
         AnnotationConfigApplicationContext
                         applicationContext = CubeRun.getApplicationContext();
         HttpProcess httpProcess = null;
-//        dispatcher(ctx, req);
+        //    dispatcher(ctx, req);
         if( "/open".equals(path) ){
             httpProcess = (OpenExecAction) applicationContext.getBean("openExecAction");
         }else if("/close".equals(path)){
             httpProcess = (CloseExecAction) applicationContext.getBean("closeExecAction");
         }else if("/battery".equals(path)){
             httpProcess = (BatteryExecAction) applicationContext.getBean("batteryExecAction");
+        }else if("/dayBattery".equals(path)){
+            httpProcess = (DayBatteryExecAction) applicationContext.getBean("dayBatteryExecAction");
         }
 
         httpProcess.execute(ctx,req,paramMap);
-
-        // 处理业务
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
     }
-
-
 
     @Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
@@ -154,14 +153,11 @@ public class HttpServerInboundHandler extends SimpleChannelInboundHandler<FullHt
     }
     
     private static void dispatcher(ChannelHandlerContext ctx, FullHttpRequest req){
-        //在HttpProcessRunnable中已经req.retain()
         HttpProcessRunnable run = new HttpProcessRunnable(ctx, req);
         HttpProcessRunnable.EXECUTOR.submit(run);
     }
 
     private static ByteBuf getContent(String cnt) {
-      /*  return Unpooled.copiedBuffer("<html><head><title>Web Test</title></head>" + NEWLINE + "<body>" + NEWLINE
-                + cnt + NEWLINE + "</body>" + NEWLINE + "</html>" + NEWLINE, CharsetUtil.UTF_8);*/
       return Unpooled.copiedBuffer(cnt.getBytes());
     }
 }

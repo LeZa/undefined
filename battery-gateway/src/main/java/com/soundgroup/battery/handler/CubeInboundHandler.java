@@ -90,19 +90,10 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
         Attribute<Connection> attr = ctx.channel().attr(SysConst.CONN_KEY);
         Connection conn = attr.get();
         if (StringUtils.isNotBlank(conn.getMac())) {
-            //LOG.info((new StringBuilder()).append("remove a connetion:{}, from connectionmanager=:").append(conn.getMac()).toString());
             ConnectionManager.getInstance().removeConn(conn.getMac());
         }
-//        Attribute<ScheduledFuture<?>> futureAttr = ctx.channel().attr(SysConst.DELAY_KEY);
-//        if(futureAttr.get() != null){
-//            LOG.info("remove future");
-//            futureAttr.get().cancel(false);
-//            futureAttr.remove();
-//        }
-        //LOG.info((new StringBuilder()).append("remove a connection==remoteAddress=:").append(ctx.channel().remoteAddress()).toString());
         attr.remove();
         ctx.channel().attr(SysConst.MAC_KEY).remove();
-        //LOG.error((new StringBuilder()).append("断开时，异常关闭处理").toString());
     }
 
 
@@ -140,9 +131,7 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
                 rocksDBHolder.getResource().put(daySN.getBytes(),heartMsg.getBytes());
             }
             /** DaySN  storage end **/
-            long curTimeinMillis = Calendar.getInstance().getTimeInMillis();
-            String newMsgStr = heartMsg = msgStr+","+String.valueOf( curTimeinMillis/1000 );
-            rocksDBHolder.getResource().put(sn.getBytes(),newMsgStr.getBytes());
+            rocksDBHolder.getResource().put(sn.getBytes(),msgStr.getBytes());
             CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
         } catch (Exception ex) {
         	ctx.pipeline().close();

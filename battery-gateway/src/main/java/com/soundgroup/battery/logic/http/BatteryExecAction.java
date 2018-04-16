@@ -38,10 +38,10 @@ public class BatteryExecAction
         curTimeinMillis = (curTimeinMillis/1000)-25;
         AnnotationConfigApplicationContext
                 applicationContext = CubeRun.getApplicationContext();
-        RocksDBHolder    rocksDBHolder = (RocksDBHolder) applicationContext.getBean("rocksDBHolder");
+        RocksDBHolder rocksDBHolder = (RocksDBHolder) applicationContext.getBean("rocksDBHolder");
         String sn = (String) paramMap.get("SN");
         byte[] result = rocksDBHolder.getResource().get(sn.getBytes());
-        String retData =  new String( result);
+        String retData =  new String( result );
         String[] retDataArr =  retData.split(",");
         int len = retDataArr.length;
         String curTimeMStr = retDataArr[ len-1 ];

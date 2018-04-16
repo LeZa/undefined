@@ -32,9 +32,10 @@ public class MsgDecoder extends ByteToMessageDecoder {
                 }
             } else {
                 String waterMsg = CommonUtil.bytesToHexString(bytes);
-//                String waterMsg = "24,21,70,05,52,41,01,29,32,12,04,18,22,36,11,20,07,11,34,99,10,3E,00,12,33,FF,FF,FF,FF,01,0F,00,00,00,00,00,00,01,CC,00,25,EF,11,4F,5E";
                 if (waterMsg.startsWith("24")
                         && waterMsg.length() == 134) {
+                    long timeInMillis = Calendar.getInstance().getTimeInMillis();
+                    waterMsg = waterMsg+","+timeInMillis;
                     ByteBuf waterByteBuf = Unpooled.copiedBuffer(waterMsg.getBytes());
                     list.add(waterByteBuf);
                 }

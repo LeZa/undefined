@@ -6,7 +6,6 @@ import java.io.*;
 
 import static com.build.thinking.in.java.net.mindview.util.Print.print;
 
-
 public class CloseResource {
   public static void main(String[] args) throws Exception {
     ExecutorService exec = Executors.newCachedThreadPool();
@@ -25,6 +24,7 @@ public class CloseResource {
     print("Closing " + System.in.getClass().getName());
     System.in.close(); // Releases blocked thread
   }
+
 } /* Output: (85% match)
 Waiting for read():
 Waiting for read():
