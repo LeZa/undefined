@@ -5,7 +5,6 @@ import java.util.concurrent.locks.*;
 
 import static com.build.thinking.in.java.net.mindview.util.Print.print;
 
-
 class BlockedMutex {
   private Lock lock = new ReentrantLock();
   public BlockedMutex() {
