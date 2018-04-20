@@ -82,6 +82,9 @@ dependencies {
         exclude group: 'org.apache.zookeeper', module: 'zookeeper'
     }
 
+    // https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper
+    compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.10', ext: 'pom'
+
     // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
     compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.6.0'
 

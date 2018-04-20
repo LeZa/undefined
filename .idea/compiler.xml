@@ -11,20 +11,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway (1) (com.kakawait)" />
         <module name="battery-gateway" />
-        <module name="cloud-rocksdb-client" />
-        <module name="cloud-rocksdb-server" />
         <module name="cube" />
-        <module name="curator-x-zkclient-bridge" />
         <module name="dummy-service" />
         <module name="netty.io" />
         <module name="oath2-client-demo" />
-        <module name="redis-client" />
-        <module name="rocksdbjni" />
         <module name="service-battery" />
         <module name="service-registry" />
         <module name="uaa-service" />
         <module name="user" />
-        <module name="zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

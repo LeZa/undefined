@@ -132,20 +132,21 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
             if(findIterable.iterator().hasNext() ){
                 Document document = findIterable.iterator().next();
                 String oldVal = (String) document.get(daySN);
-                String existsStr = "";
                 String newVal = oldVal + ","+ heartMsg;
-                MongoDBOperator.updateOne(mongoCollection,"temp",daySN,existsStr,newVal);
+                MongoDBOperator.updateOne(mongoCollection,"temp",daySN,oldVal,newVal);
             }else{
                 MongoDBOperator.put(mongoCollection,"temp",daySN,heartMsg);
             }
             /** DaySN  storage end **/
-            String oldHeartVal = null;
             FindIterable<Document> findIterable1 = MongoDBOperator.hasNext(mongoCollection1,"heart",sn);
             if(findIterable1.iterator().hasNext() ){
                 Document document = findIterable1.iterator().next();
-                oldHeartVal = (String) document.get(sn);
+                String oldHeartVal = (String) document.get(sn);
+                MongoDBOperator.updateOne(mongoCollection1,"heart",sn,oldHeartVal,msgStr);
+            }else{
+                MongoDBOperator.put(mongoCollection1,"heart",sn,msgStr);
             }
-            MongoDBOperator.updateOne(mongoCollection1,"heart",sn,oldHeartVal,msgStr);
+
             CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
         } catch (Exception exp) {
             exp.printStackTrace();

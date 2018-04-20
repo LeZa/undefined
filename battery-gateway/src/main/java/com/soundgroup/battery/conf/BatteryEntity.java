@@ -103,6 +103,8 @@ public class BatteryEntity {
     private String power;
 
 
+    private String status;
+
     public String getDeviceProvider() {
         return deviceProvider;
     }
@@ -262,5 +264,13 @@ public class BatteryEntity {
 
     public void setLastReceTime(String lastReceTime) {
         this.lastReceTime = lastReceTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

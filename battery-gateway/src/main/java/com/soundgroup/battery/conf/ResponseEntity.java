@@ -40,7 +40,7 @@ public class ResponseEntity {
      * @param data
      * @return
      */
-    public static  Map<String,Object> failRtn( String msg,Object data){
+    public static  Map<String,Object> failRtn( String msg,String code,Object data){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("msg",msg);
         resultMap.put("code",-1);

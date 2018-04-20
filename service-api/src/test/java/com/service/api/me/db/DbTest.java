@@ -13,6 +13,8 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static com.build.thinking.in.java.net.mindview.util.Print.print;
 
@@ -81,12 +83,31 @@ public class DbTest {
 
         //连接到数据库
         MongoDatabase mongoDatabase = mongoClient.getDatabase("test");
-        MongoCollection<Document> collection = mongoDatabase.getCollection("sushile");
-        FindIterable<Document> findIterable = collection.find(Filters.exists("201700641"));
-        if( findIterable.iterator().hasNext() ){
-            System.out.println( "has Next");
-        }else{
-            print("does't have");
+ /*       MongoCollection<Document> collection = mongoDatabase.getCollection("temp");
+        FindIterable<Document> findIterable = collection.find();
+        MongoCursor<Document> mongoCursor = findIterable.iterator();
+        while( mongoCursor.hasNext() ){
+                System.out.println ( mongoCursor.next() );
+        }*/
+        System.out.println("--------------------------------------------------------------------------------------------");
+        MongoCollection<Document> collection1 = mongoDatabase.getCollection("heart");
+        FindIterable<Document> findIterable1 = collection1.find();
+        MongoCursor<Document> mongoCursor1 = findIterable1.iterator();
+        while( mongoCursor1.hasNext() ){
+            Document document =  mongoCursor1.next();
+            Set<Map.Entry<String, Object>> setVal = document.entrySet();
+            for( Map.Entry<String,Object> map : setVal ){
+                String heartVal = String.valueOf(  map.getValue() ) ;
+                if( heartVal.indexOf(",") > -1 ){
+                    String[] getLenArr = heartVal.split(",");
+                    System.out.print("SN..."+getLenArr[1]+getLenArr[2]+getLenArr[3]+getLenArr[4]+getLenArr[5]);//SN
+                    System.out.print("    A..."+getLenArr[12]+getLenArr[13]+getLenArr[14]+getLenArr[15]);
+                    System.out.print( "   battery..."+getLenArr[16]);//0-10
+                    System.out.print( "   N..."+getLenArr[17]+getLenArr[18]+getLenArr[19]+getLenArr[20]);
+                    System.out.println("Status..."+getLenArr[25]+getLenArr[26]+getLenArr[27]+getLenArr[28]);
+                }
+            }
+
         }
         /*MongoCursor<Document> mongoCursor = findIterable.iterator();
         while(mongoCursor.hasNext()){

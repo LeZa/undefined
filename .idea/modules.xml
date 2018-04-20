@@ -3,17 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/battery-gateway/battery-gateway.iml" filepath="$PROJECT_DIR$/battery-gateway/battery-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb.iml" filepath="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-client/cloud-rocksdb-client.iml" filepath="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-client/cloud-rocksdb-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/cloud-rocksdb-server.iml" filepath="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/cloud-rocksdb-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../net/curator-master/curator-x-zkclient-bridge.iml" filepath="$PROJECT_DIR$/../net/curator-master/curator-x-zkclient-bridge.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-netty/netty.io.iml" filepath="$PROJECT_DIR$/service-netty/netty.io.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-redis-client/redis-client.iml" filepath="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-redis-client/redis-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/rocksdbjni.iml" filepath="$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/rocksdbjni.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_main.iml" group="service-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_test.iml" group="service-api" />
-      <module fileurl="file://$USER_HOME$/Downloads/zookeeper-master/zookeeper.iml" filepath="$USER_HOME$/Downloads/zookeeper-master/zookeeper.iml" />
     </modules>
   </component>
 </project>
