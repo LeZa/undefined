@@ -60,34 +60,34 @@ public class BatteryExecAction
         Gson gson = new Gson();
         long curTimeinMillis = Calendar.getInstance().getTimeInMillis();//now time
         curTimeinMillis = (curTimeinMillis/1000)-25;
-
+        /** Get database and collection**/
         AnnotationConfigApplicationContext applicationContext
                 = CubeRun.getApplicationContext();
         mongoDatabase = (MongoDatabase) applicationContext.getBean("mongoDatabase");
         MongoCollection mongoCollection1 = MongoDBOperator.mongoCollection(mongoDatabase,"heart");
         String sn = (String) paramMap.get("SN");
-        FindIterable<Document> findIterable1 = MongoDBOperator.hasNext(mongoCollection1,"heart",sn);
+        FindIterable<Document> findIterable = MongoDBOperator.hasNext(mongoCollection1,"heart",sn);
+        MongoCursor<Document> mongoCursor =  findIterable.iterator();
+        /** Get database and collection**/
+        /** Create entity **/
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(String.class, new GsonNullTypeAdapter());
-        MongoCursor<Document> mongoCursor1 =  findIterable1.iterator();
         String resultStr = gsonBuilder.create().toJson(ResponseEntity.failRtn("device noit exists","-99",new BatteryEntity()));
-        if(  mongoCursor1.hasNext() ) {
-            Document document = findIterable1.iterator().next();
+        if(  mongoCursor.hasNext() ) {
+            Document document = mongoCursor.next();
             String heartVal = (String) document.get(sn);
-
             String[] retDataArr = heartVal.split(",");
             int len = retDataArr.length;
             String curTimeMStr = retDataArr[len - 1];
             long storageCurTime = (Long.parseLong(curTimeMStr)) / 1000;//storage time
-            BatteryEntity batteryEntity = null;
+            BatteryEntity  batteryEntity = getBatteryEntity(retDataArr, sn);
             if (storageCurTime > curTimeinMillis) {
-                batteryEntity = getBatteryEntity(retDataArr, sn);
                 resultStr = new Gson().toJson(ResponseEntity.sussRtn("on-line", batteryEntity));
             } else {
-                batteryEntity = getBatteryEntity(retDataArr, sn);
                 resultStr = new Gson().toJson(ResponseEntity.failRtn("off-line","-1", batteryEntity));
             }
         }
+        /**  Create entity **/
         resp.content().writeBytes(new String(resultStr.toString().getBytes(),"UTF-8").getBytes());
         resp.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
     }
