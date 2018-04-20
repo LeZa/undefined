@@ -1,6 +1,5 @@
 package com.soundgroup.battery.handler;
 
-import com.soundgroup.battery.core.common.RocksDBHolder;
 import com.soundgroup.battery.utils.newStringUtils.MsgDecoder;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

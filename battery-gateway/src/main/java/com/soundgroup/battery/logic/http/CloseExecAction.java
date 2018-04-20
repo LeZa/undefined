@@ -19,7 +19,6 @@ import java.util.Map;
 
 import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
 
-
 /**
  * @Description  Close battery
  * @author sushile

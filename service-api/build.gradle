@@ -65,5 +65,26 @@ dependencies {
     // https://mvnrepository.com/artifact/io.netty/netty-all
     compile group: 'io.netty', name: 'netty-all', version: '4.0.21.Final'
 
+    // https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
+    compile group: 'org.apache.curator', name: 'curator-recipes', version: '2.12.0'
+
+    // https://mvnrepository.com/artifact/org.apache.curator/curator-framework
+    compile group: 'org.apache.curator', name: 'curator-framework', version: '2.12.0'
+
+    // https://mvnrepository.com/artifact/org.apache.curator/curator-x-discovery
+    compile group: 'org.apache.curator', name: 'curator-x-discovery', version: '2.12.0'
+
+    // https://mvnrepository.com/artifact/org.apache.curator/curator-client
+    compile group: 'org.apache.curator', name: 'curator-client', version: '2.12.0'
+
+
+    testCompile('org.apache.curator:curator-test:2.12.0') {
+        exclude group: 'org.apache.zookeeper', module: 'zookeeper'
+    }
+
+    // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.6.0'
+
+
 
 }

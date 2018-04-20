@@ -1,7 +1,10 @@
 package com.soundgroup.battery.handler;
 
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import com.soundgroup.battery.core.CubeRun;
-import com.soundgroup.battery.core.common.RocksDBHolder;
+import com.soundgroup.battery.core.common.MongoDBOperator;
 import com.soundgroup.battery.event.CubeMsg;
 import com.soundgroup.battery.event.EventEnum;
 import com.soundgroup.battery.server.CubeBootstrap;
@@ -28,18 +31,14 @@ import com.soundgroup.battery.core.conn.ConnectionManager;
 import com.soundgroup.battery.utils.ByteBufUtils;
 import com.soundgroup.battery.utils.CommUtils;
 
+import org.bson.Document;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 @Sharable
 public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
 
-    private RocksDBHolder rocksDBHolder;
-
-    public CubeInboundHandler(){
-        AnnotationConfigApplicationContext
-                applicationContext = CubeRun.getApplicationContext();
-        rocksDBHolder = (RocksDBHolder) applicationContext.getBean("rocksDBHolder");
-    }
+    private MongoDatabase mongoDatabase;
 
     /**
      * @description DelayClose
@@ -67,6 +66,12 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
                 ctx.pipeline().close();
             }
         }
+    }
+
+    public CubeInboundHandler(){
+        AnnotationConfigApplicationContext applicationContext
+                 = CubeRun.getApplicationContext();
+        mongoDatabase = (MongoDatabase) applicationContext.getBean("mongoDatabase");
     }
 
 
@@ -106,6 +111,7 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         try {
+
             String currentDay =  new SimpleDateFormat("yyyyMMdd").format( new java.util.Date());
             ByteBuf msgByteBuf = (ByteBuf)msg;
             System.out.println(Calendar.getInstance().getTimeInMillis()+"..."+ msgByteBuf.toString(CharsetUtil.UTF_8));
@@ -119,21 +125,30 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
             cubeMsg.setDataString(msgStr);
             /** DaySN  storage start **/
             String heartMsg = msgStr.replaceAll(",","");
-            String daySN =  sn+currentDay;
-            if( rocksDBHolder.getResource().get(daySN.getBytes()) != null){
-                byte[] exists  = rocksDBHolder.getResource().get(daySN.getBytes());
-                byte[] newVal = heartMsg.getBytes();
-                String existsStr =  new String( exists );
-                String newStr =  new String( newVal );
-                String putStr = existsStr + ","+ newStr;
-                rocksDBHolder.getResource().put(daySN.getBytes(),putStr.getBytes());
+            String daySN = sn+currentDay;
+            MongoCollection mongoCollection = MongoDBOperator.mongoCollection(mongoDatabase,"temp");
+            MongoCollection mongoCollection1 = MongoDBOperator.mongoCollection(mongoDatabase,"heart");
+            FindIterable<Document> findIterable = MongoDBOperator.hasNext(mongoCollection,"temp",daySN);
+            if(findIterable.iterator().hasNext() ){
+                Document document = findIterable.iterator().next();
+                String oldVal = (String) document.get(daySN);
+                String existsStr = "";
+                String newVal = oldVal + ","+ heartMsg;
+                MongoDBOperator.updateOne(mongoCollection,"temp",daySN,existsStr,newVal);
             }else{
-                rocksDBHolder.getResource().put(daySN.getBytes(),heartMsg.getBytes());
+                MongoDBOperator.put(mongoCollection,"temp",daySN,heartMsg);
             }
             /** DaySN  storage end **/
-            rocksDBHolder.getResource().put(sn.getBytes(),msgStr.getBytes());
+            String oldHeartVal = null;
+            FindIterable<Document> findIterable1 = MongoDBOperator.hasNext(mongoCollection1,"heart",sn);
+            if(findIterable1.iterator().hasNext() ){
+                Document document = findIterable1.iterator().next();
+                oldHeartVal = (String) document.get(sn);
+            }
+            MongoDBOperator.updateOne(mongoCollection1,"heart",sn,oldHeartVal,msgStr);
             CubeBootstrap.processRunnable.pushUpMsg(cubeMsg);
-        } catch (Exception ex) {
+        } catch (Exception exp) {
+            exp.printStackTrace();
         	ctx.pipeline().close();
         } finally {
             ReferenceCountUtil.release(msg);

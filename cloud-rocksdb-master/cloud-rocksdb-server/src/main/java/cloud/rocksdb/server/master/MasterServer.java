@@ -29,13 +29,13 @@ public class MasterServer extends AbstractServer {
     private ServerBootstrap bootstrap;
     ChannelFuture future;
 
+    public MasterServer(Configuration config){
+        super(config);
+    }
+
     @Override
     protected int doGetPort() {
         return config.getMasterPort();
-    }
-
-    public MasterServer(Configuration config){
-        super(config);
     }
 
     @Override
@@ -48,7 +48,8 @@ public class MasterServer extends AbstractServer {
                 .localAddress(new InetSocketAddress(this.host, this.port))
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new LengthFieldBasedFrameDecoder(config.getRequestMaxBodyLength(), 0, 4));
+                        ch.pipeline().addLast(new LengthFieldBasedFrameDecoder(config.getRequestMaxBodyLength(),
+                                0, 4));
                         ch.pipeline().addLast(new ReplicatorDecoder());
                         ch.pipeline().addLast(new ReplicatorEncoder());
                         ch.pipeline().addLast(new MasterProxyHandler(shardDiscover));

@@ -27,9 +27,13 @@ public abstract class AbstractServer implements LifeCycle {
         this.config = config;
     }
 
+    /**
+     *@Description  init Zookeeper server
+     */
     private void initZookeeper() {
         String zookeeper = config.getZookeeperHost();
-        curator = CuratorFrameworkFactory.newClient(zookeeper, 30 * 1000, 3000, new RetryNTimes(10, 1000));
+        curator = CuratorFrameworkFactory.newClient(zookeeper, 30 * 1000,
+                        3000, new RetryNTimes(10, 1000));
         curator.start();
     }
 

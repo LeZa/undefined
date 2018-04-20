@@ -92,7 +92,10 @@ public class BatteryEntity {
      */
     private String elecPower;
 
-
+    /**
+     *  最后接收时间
+     */
+    private String lastReceTime;
 
     /**
      *battery
@@ -253,4 +256,11 @@ public class BatteryEntity {
         this.power = power;
     }
 
+    public String getLastReceTime() {
+        return lastReceTime;
+    }
+
+    public void setLastReceTime(String lastReceTime) {
+        this.lastReceTime = lastReceTime;
+    }
 }

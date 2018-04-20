@@ -152,7 +152,7 @@ public class ServiceDiscover implements LifeCycle {
             public void nodeChanged() throws Exception {
                 byte[] bytes =  shardNodeCache.getCurrentData().getData();
                 System.out.println( new String(bytes) );
-                Shard newShard = JacksonUtil.toObject(shardNodeCache.getCurrentData().getData(),Shard.class);
+                Shard newShard = JacksonUtil.toObject(bytes,Shard.class);
                 if(newShard.getEpoch() != shard.get().getEpoch()){
                     shard.set(newShard);
                 }

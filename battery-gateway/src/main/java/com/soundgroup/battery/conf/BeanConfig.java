@@ -1,8 +1,9 @@
 package com.soundgroup.battery.conf;
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.soundgroup.battery.core.common.RocksDBHolder;
-import com.soundgroup.battery.logic.http.OpenExecAction;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
+import com.mongodb.client.MongoDatabase;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -12,12 +13,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import javax.sql.DataSource;
-import java.beans.PropertyVetoException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 public class BeanConfig {
-
+/*
     @Value("${jdbc.url}")
     private String jdbcUrl;
 
@@ -28,7 +29,23 @@ public class BeanConfig {
     private String jdbcUser;
 
     @Value("${jdbc.password}")
-    private String jdbcPassword;
+    private String jdbcPassword;*/
+
+    @Value("${mongodb.host}")
+    private String mongoDBHost;
+
+    @Value("${mongodb.port}")
+    private int mongoDBPort;
+
+    @Value("${mongodb.user}")
+    private String mongoDBUser;
+
+    @Value("${mongodb.instance}")
+    private String mongoDBInstance;
+
+    @Value("${mongodb.password}")
+    private String mongoDBPassword;
+/*
 
     @Bean(name = {"comboPooledDataSource"})
     public ComboPooledDataSource dataSource() throws PropertyVetoException {
@@ -42,16 +59,23 @@ public class BeanConfig {
     	cpds.setMaxPoolSize(20);
         return cpds;
     }
+*/
 
-    private String shardId = "1";
 
-
-    @Bean(name = {"rocksDBHolder"})
-    public RocksDBHolder initStorage() throws Exception {
-        RocksDBHolder rocksDBHolder = new RocksDBHolder(shardId);
-        rocksDBHolder.init();
-       return rocksDBHolder;
+    @Bean(name={"mongoDatabase"})
+    public MongoDatabase mongoDatabase(){
+        ServerAddress serverAddress = new ServerAddress(mongoDBHost,mongoDBPort);
+        List<ServerAddress> addrs = new ArrayList<ServerAddress>();
+        addrs.add(serverAddress);
+        MongoCredential credential = MongoCredential.createScramSha1Credential(mongoDBUser,
+                mongoDBInstance, mongoDBPassword.toCharArray());
+        List<MongoCredential> credentials = new ArrayList<MongoCredential>();
+        credentials.add(credential);
+        MongoClient mongoClient = new MongoClient(addrs,credentials);
+        MongoDatabase mongoDatabase = mongoClient.getDatabase(mongoDBInstance);
+        return mongoDatabase;
     }
+
 
     @Bean(name = {"serverBootstrap"})
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="battery-gateway:jar" />
+      <artifact name="service-gateway:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -75,6 +75,14 @@
     <ignored path="$PROJECT_DIR$/cube/target/" />
     <ignored path="$PROJECT_DIR$/service-battery/target/" />
     <ignored path="$PROJECT_DIR$/battery-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/cloud-rocksdb-master/target/" />
+    <ignored path="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-client/target/" />
+    <ignored path="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-redis-client/target/" />
+    <ignored path="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/target/" />
+    <ignored path="$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/target/" />
+    <ignored path="$PROJECT_DIR$/../net/tikv-client-lib-java-master/target/" />
+    <ignored path="$PROJECT_DIR$/../net/curator-master/target/" />
+    <ignored path="$USER_HOME$/Downloads/zookeeper-master/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,37 +149,19 @@
     <favorites_list name="service-api" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Interrupting2.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/Interrupting2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>route</find>
-      <find>initRoute</find>
-      <find>4.3.6</find>
-      <find>root</find>
-      <find>httpBootstrap</find>
-      <find>PropertySourcesPlaceholderConfigurer</find>
-      <find>flush</find>
-      <find>content</find>
       <find>readab</find>
       <find>CubeBootstrap</find>
       <find>getUnadjustedFrameLength</find>
@@ -188,12 +178,20 @@
       <find>redis</find>
       <find>RocksDB</find>
       <find>nativeHandle_</find>
-      <find>merge</find>
       <find>LOG.info</find>
       <find>createStatistics</find>
       <find>ROCKSDB_WAL_DATA_PATH</find>
       <find>Syste</find>
       <find>setDaemon</find>
+      <find>RocksDBHolder</find>
+      <find>ServerBootstrap</find>
+      <find>rocksDBHolderTemp</find>
+      <find>System.</find>
+      <find>merge</find>
+      <find>bloomFilter</find>
+      <find>mongoDatabase</find>
+      <find>comboPooledDataSource</find>
+      <find>dbManager</find>
     </findStrings>
     <replaceStrings>
       <replace>System.out.println</replace>
@@ -383,8 +381,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/service-api" value="3046665216000" />
-        <entry key="$PROJECT_DIR$/service-api/build.gradle" value="1687240538" />
+        <entry key="$PROJECT_DIR$/service-api" value="3047441158000" />
+        <entry key="$PROJECT_DIR$/service-api/build.gradle" value="3492013940" />
         <entry key="$PROJECT_DIR$/service-api/settings.gradle" value="1748431039" />
       </map>
     </option>
@@ -502,57 +500,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/test/Test.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/LifeCycle.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/InstanceAlreadyRunningException.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/BaseConfig.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/CubeChannelInit.java" />
-        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/dataType/CalendarT.java" />
-        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/battery/RecycleTest.java" />
-        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/battery/BatteryTest.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/proc/OpenBatteryProcess.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/proc/CloseBatteryProcess.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/proc/ReceiveBatteryProcess.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/ProcessManager.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/conn/Connection.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/conn/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/CubeMsg.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/ByteObjConverter.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/TransforDecoder.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/TransforEncoder.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/utils/newStringUtils/Decoder.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/ProcessRunnable.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BatteryEntity.java" />
-        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/concurrency/DaemonThread.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/Daemon/SimpleDaemons.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/SimpleDaemons.java" />
-        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/concurrency/net/RunnabldeT.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/SimpleDaemons.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/Daemons.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonsDontRunFinally.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonFromFactory.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonThreadPoolExecutor.java" />
         <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/CubeRun.java" />
         <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/Service.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/RocksDBHolder.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/OpenExecAction.java" />
         <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/server/CubeBootstrap.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BeanConfig.java" />
         <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/Service.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/org/rocksdb/util/BytewiseComparator.java" />
         <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/A.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/BatteryExecAction.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/DayBatteryExecAction.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/utils/newStringUtils/MsgDecoder.java" />
-        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/CubeInboundHandler.java" />
         <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/HttpServerInboundHandler.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/IOBlocked.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/CloseResource.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/Interrupting.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/InterruptingIdiom.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/Interrupting2.java" />
+        <option value="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/src/main/java/cloud/rocksdb/server/client/SimpleClientHandler.java" />
+        <option value="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/src/main/java/cloud/rocksdb/server/AbstractServer.java" />
+        <option value="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/src/main/java/cloud/rocksdb/server/master/ServiceDiscover.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/CuratorTest.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BatteryEntity.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/ResponseEntity.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/dataType/FileT.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/CubeChannelInit.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/OpenExecAction.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/CloseExecAction.java" />
+        <option value="$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/src/main/java/cloud/rocksdb/server/master/MasterServer.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/CommonUtil.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/RocksDBHolder.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/Test.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/Test123.java" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/CuratorNodeCacheTest.java" />
+        <option value="$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java" />
+        <option value="$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/zookeeper/example/masterworker/AsynCreate.java" />
+        <option value="$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/Test234.java" />
+        <option value="$USER_HOME$/Downloads/zookeeper-master/pom.xml" />
+        <option value="$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/App.java" />
+        <option value="$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/RocksDBHolder.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/RocksDBHolder.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/RocksDBHolderTemp.java" />
+        <option value="$PROJECT_DIR$/service-api/build.gradle" />
+        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/db/DbTest.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/CubeInboundHandler.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/MongoDBOperator.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/server/CubeBootstrapLong.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BeanConfig.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/utils/newStringUtils/MsgDecoder.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/DayBatteryExecAction.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/BatteryExecAction.java" />
+        <option value="$PROJECT_DIR$/battery-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/resources/c3p0.properties" />
+        <option value="$PROJECT_DIR$/battery-gateway/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -573,7 +571,30 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="cloud-rocksdb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="redis-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="redis-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="zookeeper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="zookeeper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -581,10 +602,10 @@
     <option name="vmOptions" value="-DarchetypeCatalog=local" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1261" />
-    <option name="y" value="82" />
-    <option name="width" value="1368" />
-    <option name="height" value="749" />
+    <option name="x" value="1454" />
+    <option name="y" value="83" />
+    <option name="width" value="1286" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -623,6 +644,52 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud-rocksdb-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud-rocksdb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="rocksdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud-rocksdb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="rocksdb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud-rocksdb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="rocksdb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud-rocksdb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="rocksdb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloud-rocksdb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="rocksdb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rocksdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches">
         <subPane>
           <expand>
@@ -639,28 +706,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.11875" />
     <property name="project.structure.side.proportion" value="0.28102836" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/jar" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -679,11 +735,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.service.api.me.battery" />
+      <recent name="yangqi.code" />
+      <recent name="com.service.api.me.curator" />
       <recent name="com.soundgroup.battery.core.common" />
+      <recent name="com.service.api.me.battery" />
       <recent name="com.alibaba.boot.dubbo.demo.consumer.config" />
-      <recent name="com.service.api.me.httpClient.httpclient" />
-      <recent name="com.example.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -704,12 +760,31 @@
     </option>
     <option name="contentProportion" value="0.26384366" />
   </component>
-  <component name="RunManager" selected="Application.InterruptingIdiom">
+  <component name="RunManager" selected="Application.CubeRun">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="yangqi.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="yangqi.code.App" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="zookeeper" />
+      <envs />
     </configuration>
     <configuration name="CubeRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -730,82 +805,6 @@
       <module name="battery-gateway" />
       <envs />
     </configuration>
-    <configuration name="Daemons" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.build.thinking.in.java.concurrency.daemon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.build.thinking.in.java.concurrency.daemon.Daemons" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="service-api_main" />
-      <envs />
-    </configuration>
-    <configuration name="Interrupting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.build.thinking.in.java.concurrency.interrupt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.build.thinking.in.java.concurrency.interrupt.Interrupting" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="service-api_main" />
-      <envs />
-    </configuration>
-    <configuration name="Interrupting2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.build.thinking.in.java.concurrency.interrupt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.build.thinking.in.java.concurrency.interrupt.Interrupting2" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="service-api_main" />
-      <envs />
-    </configuration>
-    <configuration name="InterruptingIdiom" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.build.thinking.in.java.concurrency.interrupt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.build.thinking.in.java.concurrency.interrupt.InterruptingIdiom" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="service-api_main" />
-      <envs />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -819,6 +818,81 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="DbTest.connectMongodb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.service.api.me.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="service-api_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.service.api.me.db" />
+      <option name="MAIN_CLASS_NAME" value="com.service.api.me.db.DbTest" />
+      <option name="METHOD_NAME" value="connectMongodb" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/service-api" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="DbTest.getData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.service.api.me.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="service-api_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.service.api.me.db" />
+      <option name="MAIN_CLASS_NAME" value="com.service.api.me.db.DbTest" />
+      <option name="METHOD_NAME" value="getData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/service-api" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="DbTest.putData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.service.api.me.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="service-api_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.service.api.me.db" />
+      <option name="MAIN_CLASS_NAME" value="com.service.api.me.db.DbTest" />
+      <option name="METHOD_NAME" value="putData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/service-api" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -924,19 +998,19 @@
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.DubboConsumerDemo" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.DubboProviderDemo" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.OauthApplication" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Daemons" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CubeRun" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Interrupting" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Interrupting2" />
-      <item index="7" class="java.lang.String" itemvalue="Application.InterruptingIdiom" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CubeRun" />
+      <item index="4" class="java.lang.String" itemvalue="Application.App" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.DbTest.connectMongodb" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.DbTest.putData" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.DbTest.getData" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.InterruptingIdiom" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Interrupting" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Interrupting2" />
-        <item index="3" class="java.lang.String" itemvalue="Application.CubeRun" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Daemons" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CubeRun" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DbTest.connectMongodb" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DbTest.getData" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DbTest.putData" />
+        <item index="4" class="java.lang.String" itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -1116,43 +1190,52 @@
       <workItem from="1523759561585" duration="250000" />
       <workItem from="1523760773738" duration="2008000" />
       <workItem from="1523840959021" duration="9051000" />
+      <workItem from="1523850978589" duration="10765000" />
+      <workItem from="1523926247840" duration="23230000" />
+      <workItem from="1524018301215" duration="2539000" />
+      <workItem from="1524030550448" duration="3811000" />
+      <workItem from="1524034551470" duration="6915000" />
+      <workItem from="1524047447586" duration="1725000" />
+      <workItem from="1524113856772" duration="1330000" />
+      <workItem from="1524116228719" duration="11405000" />
+      <workItem from="1524185853060" duration="869000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunnabldeT_blockQueue - 2018.04.13 at 16h 24m 20s.xml">
-      <configuration name="RunnabldeT.blockQueue" configurationId="JUnit" />
+    <history-entry file="DbTest_connectMongodb - 2018.04.19 at 13h 44m 37s.xml">
+      <configuration name="DbTest.connectMongodb" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_blockQueue - 2018.04.13 at 16h 48m 56s.xml">
-      <configuration name="RunnabldeT.blockQueue" configurationId="JUnit" />
+    <history-entry file="DbTest_connectMongodb - 2018.04.19 at 14h 46m 40s.xml">
+      <configuration name="DbTest.connectMongodb" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_blockQueue - 2018.04.13 at 16h 51m 01s.xml">
-      <configuration name="RunnabldeT.blockQueue" configurationId="JUnit" />
+    <history-entry file="DbTest_connectMongodb - 2018.04.19 at 15h 19m 33s.xml">
+      <configuration name="DbTest.connectMongodb" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_blockQueue - 2018.04.13 at 16h 52m 12s.xml">
-      <configuration name="RunnabldeT.blockQueue" configurationId="JUnit" />
+    <history-entry file="DbTest_connectMongodb - 2018.04.19 at 15h 19m 47s.xml">
+      <configuration name="DbTest.connectMongodb" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_blockQueue - 2018.04.13 at 16h 52m 42s.xml">
-      <configuration name="RunnabldeT.blockQueue" configurationId="JUnit" />
+    <history-entry file="DbTest_connectMongodb - 2018.04.19 at 15h 19m 53s.xml">
+      <configuration name="DbTest.connectMongodb" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_daemon - 2018.04.13 at 17h 12m 13s.xml">
-      <configuration name="RunnabldeT.daemon" configurationId="JUnit" />
+    <history-entry file="DbTest_getData - 2018.04.19 at 15h 00m 13s.xml">
+      <configuration name="DbTest.getData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_daemon - 2018.04.13 at 17h 16m 31s.xml">
-      <configuration name="RunnabldeT.daemon" configurationId="JUnit" />
+    <history-entry file="DbTest_getData - 2018.04.19 at 15h 06m 17s.xml">
+      <configuration name="DbTest.getData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_daemon - 2018.04.13 at 17h 19m 01s.xml">
-      <configuration name="RunnabldeT.daemon" configurationId="JUnit" />
+    <history-entry file="DbTest_getData - 2018.04.19 at 15h 06m 57s.xml">
+      <configuration name="DbTest.getData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnabldeT_daemon - 2018.04.13 at 17h 35m 19s.xml">
-      <configuration name="RunnabldeT.daemon" configurationId="JUnit" />
+    <history-entry file="DbTest_putData - 2018.04.19 at 14h 49m 35s.xml">
+      <configuration name="DbTest.putData" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RunnabldeT_sellTicket - 2018.04.13 at 16h 23m 52s.xml">
       <configuration name="RunnabldeT.sellTicket" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="930257000" />
+    <option name="totallyTimeSpent" value="992846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1164,81 +1247,44 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1363" y="19" width="1286" height="1008" extended-state="6" />
+    <frame x="1362" y="25" width="1288" height="1003" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38566554" sideWeight="0.4953125" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3943662" sideWeight="0.63762814" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38869664" sideWeight="0.4889357" order="12" side_tool="false" content_ui="combo" />
-      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.495" sideWeight="0.49487555" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49488056" sideWeight="0.49487555" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40841866" sideWeight="0.3623719" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28219396" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3200953" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43572986" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57850367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5782367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4935484" sideWeight="0.5089852" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40614334" sideWeight="0.49051633" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3208191" sideWeight="0.49051633" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5420992" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54152447" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32856005" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38566554" sideWeight="0.4953125" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32856005" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42445213" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42434585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3943662" sideWeight="0.63762814" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.495" sideWeight="0.49487555" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5420992" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32856005" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57850367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40614334" sideWeight="0.49051633" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38566554" sideWeight="0.4953125" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38869664" sideWeight="0.4889357" order="12" side_tool="false" content_ui="combo" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40841866" sideWeight="0.3623719" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28219396" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32856005" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42445213" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43572986" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4935484" sideWeight="0.5089852" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1253,12 +1299,30 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-server/src/main/java/cloud/rocksdb/server/master/MasterServer.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/curator/CuratorNodeCacheTest.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="183" />
+      <option name="time" value="202" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="waterMsg.length()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1266,6 +1330,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>waterMsg.length()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>openExecAction</expression-string>
         <language-id>JAVA</language-id>
@@ -1315,394 +1384,337 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>CubeBootstrap.processRunnable.getReply(sn)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/TransforEncoder.java">
+    <entry file="file://$PROJECT_DIR$/../net/curator-master/src/test/java/org/I0Itec/zkclient/ZkClientSerializationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/ByteObjConverter.java" />
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/utils/newStringUtils/Decoder.java">
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="-593">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/CommonUtil.java">
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/nio/ZkNIOClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
+        <state relative-caret-position="119">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/Test234.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/m2/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8-sources.jar!/org/apache/zookeeper/ZooKeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="799" column="61" lean-forward="false" selection-start-line="799" selection-start-column="55" selection-end-line="799" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/zookeeper/example/masterworker/AsynCreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="76" column="10" lean-forward="false" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/zookeeper/example/masterworker/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <caret line="65" column="47" lean-forward="false" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/zookeeper/example/masterworker/ChildrenCallbackMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/m2/org/rocksdb/rocksdbjni/5.11.3/rocksdbjni-5.11.3-sources.jar!/org/rocksdb/RocksDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/RocksDBHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/src/main/java/org/rocksdb/AbstractImmutableNativeReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/src/main/java/org/rocksdb/RocksObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/DataMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/zookeeper-master/src/main/java/yangqi/code/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-api/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/RocksDBHolderTemp.java" />
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/RocksDBHolder.java" />
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/JedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/ByteBufToBytes.java">
+    <entry file="jar://$USER_HOME$/m2/org/mongodb/mongo-java-driver/3.6.0/mongo-java-driver-3.6.0.jar!/org/bson/conversions/Bson.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/CubeMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="88" column="4" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/EventEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/ReplyEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/exception/IllegalDataException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/exception/NormalRuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/exception/RespException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/ChildChannelHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/ProcessManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/ProcessRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="102">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BatteryEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/concurrency/DaemonThread.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.6.0/ee36d9b1d13ba03fb901f6c60cbad3dc57778593/mongo-java-driver-3.6.0-sources.jar!/org/bson/conversions/Bson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="187">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/concurrency/net/RunnabldeT.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.6.0/ee36d9b1d13ba03fb901f6c60cbad3dc57778593/mongo-java-driver-3.6.0-sources.jar!/org/bson/Document.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="111" column="4" lean-forward="false" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
+        <state relative-caret-position="-4267">
+          <caret line="47" column="70" lean-forward="false" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/SimpleDaemons.java">
+    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/db/DbTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-282">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-15">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/Tester.java">
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/CommonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-917">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonThreadFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64/jre/lib/rt.jar!/java/util/concurrent/ExecutorService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonFromFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/Daemons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/daemon/DaemonsDontRunFinally.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/m2/org/springframework/spring-context/4.0.6.RELEASE/spring-context-4.0.6.RELEASE.jar!/org/springframework/context/Lifecycle.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/RocksDBHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BeanConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/OpenExecAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/ApplicationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/HttpProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/server/CubeBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/DefaultHttpProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/org/rocksdb/util/BytewiseComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        <state relative-caret-position="136">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/proc/ReceiveBatteryProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="72" column="48" lean-forward="false" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="384">
+          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/BatteryExecAction.java">
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/ProcessManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="61" column="69" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="61" selection-end-column="69" />
-          <folding />
+        <state relative-caret-position="399">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/DayBatteryExecAction.java">
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/db/DbManager.java" />
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/server/CubeBootstrapLong.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/proc/OpenBatteryProcess.java">
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/server/HttpBootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/proc/CloseBatteryProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/utils/newStringUtils/MsgDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="35" column="54" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/CubeInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/HttpServerInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="-153">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/CubeRun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/handler/CubeInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="146" column="13" lean-forward="false" selection-start-line="143" selection-start-column="12" selection-end-line="146" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/CloseResource.java">
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/DayBatteryExecAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/IOBlocked.java">
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/BatteryExecAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/conn/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/conn/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/BaseConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/InstanceAlreadyRunningException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/MongoDBOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/SysConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/common/LifeCycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/resources/c3p0.properties" />
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/utils/newStringUtils/MsgDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/javaBean/StringT.java" />
+    <entry file="file://$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/src/main/java/org/rocksdb/RocksDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/src/main/java/org/rocksdb/RocksEnv.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/InterruptingIdiom.java">
+    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/battery/BatteryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/Interrupting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#835#934#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/interrupt/Interrupting2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="-2533">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1716,7 +1728,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>battery-gateway:jar</last-edited>
+          <last-edited>service-gateway:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1764,7 +1776,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>battery-gateway</last-edited>
+          <last-edited>zookeeper</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

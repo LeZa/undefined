@@ -47,9 +47,6 @@ public class CubeBootstrapLong implements Runnable {
      */
     @Value("${serviceLong.port}")
     private String servicePort;
-
-//    @Autowired
-//    private DbManager dbManager;
     
     public void run() {
         LOG.info("设置serverbootstrap");
