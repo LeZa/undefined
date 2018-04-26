@@ -1,5 +1,6 @@
 package com.soundgroup.battery.conf;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
@@ -13,12 +14,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import java.beans.PropertyVetoException;
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
 public class BeanConfig {
-/*
+
     @Value("${jdbc.url}")
     private String jdbcUrl;
 
@@ -29,7 +31,7 @@ public class BeanConfig {
     private String jdbcUser;
 
     @Value("${jdbc.password}")
-    private String jdbcPassword;*/
+    private String jdbcPassword;
 
     @Value("${mongodb.host}")
     private String mongoDBHost;
@@ -45,7 +47,6 @@ public class BeanConfig {
 
     @Value("${mongodb.password}")
     private String mongoDBPassword;
-/*
 
     @Bean(name = {"comboPooledDataSource"})
     public ComboPooledDataSource dataSource() throws PropertyVetoException {
@@ -59,7 +60,6 @@ public class BeanConfig {
     	cpds.setMaxPoolSize(20);
         return cpds;
     }
-*/
 
 
     @Bean(name={"mongoDatabase"})

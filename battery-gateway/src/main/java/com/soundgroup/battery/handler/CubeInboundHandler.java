@@ -1,5 +1,6 @@
 package com.soundgroup.battery.handler;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -19,6 +20,7 @@ import io.netty.util.Attribute;
 import io.netty.util.CharsetUtil;
 import io.netty.util.ReferenceCountUtil;
 
+import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
 
 import java.util.Calendar;
@@ -39,6 +41,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
 
     private MongoDatabase mongoDatabase;
+
+    private ComboPooledDataSource comboPooledDataSource;
 
     /**
      * @description DelayClose
@@ -72,6 +76,7 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
         AnnotationConfigApplicationContext applicationContext
                  = CubeRun.getApplicationContext();
         mongoDatabase = (MongoDatabase) applicationContext.getBean("mongoDatabase");
+        comboPooledDataSource = (ComboPooledDataSource) applicationContext.getBean("comboPooledDataSource");
     }
 
 
@@ -123,11 +128,12 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
             cubeMsg.setData( sn.getBytes() );//SN
             cubeMsg.setCtx(ctx);
             cubeMsg.setDataString(msgStr);
+            MongoCollection mongoCollection1 = MongoDBOperator.mongoCollection(mongoDatabase,"heart");
             /** DaySN  storage start **/
-            String heartMsg = msgStr.replaceAll(",","");
+ /*           String heartMsg = msgStr.replaceAll(",","");
             String daySN = sn+currentDay;
             MongoCollection mongoCollection = MongoDBOperator.mongoCollection(mongoDatabase,"temp");
-            MongoCollection mongoCollection1 = MongoDBOperator.mongoCollection(mongoDatabase,"heart");
+
             FindIterable<Document> findIterable = MongoDBOperator.hasNext(mongoCollection,"temp",daySN);
             if(findIterable.iterator().hasNext() ){
                 Document document = findIterable.iterator().next();
@@ -136,12 +142,25 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
                 MongoDBOperator.updateOne(mongoCollection,"temp",daySN,oldVal,newVal);
             }else{
                 MongoDBOperator.put(mongoCollection,"temp",daySN,heartMsg);
-            }
+            }*/
             /** DaySN  storage end **/
             FindIterable<Document> findIterable1 = MongoDBOperator.hasNext(mongoCollection1,"heart",sn);
             if(findIterable1.iterator().hasNext() ){
                 Document document = findIterable1.iterator().next();
                 String oldHeartVal = (String) document.get(sn);
+                /**
+                 * Compare battery and storage to mysql
+                 */
+                int  oldBattery = Integer.parseInt( oldHeartVal.split(",")[16] );
+                int  newBattery = Integer.parseInt(  msrArr[16] );
+                if( oldBattery !=  newBattery ){ //storage to mysql;
+                    java.sql.Connection connection = comboPooledDataSource.getConnection();
+                    String sql = "update Battery set battery_power=? where battery_number=?";
+                    PreparedStatement preparedStatement = connection.prepareStatement( sql );
+                    preparedStatement.setString(1,String.valueOf(newBattery));
+                    preparedStatement.setString(2,sn);
+                    preparedStatement.execute();
+                }
                 MongoDBOperator.updateOne(mongoCollection1,"heart",sn,oldHeartVal,msgStr);
             }else{
                 MongoDBOperator.put(mongoCollection1,"heart",sn,msgStr);

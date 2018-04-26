@@ -43,8 +43,8 @@ public class ResponseEntity {
     public static  Map<String,Object> failRtn( String msg,String code,Object data){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("msg",msg);
-        resultMap.put("code",-1);
-        resultMap.put("data",new ArrayList());
+        resultMap.put("code",code);
+        resultMap.put("data",data);
         return resultMap;
     }
 }

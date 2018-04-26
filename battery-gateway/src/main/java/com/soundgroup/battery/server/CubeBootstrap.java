@@ -65,21 +65,15 @@ public class CubeBootstrap implements Runnable {
         serverBootstrap.childOption(ChannelOption.TCP_NODELAY, true);
         Channel ch;
         try {
-
             // 启动工作线程
             Thread processThread = new Thread(processRunnable);
             //setDaemon方法把java的线程设置为守护线程，此方法的调用必须在线程启动之前执行。只有在当前jvm中所有的线程都为守护线程时，jvm才会退出。
             processThread.setDaemon(true);
             processThread.start();
-
             ChannelFuture bindf = serverBootstrap.bind(Integer.valueOf(servicePort));
             ChannelFuture bsync = bindf.sync();
-
             ch = bsync.channel();
-            LOG.info((new StringBuilder()).append("listen port=:").append(servicePort).toString());
             run = true;
-
-            LOG.info("等待TCP结束...............................");
             ch.closeFuture().sync();
         } catch (InterruptedException e) {
             LOG.info("interrupted", e);

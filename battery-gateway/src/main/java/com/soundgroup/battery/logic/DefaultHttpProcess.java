@@ -31,9 +31,8 @@ import org.apache.log4j.Logger;
 
 import com.soundgroup.battery.exception.RespException;
 
-public abstract class DefaultHttpProcess implements HttpProcess {
-
-	private static final Logger LOG = Logger.getLogger(ProcessRunnable.class);
+public abstract class DefaultHttpProcess
+        implements HttpProcess {
 
     public void execute(ChannelHandlerContext ctx, FullHttpRequest req,Map<String,Object> paramMap)  {
         FullHttpResponse resp = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK);
@@ -46,15 +45,16 @@ public abstract class DefaultHttpProcess implements HttpProcess {
             } else if (req.getMethod() == HttpMethod.POST) {
                 decoder = new HttpPostRequestDecoder(req);
             } else {
-                throw new Exception("HTTP method 不支持:" + req.getMethod().name());
+                throw new Exception("Not support request method.");
             }
-            // 执行业务逻辑
+
             doExcute(ctx, req, resp, paramMap, decoder);
+
             sendResp(ctx, resp);
+
         } catch (RespException e) {
-            LOG.info("RespException 返回");
+            e.printStackTrace();
         } catch (Exception e) {
-            LOG.error("执行HTTP处理", e);
             if(ctx.channel().isWritable()){
                 resp.setStatus(HttpResponseStatus.INTERNAL_SERVER_ERROR);
                 sendResp(ctx, resp);
@@ -70,7 +70,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
     protected abstract void doExcute(ChannelHandlerContext ctx, FullHttpRequest req, FullHttpResponse resp,
             Map<String, Object> params, HttpPostRequestDecoder decoder) throws Exception;
 
-    public String parseData(InterfaceHttpData data) throws IOException {
+    private String parseData(InterfaceHttpData data) throws IOException {
         if (data == null) {
             return null;
         }
@@ -82,14 +82,14 @@ public abstract class DefaultHttpProcess implements HttpProcess {
         return null;
     }
 
-    public InterfaceHttpData getHttpData(String name, HttpPostRequestDecoder decoder) {
+    private InterfaceHttpData getHttpData(String name, HttpPostRequestDecoder decoder) {
         if (decoder == null) {
             return null;
         }
         return decoder.getBodyHttpData(name);
     }
 
-    public List<InterfaceHttpData> getHttpDatas(String name, HttpPostRequestDecoder decoder) {
+    private List<InterfaceHttpData> getHttpDatas(String name, HttpPostRequestDecoder decoder) {
         if (decoder == null) {
             return Collections.emptyList();
         }
@@ -100,7 +100,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
         return retLst;
     }
 
-    public String getParam(String name, Map<String, List<String>> params) {
+    private String getParam(String name, Map<String, List<String>> params) {
         if (params == null) {
             return null;
         }
@@ -115,7 +115,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
         }
     }
 
-    public List<String> getParams(String name, Map<String, List<String>> params) {
+    private List<String> getParams(String name, Map<String, List<String>> params) {
         if (params == null) {
             return null;
         }
@@ -126,7 +126,7 @@ public abstract class DefaultHttpProcess implements HttpProcess {
         return retLst;
     }
 
-    public void sendResp(ChannelHandlerContext ctx, FullHttpResponse resp) {
+    private void sendResp(ChannelHandlerContext ctx, FullHttpResponse resp) {
         if (resp.getStatus().code() != 200) {
             ByteBuf buf = Unpooled.copiedBuffer(resp.getStatus().toString(), CharsetUtil.UTF_8);
             resp.content().writeBytes(buf);
@@ -139,27 +139,26 @@ public abstract class DefaultHttpProcess implements HttpProcess {
         } else {
             ctx.channel().close();
         }
-
     }
 
-    public HttpMethod method(FullHttpRequest req) {
+    private HttpMethod method(FullHttpRequest req) {
         return req.getMethod();
     }
 
     protected void sendTimeout(FullHttpResponse resp) {
         Gson gson =  new Gson();
-        resp.content().writeBytes(gson.toJson(ResponseEntity.failRtn("请求处理超时")).getBytes());
+        resp.content().writeBytes(gson.toJson(ResponseEntity.failRtn("Request timeout.")).getBytes());
         resp.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
     }
 
     protected void sendUnableConn(FullHttpResponse resp) {
-    	//无有效连接
         Gson gson = new Gson();
-        resp.content().writeBytes( gson.toJson( ResponseEntity.failRtn("设备未连接")).getBytes() );
+        resp.content().writeBytes( gson.toJson(
+                ResponseEntity.failRtn("Device connect fial.")).getBytes() );
         resp.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
     }
 
-    protected void sendParamsError(String msg, FullHttpResponse resp) {
+    private void sendParamsError(String msg, FullHttpResponse resp) {
         resp.content().writeBytes(msg.getBytes());
         resp.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
     }

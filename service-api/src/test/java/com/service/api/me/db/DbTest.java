@@ -11,10 +11,7 @@ import com.mongodb.client.model.Filters;
 import org.bson.Document;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static com.build.thinking.in.java.net.mindview.util.Print.print;
 
@@ -27,20 +24,15 @@ public class DbTest {
         ServerAddress serverAddress = new ServerAddress("192.168.109.37",27018);
         List<ServerAddress> addrs = new ArrayList<ServerAddress>();
         addrs.add(serverAddress);
-
         //MongoCredential.createScramSha1Credential()三个参数分别为 用户名 数据库名称 密码
         MongoCredential credential = MongoCredential.createScramSha1Credential("test", "test", "123".toCharArray());
         List<MongoCredential> credentials = new ArrayList<MongoCredential>();
         credentials.add(credential);
-
         //通过连接认证获取MongoDB连接
         MongoClient mongoClient = new MongoClient(addrs,credentials);
-
         //连接到数据库
         MongoDatabase mongoDatabase = mongoClient.getDatabase("test");
-
-        mongoDatabase.createCollection("heart");
-
+        mongoDatabase.createCollection("tempHeart");
         System.out.println("Connect to database successfully");
     }
 
@@ -49,15 +41,12 @@ public class DbTest {
         ServerAddress serverAddress = new ServerAddress("192.168.109.37",27018);
         List<ServerAddress> addrs = new ArrayList<ServerAddress>();
         addrs.add(serverAddress);
-
         //MongoCredential.createScramSha1Credential()三个参数分别为 用户名 数据库名称 密码
         MongoCredential credential = MongoCredential.createScramSha1Credential("test", "test", "123".toCharArray());
         List<MongoCredential> credentials = new ArrayList<MongoCredential>();
         credentials.add(credential);
-
         //通过连接认证获取MongoDB连接
         MongoClient mongoClient = new MongoClient(addrs,credentials);
-
         //连接到数据库
         MongoDatabase mongoDatabase = mongoClient.getDatabase("test");
         MongoCollection<Document> collection = mongoDatabase.getCollection("sushile");
@@ -104,7 +93,8 @@ public class DbTest {
                     System.out.print("    A..."+getLenArr[12]+getLenArr[13]+getLenArr[14]+getLenArr[15]);
                     System.out.print( "   battery..."+getLenArr[16]);//0-10
                     System.out.print( "   N..."+getLenArr[17]+getLenArr[18]+getLenArr[19]+getLenArr[20]);
-                    System.out.println("Status..."+getLenArr[25]+getLenArr[26]+getLenArr[27]+getLenArr[28]);
+                    System.out.print("  Status..."+getLenArr[25]+getLenArr[26]+getLenArr[27]+getLenArr[28]);
+                    System.out.println("  TimeinMillis..."+getLenArr[getLenArr.length-1]);
                 }
             }
 

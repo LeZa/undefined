@@ -13,7 +13,6 @@ public class MsgDecoder extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf buf, List<Object> list) throws Exception {
-
         int len = buf.readableBytes();
         if (len > 0) {
             byte[] bytes = new byte[len];
@@ -23,6 +22,7 @@ public class MsgDecoder extends ByteToMessageDecoder {
                     && heartMsg.endsWith("#")) {
                 if (heartMsg.split(",").length == 18) {
                     ByteBuf heartByteBuf = Unpooled.wrappedBuffer(heartMsg.getBytes());
+                    list.add( heartMsg);
                 }
             } else {
                 String waterMsg = CommonUtil.bytesToHexString(bytes);

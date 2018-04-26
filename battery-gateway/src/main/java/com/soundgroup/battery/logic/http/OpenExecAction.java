@@ -39,7 +39,7 @@ public class OpenExecAction
             String CODE = (String) paramMap.get("CODE");;
             String sn = (String) paramMap.get("SN");
             CubeMsg cubeMsg = CubeMsg.buildMsg(sn);
-            if (cubeMsg == null) {
+            if( cubeMsg == null ) {
                 sendUnableConn(resp);
                 return;
             }

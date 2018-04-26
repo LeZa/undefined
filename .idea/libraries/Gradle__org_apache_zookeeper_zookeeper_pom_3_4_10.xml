@@ -4,6 +4,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.4.10/472c6b062e4217a2460549cf8b61f160477aacef/zookeeper-3.4.10.pom" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.4.10/3cdacffaa07b36877ff0a7baee6910535e62e6eb/zookeeper-3.4.10-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

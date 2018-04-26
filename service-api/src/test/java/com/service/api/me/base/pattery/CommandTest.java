@@ -1,6 +1,8 @@
-package com.build.thinkingc.out.self.base.pattern.command;
+package com.service.api.me.base.pattery;
 
+import com.build.thinkingc.out.self.base.pattern.command.*;
 import com.build.thinkingc.out.self.base.pattern.command.pb.Light;
+import org.junit.Test;
 
 public class CommandTest {
 
@@ -12,6 +14,14 @@ public class CommandTest {
 		Command lightOnCommand =  new LightOnCommand( light );
 		Command lightOffCommand =  new LightOffCommand( light );
 		rc.setCommand(0, lightOnCommand, lightOffCommand);
-		
+	}
+
+
+	@Test
+	public void abstractVoid(){
+
+		AbstractCommand abstractCommand =  new PcOffCommand();
+		abstractCommand.execute();
+
 	}
 }
