@@ -13,7 +13,9 @@ public class RocksdbServiceImpl
 
     public RocksdbServiceImpl() throws RemoteException {
         try {
-            this.rocksDB = RocksDB.open("/home/centin/data");
+            if( this.rocksDB != null ) {
+                this.rocksDB = RocksDB.open("/home/centin/data");
+            }
         } catch (RocksDBException e) {
             e.printStackTrace();
         }

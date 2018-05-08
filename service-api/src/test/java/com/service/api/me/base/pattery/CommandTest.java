@@ -1,7 +1,7 @@
 package com.service.api.me.base.pattery;
 
-import com.build.thinkingc.out.self.base.pattern.command.*;
-import com.build.thinkingc.out.self.base.pattern.command.pb.Light;
+import com.build.pattern.command.*;
+import com.build.pattern.command.pb.Light;
 import org.junit.Test;
 
 public class CommandTest {

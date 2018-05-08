@@ -1,0 +1,112 @@
+1: cd ~ 回到/home/ubuntu
+2: cd / 回到根目录
+3: cd - 回到上一次的工作目录 
+4: rm rf 删除文件夹
+5:cp -r bbs ../backup/bbs    解释:-r 这个options是递归的意思
+6: ssh root@192.168.100.100 (必须root下)
+7: mv aaa bbb (重命名文件夹)
+8: scp /media/ubuntu/sda/package/zookeeper-3.4.8.tar.gz  root@192.168.100.187:/opt   ssh复制
+9:修改host  vi /etc/hosts（必须root下）
+10:kill -9  7890 (強制刪除一個進程)
+11:more +/商城 catalina.out
+12:event model 事件模型
+
+
+
+idea
+1:ctrl+h 查看所有的继承子类
+2:ctrl+shift+f8  查看所有的断点
+3:alt+insert   生成 set get
+4:ctrl+shift+f  全局搜索
+5:ctrl+g   跳到指定行
+6:alt+f7   
+7:ctrl+shift+f  全局搜索
+8:CSRF
+CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性
+9:JWT   json web token
+10: idea  取消单行/import折叠 到setting里修改：
+File->Setting->Editor->General->Code Folding，把红色部分取消掉即可。
+
+
+
+systemctl stop firewalld.service
+
+git init
+touch README  
+git add .
+git commit -m 'commit'
+git checkout -b develop
+git remote add origin http://git.91haolei.net/java/wisdom_cloud.git
+/****/
+git remote remove origin https://github.com/LeZa/remark-file.git
+git fetch
+git checkout origin/develop
+
+
+git checkout master
+git merge develop
+
+git checkout develop/**switch branch
+
+
+
+
+
+spring.datasource.url = jdbc:mysql://192.168.100.180:3306/wisdom_cloud?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+spring.datasource.username = cloud_admin
+spring.datasource.password = 123456
+
+
+select column_name, column_comment  from information_schema.columns where table_schema ='wisdom_cloud' and table_name='employee';
+
+//                String waterMsg = "24,21,70,05,52,41,01,29,32,12,04,18,22,36,11,20,07,11,34,99,10,3E,00,12,33,FF,FF,FF,FF,01,0F,00,00,00,00,00,00,01,CC,00,25,EF,11,4F,5E";
+
+
+ps -ef|egrep  "rpc|nfs"
+
+
+mount -t nfs 192.168.89.54:/home/centin/ideaProject/undefined/data/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IntelliJ IDEA总是提示Cannot resolve symbol
+后来在这里百度知道，找到这个解决方法：
+点击File | Invalidate Caches，清理了缓存重启IDEA就可以了。
+
+
+curl -X POST -d grant_type=password -d username=123 -d password=123 "http://acme:acmesecret@localhost:9997/oauth/token"
+
+curl -H "Authorization: bearer ae532377-406f-4dd5-bec2-b422c4c6a10a http://localhost:9999/client/us
+
+
+
+

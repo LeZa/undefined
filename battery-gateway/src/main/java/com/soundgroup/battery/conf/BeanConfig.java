@@ -1,5 +1,6 @@
 package com.soundgroup.battery.conf;
 
+import com.build.db.rmi.RocksdbService;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
@@ -15,6 +16,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import java.beans.PropertyVetoException;
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +53,10 @@ public class BeanConfig {
     @Value("${mongodb.password}")
     private String mongoDBPassword;
 
+
+    @Value("${rmi.url}")
+    private String rmiUrl;
+
     @Bean(name = {"comboPooledDataSource"})
     public ComboPooledDataSource dataSource() throws PropertyVetoException {
         ComboPooledDataSource cpds = new ComboPooledDataSource();
@@ -61,7 +70,24 @@ public class BeanConfig {
         return cpds;
     }
 
+    /**
+     * @Description rocksdbService
+     * @return
+     * @throws RemoteException
+     * @throws NotBoundException
+     * @throws MalformedURLException
+     */
+    @Bean( name={"RocksdbService"})
+    public RocksdbService getRocksdbService()
+            throws RemoteException, NotBoundException, MalformedURLException {
+            RocksdbService rocksdbService = (RocksdbService) Naming.lookup(rmiUrl);
+            return rocksdbService;
+    }
 
+    /**
+     * @Description  mongodbService
+     * @return
+     */
     @Bean(name={"mongoDatabase"})
     public MongoDatabase mongoDatabase(){
         ServerAddress serverAddress = new ServerAddress(mongoDBHost,mongoDBPort);
@@ -75,7 +101,6 @@ public class BeanConfig {
         MongoDatabase mongoDatabase = mongoClient.getDatabase(mongoDBInstance);
         return mongoDatabase;
     }
-
 
     @Bean(name = {"serverBootstrap"})
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

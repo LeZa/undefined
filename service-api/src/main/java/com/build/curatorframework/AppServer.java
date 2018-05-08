@@ -1,6 +1,6 @@
 package com.build.curatorframework;
 
-import com.build.db.RocksdbHolder;
+
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
 
 public class AppServer {
 
+    public static final String REGISTER_ROOT_PATH = "/mall";
+
 
     public static void main( String sck[] ) {
         try {
@@ -22,21 +24,35 @@ public class AppServer {
                     new ExponentialBackoffRetry(1000, 3));
             curatorFramework.start();
             curatorFramework.blockUntilConnected();
-            ServiceInstanceBuilder<RocksdbHolder> serviceInstanceBuilder = ServiceInstance.builder();
+
+            ServiceInstanceBuilder<ServiceDetail> serviceInstanceBuilder = ServiceInstance.builder();
+            serviceInstanceBuilder.address("192.168.89.5");
+            serviceInstanceBuilder.port(2185);
+            serviceInstanceBuilder.name("tomcat");
+            serviceInstanceBuilder.payload( new ServiceDetail("1",1) );
+
+            ServiceInstance<ServiceDetail> instance = serviceInstanceBuilder.build();
+
+            ServiceDiscovery<ServiceDetail> serviceDiscovery = ServiceDiscoveryBuilder.builder(ServiceDetail.class)
+                    .client(curatorFramework)
+                    .serializer(new JsonInstanceSerializer<ServiceDetail>(ServiceDetail.class))
+                    .basePath(REGISTER_ROOT_PATH)
+                    .build();
+
+/*            ServiceInstanceBuilder<RocksdbService> serviceInstanceBuilder = ServiceInstance.builder();
             serviceInstanceBuilder.address("192.168.89.60");
             serviceInstanceBuilder.port(2185);
             serviceInstanceBuilder.name("sushile");
-            RocksdbHolder rocksdbHolder = new RocksdbHolder();
-            rocksdbHolder.create();
-            serviceInstanceBuilder.payload(rocksdbHolder);
+            RocksdbService rocksdbService =  new RocksdbServiceImpl();
+            serviceInstanceBuilder.payload( rocksdbService );
 
-            ServiceInstance<RocksdbHolder> instance = serviceInstanceBuilder.build();
+            ServiceInstance<RocksdbService> instance = serviceInstanceBuilder.build();
 
-            ServiceDiscovery<RocksdbHolder> serviceDiscovery = ServiceDiscoveryBuilder.builder(RocksdbHolder.class)
+            ServiceDiscovery<RocksdbService> serviceDiscovery = ServiceDiscoveryBuilder.builder(RocksdbService.class)
                     .client(curatorFramework)
-                    .serializer(new JsonInstanceSerializer<RocksdbHolder>(RocksdbHolder.class))
-                    .basePath(RocksdbHolder.REGISTER_ROOT_PATH)
-                    .build();
+                    .serializer(new JsonInstanceSerializer<RocksdbService>(RocksdbService.class))
+                    .basePath(REGISTER_ROOT_PATH)
+                    .build();*/
             //服务注册
             serviceDiscovery.registerService(instance);
             serviceDiscovery.start();

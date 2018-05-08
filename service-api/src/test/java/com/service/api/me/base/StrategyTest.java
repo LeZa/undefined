@@ -1,7 +1,7 @@
 package com.service.api.me.base;
 
-import com.build.thinkingc.out.self.base.pattern.Strategy.pb.Duck;
-import com.build.thinkingc.out.self.base.pattern.Strategy.pb.MallardDuck;
+import com.build.pattern.Strategy.pb.Duck;
+import com.build.pattern.Strategy.pb.MallardDuck;
 import org.junit.Test;
 
 
@@ -17,9 +17,9 @@ public class StrategyTest {
 		md.performQuack();
 		md.display();
 		System.out.println("----------------------------------");
-		md.setFlyBehavior(new com.build.thinkingc.out.self.base.pattern.Strategy.FlyNoWay());
+		md.setFlyBehavior(new com.build.pattern.Strategy.FlyNoWay());
 		md.performFly();
-		md.setQuackBehavior(new com.build.thinkingc.out.self.base.pattern.Strategy.MuteQuack());
+		md.setQuackBehavior(new com.build.pattern.Strategy.MuteQuack());
 		md.performQuack();
 	}
 }
