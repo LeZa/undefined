@@ -62,13 +62,6 @@ public class Acceptor extends Thread {
     @Override
     public void run() {
 
-        try {
-            System.out.println("Acceptor {} start to service..."+serverChannel.getLocalAddress());
-        }
-        catch (IOException e) {
-            throw new ReactorException(e);
-        }
-
         final Selector selector = this.selector;
 
         for (; ; ) {

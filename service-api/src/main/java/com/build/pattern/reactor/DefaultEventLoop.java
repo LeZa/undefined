@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class DefaultEventLoop
         implements EventLoop, Runnable {
 
-    private EventLoopGroup parent;
+    private EventLoopGroup eventLoopGroup;
 
     private String name;
 
@@ -25,9 +25,9 @@ public class DefaultEventLoop
 
     private Queue<Runnable> taskQueue = new ConcurrentLinkedQueue<>();
 
-    public DefaultEventLoop(EventLoopGroup parent, String name) {
+    public DefaultEventLoop(EventLoopGroup eventLoopGroup, String name) {
 
-        this.parent = parent;
+        this.eventLoopGroup = eventLoopGroup;
         this.name = name;
         try {
             this.selector = Selector.open();

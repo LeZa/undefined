@@ -13,17 +13,13 @@ public class DefaultEventLoopGroup implements EventLoopGroup {
         if (threads <= 0) {
             throw new IllegalArgumentException("threads <= 0");
         }
-
         eventLoops = new EventLoop[threads];
-
         for (int i = 0; i < threads; ++i) {
             eventLoops[i] = new DefaultEventLoop(this, "eventloop-" + i);
         }
-
         for (int i = 0; i < threads; ++i) {
             new Thread(eventLoops[i]).start();
         }
-
         currEventLoopIdx = 0;
     }
 

@@ -9,5 +9,6 @@ public class EchoServerDemo {
         Acceptor acceptor = new Acceptor(eventLoopGroup, 12345);
         acceptor.addHandler(new EchoServerHandler());
         acceptor.start();
+        System.out.println( " Server is start...");
     }
 }
