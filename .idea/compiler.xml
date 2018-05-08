@@ -13,7 +13,6 @@
         <module name="battery-gateway" />
         <module name="cube" />
         <module name="dummy-service" />
-        <module name="netty.io" />
         <module name="oath2-client-demo" />
         <module name="service-battery" />
         <module name="service-registry" />
