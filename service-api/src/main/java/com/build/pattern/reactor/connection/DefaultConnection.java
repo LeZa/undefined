@@ -15,19 +15,19 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class DefaultConnection implements Connection {
 
-    private static final Logger logger = LoggerFactory.getLogger(DefaultConnection.class);
-
     private EventLoop eventLoop;
+
     private SocketChannel channel;
+
     private ConnectionPipeline pipeline;
 
     private Queue<ByteBuffer> readBufferQueue = new ConcurrentLinkedQueue<>();
+
     private Queue<ByteBuffer> writeBufferQueue = new ConcurrentLinkedQueue<>();
 
     public DefaultConnection(EventLoop eventLoop, SocketChannel channel) {
         Objects.requireNonNull(eventLoop);
         Objects.requireNonNull(channel);
-
         this.eventLoop = eventLoop;
         this.channel = channel;
         this.pipeline = new DefaultConnectionPipeline(this);
@@ -44,11 +44,10 @@ public class DefaultConnection implements Connection {
                 buffer.flip();
                 readBufferQueue.add(buffer);
                 //writeBufferQueue.add(ByteBuffer.wrap(buffer.array(), 0, buffer.limit()));
-                logger.info("connection {} read {} bytes", this.toString(), buffer.limit());
-
+                System.out.println("connection {} read {} bytes"+this.toString()+ buffer.limit());
                 pipeline.fireRead(buffer);
             } else if (count == -1) {
-                logger.info("connection {} close", this.toString());
+                System.out.println("connection {} close"+this.toString());
                 channel.close();
             }
         } catch (IOException e) {
@@ -62,10 +61,8 @@ public class DefaultConnection implements Connection {
         try {
             while (!writeBufferQueue.isEmpty()) {
                 ByteBuffer buffer = writeBufferQueue.poll();
-
                 channel.write(buffer);
-                logger.info("connection {} write {} bytes", this.toString(), buffer.limit());
-
+                System.out.println("connection {} write {} bytes"+this.toString()+buffer.limit());
                 pipeline.fireWrite(buffer);
             }
         } catch (IOException e) {

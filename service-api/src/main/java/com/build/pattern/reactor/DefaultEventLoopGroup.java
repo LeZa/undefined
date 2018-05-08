@@ -6,6 +6,7 @@ import com.build.pattern.reactor.connection.*;
 public class DefaultEventLoopGroup implements EventLoopGroup {
 
     private EventLoop[] eventLoops;
+
     private volatile int currEventLoopIdx;
 
     public DefaultEventLoopGroup(int threads) {
@@ -31,6 +32,10 @@ public class DefaultEventLoopGroup implements EventLoopGroup {
         return eventLoops[currEventLoopIdx++ % eventLoops.length];
     }
 
+    /**
+     * @Description  Register connection
+     * @param connection
+     */
     @Override
     public void register(Connection connection) {
         connection.eventLoop().register(connection);

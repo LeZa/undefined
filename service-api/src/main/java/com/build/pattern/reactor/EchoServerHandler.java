@@ -9,20 +9,18 @@ import java.nio.ByteBuffer;
 
 public class EchoServerHandler extends AbstractConnectionHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(EchoServerHandler.class);
-
     @Override
     public void connectionRead(ConnectionPipeline pipeline, Object msg) throws Exception {
         super.connectionRead(pipeline, msg);
         ByteBuffer buffer = (ByteBuffer)msg;
         pipeline.connection().channel().write(buffer);
-        logger.info("EchoServerHandler connectionRead ...");
+        System.out.println("EchoServerHandler connectionRead ...");
     }
 
     @Override
     public void connectionRegistered(ConnectionPipeline pipeline) throws Exception {
         super.connectionRegistered(pipeline);
-        logger.info("EchoServerHandler register ...");
+        System.out.println("EchoServerHandler register ...");
     }
 
     @Override
@@ -30,6 +28,6 @@ public class EchoServerHandler extends AbstractConnectionHandler {
         super.write(pipeline, msg);
         ByteBuffer buffer = (ByteBuffer)msg;
         pipeline.connection().channel().write(buffer);
-        logger.info("EchoServerHandler write ...");
+        System.out.println("EchoServerHandler write ...");
     }
 }
