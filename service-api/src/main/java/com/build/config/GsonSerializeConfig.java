@@ -1,8 +1,8 @@
 package com.build.config;
 
-import Entity.Author;
-import Entity.Base;
-import Entity.Book;
+import com.build.entity.Author;
+import com.build.entity.Base;
+import com.build.entity.Book;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;

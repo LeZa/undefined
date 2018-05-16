@@ -2,9 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../net/curator-master" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../net/tikv-client-lib-java-master" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cloud-rocksdb-master/cloud-rocksdb-redis-client" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cloud-rocksdb-master/rocksdb" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinkingc/out/self/base/File/Test.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oauth-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-api/src/main/java/com/build/api/File/Test.java" charset="UTF-8" />
   </component>
 </project>

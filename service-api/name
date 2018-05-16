@@ -21,6 +21,8 @@ idea
 5:ctrl+g   跳到指定行
 6:alt+f7   
 7:ctrl+shift+f  全局搜索
+8:ctrl+alt+o
+9:ctrl+alt+l
 8:CSRF
 CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性
 9:JWT   json web token
@@ -50,13 +52,6 @@ git checkout develop/**switch branch
 
 
 
-
-
-spring.datasource.url = jdbc:mysql://192.168.100.180:3306/wisdom_cloud?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
-spring.datasource.username = cloud_admin
-spring.datasource.password = 123456
-
-
 select column_name, column_comment  from information_schema.columns where table_schema ='wisdom_cloud' and table_name='employee';
 
 //                String waterMsg = "24,21,70,05,52,41,01,29,32,12,04,18,22,36,11,20,07,11,34,99,10,3E,00,12,33,FF,FF,FF,FF,01,0F,00,00,00,00,00,00,01,CC,00,25,EF,11,4F,5E";
@@ -67,34 +62,24 @@ ps -ef|egrep  "rpc|nfs"
 
 mount -t nfs 192.168.89.54:/home/centin/ideaProject/undefined/data/
 
+/usr/local/mongodb-3.2.4/bin/mongo 192.168.109.60:27018
+
+db.createuser( {user:"battery",pwd:"battery",roles:[{role:"root",db:"admin"}] })
+
+use battery
+
+show users
+
+show collections
+db.heart.find().pretty()
 
 
 
+Linux下四款Web服务器压力测试工具（http_load、webbench、ab、siege）介绍 Apache Benchmark简称AB，安装有两种方式：
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+find -name '*source*.jar'|xargs rm -rf
 
 
 

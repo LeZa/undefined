@@ -1,7 +1,7 @@
 package com.build.gson.net;
 
-import Entity.Base;
-import Entity.BaseInterface;
+import com.build.entity.Base;
+import com.build.entity.BaseInterface;
 import com.build.config.JsonKey;
 
 import java.io.Serializable;

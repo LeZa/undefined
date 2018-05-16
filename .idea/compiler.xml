@@ -14,6 +14,7 @@
         <module name="cube" />
         <module name="dummy-service" />
         <module name="oath2-client-demo" />
+        <module name="oauth-server" />
         <module name="service-battery" />
         <module name="service-registry" />
         <module name="uaa-service" />
@@ -23,6 +24,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="battery-gateway" target="1.5" />
       <module name="netty.io" target="1.8" />
+      <module name="oauth-server" target="1.8" />
       <module name="service-api_main" target="1.8" />
       <module name="service-api_test" target="1.8" />
     </bytecodeTargetLevel>

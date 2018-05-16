@@ -72,3 +72,18 @@ public class HttpBootstrap implements Runnable {
         }
     }
 }
+
+/**
+ * @Description ChannelOption.TCP_NODELAY
+
+为什么延迟不高不低正好 40ms 呢？果断 Google 一下找到了答案。原来这是 TCP 协议中的 Nagle‘s Algorithm 和 TCP Delayed Acknoledgement 共同起作 用所造成的结果。
+
+Nagle’s Algorithm 是为了提高带宽利用率设计的算法，其做法是合并小的TCP 包为一个，避免了过多的小报文的 TCP 头所浪费的带宽。如果开启了这个算法 （默认），则协议栈会累积数据直到以下两个条件之一满足的时候才真正发送出 去：
+
+积累的数据量到达最大的 TCP Segment Size
+收到了一个 Ack
+
+TCP Delayed Acknoledgement 也是为了类似的目的被设计出来的，它的作用就 是延迟 Ack 包的发送，使得协议栈有机会合并多个 Ack，提高网络性能。
+如果一个 TCP 连接的一端启用了 Nagle‘s Algorithm，而另一端启用了 TCP Delayed Ack，而发送的数据包又比较小，则可能会出现这样的情况：发送端在等 待接收端对上一个packet 的 Ack 才发送当前的 packet，而接收端则正好延迟了 此 Ack 的发送，那么这个正要被发送的 packet 就会同样被延迟。当然 Delayed Ack 是有个超时机制的，而默认的超时正好就是 40ms。
+现代的 TCP/IP 协议栈实现，默认几乎都启用了这两个功能，你可能会想，按我 上面的说法，当协议报文很小的时候，岂不每次都会触发这个延迟问题？事实不 是那样的。仅当协议的交互是发送端连续发送两个 packet，然后立刻 read 的 时候才会出现问题。
+ */

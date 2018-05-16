@@ -1,7 +1,7 @@
 package com.service.api.me.gson;
 
-import Entity.Author;
-import Entity.Book;
+import com.build.entity.Author;
+import com.build.entity.Book;
 import com.build.gson.net.UserTypeAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

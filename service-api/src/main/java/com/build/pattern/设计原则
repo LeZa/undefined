@@ -16,3 +16,6 @@
 命令模式：
 
 Reactor:模式
+
+skeletal:骨架实现
+strategy:策略

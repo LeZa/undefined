@@ -1,6 +1,6 @@
 package com.build.gson.net;
 
-import Entity.Base;
+import com.build.entity.Base;
 import com.build.config.JsonKey;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
