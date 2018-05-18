@@ -1,0 +1,5 @@
+参照SynchronizationComparisons类
+
+1: This program uses the Template Method design pattern to put all the common code in the
+base class and isolate all the varying code in the derived class implementations of acc-
+umulate() and read().
