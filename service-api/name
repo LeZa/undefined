@@ -92,6 +92,10 @@ curl -X POST -d grant_type=password -d username=123 -d password=123 "http://acme
 
 curl -H "Authorization: bearer ae532377-406f-4dd5-bec2-b422c4c6a10a http://localhost:9999/client/us
 
+https://www.bilibili.com/video/av16409150/  CS61B-Data Structures UC berkeley Spring 2014
+https://www.bilibili.com/video/av21719171/  UCB CS61B Data Structures, Spring 2018
+https://www.bilibili.com/video/av20538548/  CS61A Spring 2018（自带英文字幕）
+
 
 
 

@@ -78,7 +78,10 @@ public class Mongodb {
         MongoCursor<Document> mongoCursor = findIterable.iterator();
         while( mongoCursor.hasNext() ){
                 System.out.println ( mongoCursor.next() );
-        }*/
+        }
+
+        24,21,70,05,23,69,02,34,40,23,05,18,39,57,76,56,06,11,61,90,69,8C,00,00,08,F7,FF,FB,FF,00,00,00,00,00,00,00,00,01,CC,00,10,4D,76,2F,29,1527042882200
+        */
         System.out.println("--------------------------------------------------------------------------------------------");
         MongoCollection<Document> collection1 = mongoDatabase.getCollection("heart");
         FindIterable<Document> findIterable1 = collection1.find();

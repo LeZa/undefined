@@ -1,13 +1,20 @@
 package com.build.thinking.in.java.concurrency.LockSync;
 
-import java.util.concurrent.*;
-import java.util.concurrent.atomic.*;
-import java.util.concurrent.locks.*;
-import java.util.*;
+import java.util.Random;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import static com.build.thinking.in.java.net.mindview.util.Print.print;
 import static com.build.thinking.in.java.net.mindview.util.Print.printf;
 
+/**
+ * @Description  使用synchronized,Atomic和lock分别对一个变量加和读操作
+ */
 
 abstract class Accumulator {
 
@@ -16,8 +23,10 @@ abstract class Accumulator {
     private static final int N = 4;
     public static ExecutorService exec =
             Executors.newFixedThreadPool(N * 2);
+
     private static CyclicBarrier barrier =
             new CyclicBarrier(N * 2 + 1);
+
     protected volatile int index = 0;
     protected volatile long value = 0;
     protected long duration = 0;
@@ -38,8 +47,9 @@ abstract class Accumulator {
 
     private class Modifier implements Runnable {
         public void run() {
-            for (long i = 0; i < cycles; i++)
+            for (long i = 0; i < cycles; i++) {
                 accumulate();
+            }
             try {
                 barrier.await();
             } catch (Exception e) {
@@ -52,8 +62,9 @@ abstract class Accumulator {
         private volatile long value;
 
         public void run() {
-            for (long i = 0; i < cycles; i++)
+            for (long i = 0; i < cycles; i++) {
                 value = read();
+            }
             try {
                 barrier.await();
             } catch (Exception e) {
@@ -64,7 +75,7 @@ abstract class Accumulator {
 
     public void timedTest() {
         long start = System.nanoTime();
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) { // N = 4
             exec.execute(new Modifier());
             exec.execute(new Reader());
         }
