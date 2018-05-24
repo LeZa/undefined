@@ -1,0 +1,34 @@
+针对项目 eureka-server
+
+创建两个配置文件
+
+application-peer1.properties
+
+spring.application.name=eureka-server
+server.port=1111
+eureka.instance.hostname=peer1
+eureka.client.serviceUrl.defaultZone=http://peer2:1112/eureka/
+
+application-peer2.properties
+
+spring.application.name=eureka-server
+server.port=1112
+eureka.instance.hostname=peer2
+eureka.client.serviceUrl.defaultZone=http://peer1:1111/eureka/
+
+启动时，通过spring.profiles.active属性来分别启动peer1和peer2
+
+java -jar eureka-server-1.0.0.jar --spring.profiles.active=peer1
+java -jar eureka-server-1.0.0.jar --spring.profiles.active=peer2
+
+ 
+
+配置好注册中心后，配置服务注册和发现
+
+spring.application.name=compute-service
+server.port=2222
+eureka.client.serviceUrl.defaultZone=http://peer1:1111/eureka/,http://peer2:1112/eureka/
+
+由于两两相互注册
+
+假设我们有3个注册中心，我们将peer1、peer2、peer3各自都将serviceUrl指向另外两个节点。换言之，peer1、peer2、peer3是两两互相注册的。启动三个服务注册中心，并将compute-service的serviceUrl指向peer1并启动，可以获得如下图所示的集群效果。

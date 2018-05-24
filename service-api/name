@@ -30,6 +30,11 @@ CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Clic
 File->Setting->Editor->General->Code Folding，把红色部分取消掉即可。
 
 
+CAP原则又称CAP定理，指的是在一个分布式系统中，Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼 [1]。
+
+ab -c 10 -n 10000 http://192.168.109.32:7869/api-a/hi?name=34&token=234234
+
+
 
 systemctl stop firewalld.service
 
@@ -95,6 +100,9 @@ curl -H "Authorization: bearer ae532377-406f-4dd5-bec2-b422c4c6a10a http://local
 https://www.bilibili.com/video/av16409150/  CS61B-Data Structures UC berkeley Spring 2014
 https://www.bilibili.com/video/av21719171/  UCB CS61B Data Structures, Spring 2018
 https://www.bilibili.com/video/av20538548/  CS61A Spring 2018（自带英文字幕）
+
+
+
 
 
 

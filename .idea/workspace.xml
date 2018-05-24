@@ -84,6 +84,98 @@
     <ignored path="$PROJECT_DIR$/../net/curator-master/target/" />
     <ignored path="$USER_HOME$/Downloads/zookeeper-master/target/" />
     <ignored path="$PROJECT_DIR$/oauth-server/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-context-integration-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-test-support/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/docs/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-commons/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-starter/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-commons-dependencies/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-context/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-logging/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-cassandra/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-redis/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-loader-tools/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-undertow/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-loader/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-cloud-connectors/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jetty/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-parent/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-thymeleaf/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-cassandra-reactive/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-security/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-validation/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-test/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-activemq/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-web/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-mongodb/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-configuration-processor/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-amqp/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-aop/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-test-support/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-solr/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-devtools/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/spring-boot-integration-tests/spring-boot-configuration-processor-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jersey/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-dependencies/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-couchbase/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-maven-plugin/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-mail/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-actuator-autoconfigure/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-actuator/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-web-services/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jooq/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-freemarker/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-antlib/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-couchbase-reactive/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-test-autoconfigure/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-redis-reactive/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-batch/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-hateoas/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-artemis/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jta-narayana/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-log4j2/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-tomcat/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/spring-boot-integration-tests/spring-boot-devtools-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-cache/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-ldap/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-elasticsearch/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-configuration-metadata/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jta-atomikos/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-docs/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-quartz/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-properties-migrator/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/spring-boot-integration-tests/spring-boot-server-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-mustache/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jta-bitronix/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/spring-boot-integration-tests/spring-boot-launch-script-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-samples-invoker/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-groovy-templates/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-websocket/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-autoconfigure/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-autoconfigure-processor/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-mongodb-reactive/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-cli/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-rest/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/spring-boot-integration-tests/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-neo4j/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-data-jpa/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-json/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-webflux/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-reactor-netty/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-actuator/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-jdbc/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-parent/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-integration/target/" />
+    <ignored path="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-starters/spring-boot-starter-test/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,14 +248,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SynchronizationComparisons.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/LockSync/SynchronizationComparisons.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="196" column="0" lean-forward="true" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,8 +273,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ctx</find>
-      <find>conn.listAllConn</find>
       <find>cu</find>
       <find>redis</find>
       <find>RocksDB</find>
@@ -213,6 +301,8 @@
       <find>static</find>
       <find>RegularEnumSet</find>
       <find>barrier</find>
+      <find>ApplicationContextInitializer</find>
+      <find>ApplicationListener</find>
     </findStrings>
     <replaceStrings>
       <replace>System.out.println</replace>
@@ -521,16 +611,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/single/ExtendsSingleton.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/single/A.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/single/ExtendsA.java" />
-        <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/base/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/countCyclic/CountDownLatchDemo.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/countCyclic/HorseRace.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/Handler.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/Main.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/common/ReactorException.java" />
-        <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/connection/Connection.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/handler/AbstractConnectionHandler.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/connection/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/connection/ConnectionPipeline.java" />
@@ -553,7 +633,6 @@
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/DefaultEventLoop.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/EchoServerDemo.java" />
         <option value="$PROJECT_DIR$/service-api/build.gradle" />
-        <option value="$PROJECT_DIR$/oauth-server/pom.xml" />
         <option value="$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/service/AuthorizeUserDetailService.java" />
         <option value="$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/controller/AuthCodeController.java" />
         <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/battery/BatteryTest.java" />
@@ -572,6 +651,17 @@
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/设计原则" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/LockSync/SynchronizationComparisons.java" />
         <option value="$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/db/Mongodb.java" />
+        <option value="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java" />
+        <option value="$PROJECT_DIR$/service-server/src/main/java/com/example/serviceserver/ServiceServerApplication.java" />
+        <option value="$PROJECT_DIR$/service-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/service-server/src/main/resources/application-peer2.properties" />
+        <option value="$PROJECT_DIR$/oauth-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/oauth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/OauthServerApplication.java" />
+        <option value="$PROJECT_DIR$/service-client/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/service-client/src/main/java/com/example/serviceclient/ServiceClientApplication.java" />
+        <option value="$PROJECT_DIR$/service-client/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/service-client/pom.xml" />
       </list>
     </option>
   </component>
@@ -595,11 +685,15 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="battery-gateway" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="oauth-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="battery-gateway" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="service-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="service-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
@@ -609,11 +703,11 @@
   <component name="MavenRunner">
     <option name="vmOptions" value="-DarchetypeCatalog=local" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1251" />
-    <option name="y" value="27" />
-    <option name="width" value="1372" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-4" />
+    <option name="y" value="25" />
+    <option name="width" value="1374" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -650,74 +744,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="me" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service-api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="me" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches">
         <subPane>
           <expand>
@@ -734,18 +760,41 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.11875" />
     <property name="project.structure.side.proportion" value="0.28102836" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../micro" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -765,6 +814,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-api" />
       <recent name="$PROJECT_DIR$/service-api/src/main/java/com/build/api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -775,6 +825,7 @@
       <recent name="com.alibaba.boot.dubbo.demo.consumer.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-server/src/main/resources" />
       <recent name="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor" />
       <recent name="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/handler" />
       <recent name="$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/connection" />
@@ -798,7 +849,7 @@
     </option>
     <option name="contentProportion" value="0.26384366" />
   </component>
-  <component name="RunManager" selected="JUnit.Mongodb.getData">
+  <component name="RunManager" selected="Spring Boot.ServiceClientApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -971,26 +1022,17 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
-    <configuration name="DubboConsumerDemo" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ServiceClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alibaba.boot.dubbo.demo.consumer.bootstrap.DubboConsumerDemo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <module name="dubbo-spring-boot-sample-consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.serviceclient.ServiceClientApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="service-client" />
       <envs />
     </configuration>
-    <configuration name="DubboProviderDemo" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ServiceServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alibaba.boot.dubbo.demo.provider.bootstrap.DubboProviderDemo" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="dubbo-spring-boot-sample-provider" />
-      <envs />
-    </configuration>
-    <configuration name="OauthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eureka.build.oauth.OauthApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="dubbo-spring-boot-oauth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.serviceserver.ServiceServerApplication" />
+      <module name="service-server" />
       <envs />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1032,15 +1074,14 @@
       <module name="" />
       <envs />
     </configuration>
-    <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.DubboConsumerDemo" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.DubboProviderDemo" />
-      <item index="2" class="java.lang.String" itemvalue="Spring Boot.OauthApplication" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Mongodb.connectMongodb" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BatteryTest.selectByUid" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.Mongodb.getData" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="7" class="java.lang.String" itemvalue="Application.SynchronizationComparisons" />
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.ServiceServerApplication" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.ServiceClientApplication" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Mongodb.connectMongodb" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BatteryTest.selectByUid" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Mongodb.getData" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="6" class="java.lang.String" itemvalue="Application.SynchronizationComparisons" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1281,6 +1322,10 @@
       <workItem from="1526605686169" duration="5430000" />
       <workItem from="1526972334921" duration="1042000" />
       <workItem from="1527043468148" duration="2643000" />
+      <workItem from="1527125401161" duration="986000" />
+      <workItem from="1527127648382" duration="7485000" />
+      <workItem from="1527143691339" duration="595000" />
+      <workItem from="1527144835875" duration="1518000" />
     </task>
     <servers />
   </component>
@@ -1317,7 +1362,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1146388000" />
+    <option name="totallyTimeSpent" value="1156972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1329,19 +1374,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1251" y="27" width="1372" height="744" extended-state="0" />
+    <frame x="-4" y="25" width="1374" height="747" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38566554" sideWeight="0.4953125" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39362913" sideWeight="0.63762814" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38869664" sideWeight="0.4889357" order="13" side_tool="false" content_ui="combo" />
-      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28835064" sideWeight="0.49487555" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54735154" sideWeight="0.4889357" order="13" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4050057" sideWeight="0.49487555" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46774194" sideWeight="0.3623719" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4675768" sideWeight="0.3623719" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33730453" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14126395" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803813" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43572986" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5774424" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1354,10 +1399,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16154721" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5608646" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38566554" sideWeight="0.4953125" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1369,45 +1415,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42320818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39362913" sideWeight="0.63762814" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28835064" sideWeight="0.49487555" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16154721" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803813" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5774424" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24959481" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5062571" sideWeight="0.49051633" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38566554" sideWeight="0.4953125" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38869664" sideWeight="0.4889357" order="13" side_tool="false" content_ui="combo" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.407281" sideWeight="0.3623719" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33383685" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35980937" sideWeight="0.48226163" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32856005" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42320818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43572986" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4935484" sideWeight="0.5089852" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1422,14 +1429,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/DefaultEventLoop.java</url>
-          <line>101</line>
-          <properties />
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog>
           <selected-grouping-rules>
@@ -1437,7 +1436,7 @@
           </selected-grouping-rules>
         </breakpoints-dialog>
       </breakpoints-dialog>
-      <option name="time" value="233" />
+      <option name="time" value="240" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1504,202 +1503,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/logic/http/BatteryExecAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/event/CubeMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/core/CubeRun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/ApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BatteryEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/conf/BeanConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1115">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/org/apache/hc/client5/http/entity/mime/MultipartEntityBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/rmi/RocksdbServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/db/RocksdbHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.0-beta1/1840a997d4929aa5a7cfe101eb9ad388d24d6c9e/httpcore5-5.0-beta1-sources.jar!/org/apache/hc/core5/http/NameValuePair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/org/apache/hc/client5/http/entity/mime/FormBodyPartBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/org/apache/hc/client5/http/entity/mime/MultipartFormEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/org/apache/hc/client5/http/entity/EntityBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="179" column="75" lean-forward="false" selection-start-line="179" selection-start-column="45" selection-end-line="179" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.0-beta1/1840a997d4929aa5a7cfe101eb9ad388d24d6c9e/httpcore5-5.0-beta1-sources.jar!/org/apache/hc/core5/http/message/BasicNameValuePair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/EchoServerDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/EchoServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64/jre/lib/rt.jar!/java/net/StandardSocketOptions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/pattern/reactor/Acceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="95" column="42" lean-forward="false" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/ApiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/battery-gateway/src/main/java/com/soundgroup/battery/server/HttpBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="60" column="53" lean-forward="false" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/netty/udp/client/UdpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/netty/udp/server/UdpServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/netty/udp/server/UdpServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/haolei/BatteryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/haolei/ClientMultipartFormPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/haolei/ManagerAndroidEms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/haolei/ManagerAndroidEmsCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/haolei/ManagerAndroidRecycle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/service/api/me/haolei/ShopCouponAndroid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1837,7 +1640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1845,7 +1647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1853,17 +1654,293 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="89" column="53" lean-forward="true" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/build/thinking/in/java/concurrency/LockSync/SynchronizationComparisons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="196" column="0" lean-forward="true" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.0.3.RELEASE/d68399e0f87815154325a5f2cf4e9ee4bb4b578b/spring-beans-5.0.3.RELEASE-sources.jar!/org/springframework/beans/factory/InitializingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-api/spring">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/service/AuthorizeUserDetailService.java" />
+    <entry file="file://$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/service/UserDetailService.java" />
+    <entry file="file://$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/controller/AuthCodeController.java" />
+    <entry file="jar://$USER_HOME$/m2/org/springframework/spring-context/5.0.6.RELEASE/spring-context-5.0.6.RELEASE.jar!/org/springframework/context/ApplicationContextInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/resources/META-INF/additional-spring-configuration-metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1377">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/resources/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/resources/org/springframework/boot/context/embedded/tomcat/empty-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2091">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/builder/ParentContextCloserApplicationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/resources/META-INF/spring.factories">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="23" column="71" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2069">
+          <caret line="274" column="31" lean-forward="false" selection-start-line="274" selection-start-column="31" selection-end-line="274" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-server/src/main/resources/application-peer1.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauth-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauth-server/src/main/java/com/oauth/me/server/OauthServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauth-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-server/src/main/resources/application-peer2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-server/src/main/java/com/example/serviceserver/ServiceServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/m2/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar!/org/springframework/boot/SpringApplicationRunListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/m2/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar!/org/springframework/boot/context/event/EventPublishingRunListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-client/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-client/src/main/java/com/example/serviceclient/ServiceClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/m2/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar!/org/springframework/boot/SpringApplicationRunListeners.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1525918294320" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1525918294320" expanded="false" signature="148:463" ph="..." />
+            <marker date="1525918294320" expanded="true" signature="700:782" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="811:1041" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="1116:1368" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="1442:1686" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="1758:2000" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="2066:2302" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="2368:2604" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="2690:2954" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="3092:3666" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/m2/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+          <folding>
+            <marker date="1525918294320" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1525918294320" expanded="false" signature="148:2679" ph="..." />
+            <marker date="1525918294320" expanded="true" signature="4778:4837" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="4924:5746" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="5806:6491" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="6543:7138" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="7202:9143" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="9284:9988" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="10205:11012" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="11086:11326" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="11373:11503" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="11578:11813" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="11888:11964" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="12082:12472" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="12630:13384" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="13447:13722" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="13816:13932" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="14030:14953" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="15044:15316" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="15396:15677" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="15759:15996" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="16066:16646" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="16720:17788" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="17879:18507" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="18586:19066" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="19118:19260" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="19343:19973" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="20013:20126" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="20198:20834" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="20882:20925" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="20967:21094" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="21185:21583" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="21698:21765" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="21833:21991" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="22092:22099" ph="{}" />
+            <marker date="1525918294320" expanded="true" signature="22185:22879" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="22962:23148" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="23231:23433" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="23631:24219" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="24331:24943" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="25009:25197" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="25292:25727" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="25831:26065" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="26175:26568" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="26649:26915" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="26980:27100" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="27157:27331" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="27379:27428" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="27501:27566" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="27572:27590" ph="/**...*/" />
+            <marker date="1525918294320" expanded="true" signature="27645:27722" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="27778:27825" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="27831:27849" ph="/**...*/" />
+            <marker date="1525918294320" expanded="true" signature="27924:28036" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28115:28259" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28307:28348" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28420:28485" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28528:28565" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28614:28659" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28719:28772" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="28852:28925" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="29003:29062" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="29131:29437" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="29497:29582" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="29658:29717" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="29787:29834" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="29917:29986" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="30024:30060" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="30110:30229" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="30270:30621" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="30688:30816" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="30934:31149" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="31229:31422" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="31525:31625" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="31706:31776" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="31845:31912" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="31999:32090" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="32155:32219" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="32275:32339" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="32434:32495" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="32592:32665" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="32727:32767" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="32865:33716" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="33776:33984" ph="{...}" />
+            <marker date="1525918294320" expanded="true" signature="34065:34243" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1924,7 +2001,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>service-api_test|service-api</last-edited>
+          <last-edited>service-client</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
