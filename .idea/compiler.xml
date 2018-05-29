@@ -26,16 +26,12 @@
         <module name="spring-boot-autoconfigure" />
         <module name="spring-boot-cli" />
         <module name="spring-boot-configuration-metadata" />
-        <module name="spring-boot-configuration-processor-tests" />
         <module name="spring-boot-devtools" />
-        <module name="spring-boot-devtools-tests" />
         <module name="spring-boot-docs" />
-        <module name="spring-boot-launch-script-tests" />
         <module name="spring-boot-loader" />
         <module name="spring-boot-loader-tools" />
         <module name="spring-boot-maven-plugin" />
         <module name="spring-boot-properties-migrator" />
-        <module name="spring-boot-server-tests" />
         <module name="spring-boot-starter" />
         <module name="spring-boot-starter-activemq" />
         <module name="spring-boot-starter-actuator" />

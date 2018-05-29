@@ -27,6 +27,9 @@
         <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/dubbo-spring-boot-sample-provider/pom.xml" />
         <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-samples/pom.xml" />
         <option value="$USER_HOME$/gitClone/dubbo/dubbo-spring-boot-project-master/dubbo-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-tools/spring-boot-gradle-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/pom.xml" />
+        <option value="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-tests/spring-boot-integration-tests/pom.xml" />
         <option value="$PROJECT_DIR$/../net/spring-cloud-commons-master/docs/pom.xml" />
         <option value="$PROJECT_DIR$/../net/spring-cloud-commons-master/pom.xml" />
         <option value="$PROJECT_DIR$/../net/spring-cloud-commons-master/spring-cloud-commons-dependencies/pom.xml" />
