@@ -7,7 +7,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class RunnabldeT {
 
-
     class MyThread implements  Runnable{
 
         /** Ten ticket**/

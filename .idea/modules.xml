@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/battery-gateway/battery-gateway.iml" filepath="$PROJECT_DIR$/battery-gateway/battery-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_main.iml" group="service-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_test.iml" group="service-api" />

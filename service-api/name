@@ -78,7 +78,7 @@ show users
 show collections
 db.heart.find().pretty()
 
-
+intellij idea  打jar包时要把MANIFEST.MF文件打到模块的根目录下才可以运行
 
 Linux下四款Web服务器压力测试工具（http_load、webbench、ab、siege）介绍 Apache Benchmark简称AB，安装有两种方式：
 
@@ -100,6 +100,7 @@ curl -H "Authorization: bearer ae532377-406f-4dd5-bec2-b422c4c6a10a http://local
 https://www.bilibili.com/video/av16409150/  CS61B-Data Structures UC berkeley Spring 2014
 https://www.bilibili.com/video/av21719171/  UCB CS61B Data Structures, Spring 2018
 https://www.bilibili.com/video/av20538548/  CS61A Spring 2018（自带英文字幕）
+https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=display
 
 
 

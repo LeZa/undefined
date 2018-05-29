@@ -1,0 +1,13 @@
+package com.service.api.me.base.cs61.linked.chapter;
+
+public class IntNode {
+
+    public int item;
+
+    public IntNode next;
+
+    public IntNode( int i, IntNode n){
+            item = i;
+            next = n;
+        }
+}

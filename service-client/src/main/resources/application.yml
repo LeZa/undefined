@@ -5,8 +5,8 @@ spring:
 server:
   port: 3342
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
 
