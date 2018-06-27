@@ -104,6 +104,11 @@ https://www.bilibili.com/video/av21719171/  UCB CS61B Data Structures, Spring 20
 https://www.bilibili.com/video/av20538548/  CS61A Spring 2018（自带英文字幕）
 https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=display
 
+https://mathiasbynens.be/notes/mysql-utf8mb4#utf8-to-utf8mb4//调用mysql字符集utf8mb4
+
+http://192.168.89.103:9200/_cat/indices?v
+http://192.168.89.103:9200/logstash-2018.06.25/_search
+
 
 
 
