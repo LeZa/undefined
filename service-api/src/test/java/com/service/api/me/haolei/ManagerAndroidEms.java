@@ -18,6 +18,7 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
 /**
  * 便民管理端快递部分接口调试
@@ -32,12 +33,10 @@ public class ManagerAndroidEms {
     /**
      * getResponseBody  result String
      */
-    private static void getResponseBody( CloseableHttpClient httpclient, HttpPost httppost ) throws IOException {
+    protected static void getResponseBody( CloseableHttpClient httpclient, HttpPost httppost ) throws IOException {
         try (CloseableHttpResponse response = httpclient.execute(httppost)) {
             System.out.println("----------------------------------------");
-            System.out.println(response);
             final HttpEntity resEntity = response.getEntity();
-
             if (resEntity != null) {
                 InputStream is = resEntity.getContent();
                 StringBuffer out = new StringBuffer();
@@ -45,16 +44,12 @@ public class ManagerAndroidEms {
                 for (int n; (n = is.read(b)) != -1;) {
                     out.append(new String(b, 0, n));
                 }
-
-                System.out.println(out.toString());
-
+                
                 JsonObject returnData = new JsonParser().parse(out.toString()).getAsJsonObject();
                 Gson gson = new GsonBuilder()
                         .setPrettyPrinting()
                         .create();
                 System.out.println(gson.toJson(returnData));
-                System.out.println( resEntity.getContent() );
-                System.out.println("Response content length: " + resEntity.getContentLength());
             }
             EntityUtils.consume(resEntity);
         }

@@ -29,16 +29,6 @@ public class Servlet extends HttpServlet {
         System.out.println("execute doGet");
     }
 
-    @PreDestroy
-    public void preDestTest(){
-        System.out.println("execute preDestTest");
-    }
-
-    @PostConstruct
-    public void postConTest(){
-        System.out.println("execute postConTest");
-    }
-
     @Override
     public  void destroy(){
         System.out.println("execute distory");

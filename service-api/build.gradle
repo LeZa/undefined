@@ -107,7 +107,13 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test
     testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version: '2.0.1.RELEASE'
 
+    // https://mvnrepository.com/artifact/com.google.inject/guice
+    compile group: 'com.google.inject', name: 'guice', version: '4.2.0'
 
+// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-multibindings
+    compile group: 'com.google.inject.extensions', name: 'guice-multibindings', version: '4.2.0'
 
+    // https://mvnrepository.com/artifact/com.google.inject.extensions/guice-servlet
+    compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: '4.2.0'
 
 }

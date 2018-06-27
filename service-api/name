@@ -83,6 +83,8 @@ intellij idea  打jar包时要把MANIFEST.MF文件打到模块的根目录下才
 Linux下四款Web服务器压力测试工具（http_load、webbench、ab、siege）介绍 Apache Benchmark简称AB，安装有两种方式：
 
 
+AVL:AVL在计算机科学中是最先发明的自平衡二叉查找树。
+
 
 find -name '*source*.jar'|xargs rm -rf
 
