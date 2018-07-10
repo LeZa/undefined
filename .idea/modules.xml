@@ -8,8 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_main.iml" group="service-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-api_test.iml" group="service-api" />
-      <module fileurl="file://$PROJECT_DIR$/service-client/service-client.iml" filepath="$PROJECT_DIR$/service-client/service-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-server/service-server.iml" filepath="$PROJECT_DIR$/service-server/service-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/spring-boot.iml" filepath="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot/spring-boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-actuator/spring-boot-actuator.iml" filepath="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-actuator/spring-boot-actuator.iml" />
       <module fileurl="file://$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-actuator-autoconfigure/spring-boot-actuator-autoconfigure.iml" filepath="$PROJECT_DIR$/../net/spring-boot-master/spring-boot-project/spring-boot-actuator-autoconfigure/spring-boot-actuator-autoconfigure.iml" />

@@ -30,7 +30,8 @@ public class Bath {
     castille = new Soap();
   }	
   // Instance initialization:
-  { i = 47;
+  {
+    i = 47;
     print(i);
   }
   public String toString() {

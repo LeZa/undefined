@@ -63,7 +63,7 @@ dependencies {
 
 
     // https://mvnrepository.com/artifact/io.netty/netty-all
-    compile group: 'io.netty', name: 'netty-all', version: '4.0.21.Final'
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.16.Final'
 
     // https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
     compile group: 'org.apache.curator', name: 'curator-recipes', version: '2.12.0'
@@ -115,5 +115,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.google.inject.extensions/guice-servlet
     compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: '4.2.0'
+
+    // https://mvnrepository.com/artifact/org.elasticsearch.client/transport
+    compile group: 'org.elasticsearch.client', name: 'transport', version: '6.3.0'
+
 
 }

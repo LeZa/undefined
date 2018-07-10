@@ -35,8 +35,8 @@ public class FinalOverridingIllusion {
     // You can upcast:
     OverridingPrivate op = op2;
     // But you can't call the methods:
-    //! op.f();
-    //! op.g();
+//    ! op.f();
+//    ! op.g();
     // Same here:
     WithFinals wf = op2;
     //! wf.f();

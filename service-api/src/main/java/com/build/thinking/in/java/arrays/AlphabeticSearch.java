@@ -1,11 +1,9 @@
 package com.build.thinking.in.java.arrays;
 
-
 import com.build.thinking.in.java.net.mindview.util.Generated;
 import com.build.thinking.in.java.net.mindview.util.RandomGenerator;
 
 import java.util.*;
-
 
 public class AlphabeticSearch {
   public static void main(String[] args) {

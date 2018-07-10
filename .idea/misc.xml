@@ -11,8 +11,6 @@
         <option value="$PROJECT_DIR$/cloud-rocksdb-master/rocksdb/rocksjni.pom" />
         <option value="$PROJECT_DIR$/../net/spring-cloud-commons-master/pom.xml" />
         <option value="$PROJECT_DIR$/../net/spring-boot-master/pom.xml" />
-        <option value="$PROJECT_DIR$/service-server/pom.xml" />
-        <option value="$PROJECT_DIR$/service-client/pom.xml" />
         <option value="$PROJECT_DIR$/example/pom.xml" />
       </list>
     </option>

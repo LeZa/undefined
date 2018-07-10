@@ -16,9 +16,7 @@
         <module name="example" />
         <module name="oath2-client-demo" />
         <module name="service-battery" />
-        <module name="service-client" />
         <module name="service-registry" />
-        <module name="service-server" />
         <module name="spring-boot" />
         <module name="spring-boot-actuator" />
         <module name="spring-boot-actuator-autoconfigure" />

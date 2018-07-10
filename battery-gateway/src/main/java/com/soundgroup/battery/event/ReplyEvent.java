@@ -4,13 +4,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * 异步响应记录对象
- * @description ReplyEvent
- * @author niulu
- * @version 0.1
- * @date 2014年8月16日
- */
 public class ReplyEvent {
 
     private static final AtomicInteger ATOMIC_ID = new AtomicInteger(1);

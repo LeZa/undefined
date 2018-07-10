@@ -2,7 +2,6 @@ package com.soundgroup.battery.exception;
 
 /**
  * 常规异常
- * @author fck
  */
 public class NormalRuntimeException extends RuntimeException {
 

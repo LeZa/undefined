@@ -64,12 +64,24 @@ select column_name, column_comment  from information_schema.columns where table_
 
 ps -ef|egrep  "rpc|nfs"
 
+find / -path '/proc' -prune -o -type f -name index.html　//过滤某个文件夹　　-prune
+
 
 mount -t nfs 192.168.89.54:/home/centin/ideaProject/undefined/data/
 
-/usr/local/mongodb-3.2.4/bin/mongo 192.168.109.60:27018
+
+./mongod --dbpath data/db/启动服务,    mongo 192.168.89.54:27017
+
 
 db.createuser( {user:"battery",pwd:"battery",roles:[{role:"root",db:"admin"}] })
+
+mongodb创建数据库后只有在插入数据或是新集合后，才会生效(show dbs才会看到)。
+mongodb 排序  db.kel.find().pretty().sort({"likes":-1})
+mongodb 索引  
+mongodb skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。 
+mogondb db.kel.getIndexes()  查询当前库的索引
+mongodb db.kel.dropIndex({'likes':1}) 删除索引
+mongodb db.kel.find().pretty().hint("likes_1") 强制使用指定索引。hint
 
 use battery
 
@@ -77,6 +89,20 @@ show users
 
 show collections
 db.heart.find().pretty()
+
+elasticsearch 
+cd /usr/share/elasticsearch/bin
+./elasticsearch
+http://192.168.89.54:9200/
+logstash
+
+systemctl stop firewalld
+/usr/share/logstash/config/pipelines.yml  配置文档
+/etc/logstash/conf.d/*.conf 配置文件
+/usr/share/logstash/bin/.logstash
+
+
+
 
 intellij idea  打jar包时要把MANIFEST.MF文件打到模块的根目录下才可以运行
 

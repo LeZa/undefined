@@ -1,8 +1,5 @@
 package com.soundgroup.battery.core.common;
 
-/**
- * Created by fafu on 2017/6/7.
- */
 public class InstanceAlreadyRunningException extends Exception {
 
     public InstanceAlreadyRunningException(String msg){

@@ -28,13 +28,6 @@ import com.soundgroup.battery.utils.CommUtils;
 public class CubeInboundHandlerLong extends ChannelInboundHandlerAdapter {
 	private static final Logger LOG = Logger.getLogger(CubeInboundHandlerLong.class);
 
-    /**
-     * 如果5秒没有验证通过，关闭连接
-     * @description DelayClose
-     * @author niulu
-     * @version 0.1
-     * @date 2014年8月16日
-     */
     class DelayClose implements Runnable {
 
         private ChannelHandlerContext ctx;

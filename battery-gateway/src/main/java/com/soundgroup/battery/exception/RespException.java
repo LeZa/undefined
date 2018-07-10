@@ -1,13 +1,5 @@
 package com.soundgroup.battery.exception;
 
-/**
- * http内部服务错误
- * 
- * @description ServerWrongException
- * @author niulu
- * @version 0.1
- * @date 2014年8月19日
- */
 public class RespException extends RuntimeException {
 
     private static final long serialVersionUID = -3910639417037386503L;

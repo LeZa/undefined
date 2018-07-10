@@ -44,11 +44,7 @@ public class CubeInboundHandler extends ChannelInboundHandlerAdapter {
 
     private ComboPooledDataSource comboPooledDataSource;
 
-    /**
-     * @description DelayClose
-     * @author niulu
-     * @version 0.122
-     */
+
     class DelayClose implements Runnable {
 
         private ChannelHandlerContext ctx;
