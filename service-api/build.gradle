@@ -119,5 +119,16 @@ dependencies {
     // https://mvnrepository.com/artifact/org.elasticsearch.client/transport
     compile group: 'org.elasticsearch.client', name: 'transport', version: '6.3.0'
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.0'
+
+    // https://mvnrepository.com/artifact/com.alibaba/druid
+    testCompile group: 'com.alibaba', name: 'druid', version: '1.1.10'
+
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    testCompile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+
+
 
 }

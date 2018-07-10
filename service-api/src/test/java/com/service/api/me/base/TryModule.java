@@ -1,6 +1,5 @@
 package com.service.api.me.base;
 
-import com.build.api.effectiveJava.Test;
 
 public class TryModule {
 
